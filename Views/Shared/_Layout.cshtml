@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BookApp</title>
+    <title>@ViewData["Title"] - Main Page</title>
+    <link rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/images/logo_gy0_icon.ico" type="image/x-icon">
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -17,33 +19,83 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">BookApp</a>
-            </div>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="~/images/logo.png" alt="The Book Cave">   
+            </a>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact"><span class="	glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="info"><span class="glyphicon glyphicon-info-sign"></span> Help</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-heart"></span> Wishlist</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign In</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- NAVBAR END -->
+
+    <!-- CONTENT START -->
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - BookApp</p>
-        </footer>
     </div>
+    <!-- CONTENT END -->
+
+    <!-- FOOTER START -->
+    <footer>
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul>
+                        <li>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">About Us</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Sign In</a></h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Help</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Contact Us</a></h5>
+                        </li>
+                        <li>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Where Do We Deliver?</a></h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 logo-container">
+                    <ul>
+                        <li>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">We Accept These Payment Methods</h5>
+                            <img src="~/images/visa.svg" alt="VISA" height="40px" width="auto">
+                            <img src="~/images/mastercard-2.svg" alt="MASTERCARD" height="40px" width="auto">
+                        </li>
+                        <li>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Follow Us</h5>
+                            <img src="~/images/facebook-3.svg" alt="FACEBOOK" height="40px" width="auto">
+                            <img src="~/images/twitter-3.svg" alt="TWITTER" height="40px" width="auto">
+                            <img src="~/images/instagram-2016.svg" alt="INSTAGRAM" height="40px" width="auto">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright py-3 text-center">
+            &copy; 2018 Copyright -
+            <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> BookApp </a>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
