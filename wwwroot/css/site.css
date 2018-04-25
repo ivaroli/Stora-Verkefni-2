@@ -1,14 +1,28 @@
-﻿body {
-    padding-top: 0px;
-    padding-bottom: 0px;
+﻿/*BODY BEGIN*/
+body {
+    padding: 0px;
+    background-color: #f6f6f6;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.body-content{
+    background-color: #f6f6f6;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 95%;
+    margin: auto;
 }
+
+#tree{
+    margin: 0px;
+    padding: 0px;
+    margin-top: -15px;
+}
+#tree a{
+    margin: 0px;
+    padding: 0px;
+}
+/*BODY END*/
 
 /* NAVBAR BEGIN */
 .navbar{
@@ -16,6 +30,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 16px;
+    background-color: #333333;
+    border-color: #333333;
 }
 
 .navbar-nav > li > a {  color: #33b6bc !important;}
@@ -41,21 +57,21 @@ footer{
     margin-top: 10px;
 }
 
-.col-md-4 ul{
+.footer-container .col-md-4 ul{
     list-style: none;
 }
 
-.col-md-4 ul li{
+.footer-container .col-md-4 ul li{
     text-align: left;
     text-decoration: none;
     color: #333333;
 }
 
-.col-md-4:not(.logo-container) ul li{
+.footer-container .col-md-4:not(.logo-container) ul li{
     margin-bottom: 35px;
 }
 
-.col-md-4 ul li a{
+.footer-container .col-md-4 ul li a{
     text-decoration: none;
     color: #333333;
 }
@@ -71,32 +87,104 @@ footer{
     color: #333333;
     font-weight: bold;
 }
-/* FOOTER BEGIN */
+/* FOOTER END */
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
+/* INDEX BEGIN */
+#index-container{
+    padding: 0px;
     width: 100%;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+#index-main-row{
+    padding: 0px;
 }
+
+.input-group-btn button{
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+    color: #333333; 
+}
+
+.form-control{
+    border-color: #33b6bc;
+}
+
+.left-container{
+    padding: 10px;
+    background-color: white;
+    max-height: 670px;
+    min-height: 670px;
+    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
+    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
+}
+
+.sugestion-list{
+    list-style: none;
+}
+
+.sugestion-list li{
+    padding-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: gray;
+}
+
+.input-container{
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
+    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
+}
+
+.book-display{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 600px;
+    max-height: 600px;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
+    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
+}
+
+#announcement{
+    color: gray;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    padding-top: 100px;
+    margin: 0px;
+}
+/* INDEX END */
 
 /* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
+@media only screen and (min-width: 300px) and (max-width: 700px) {
     /* Hide captions */
     .carousel-caption {
         display: none;
     }
 
+    .footer-container .col-md-4:not(.logo-container) ul li{
+        display: none;
+    }
+
+    .footer-container .col-md-4:not(.logo-container) ul li{
+        display: none;
+    }
+
+    #payment-options{
+        display: none;
+    }
+
     .navbar-brand{
+        display: none;
+    }
+
+    .left-container{
         display: none;
     }
 }

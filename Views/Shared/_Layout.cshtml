@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Main Page</title>
+    <title>@ViewData["Title"] - The Book Cave</title>
     <link rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="~/images/logo_gy0_icon.ico" type="image/x-icon">
 
@@ -22,10 +22,15 @@
     <!-- NAVBAR START -->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
             <a class="navbar-brand" href="#">
                 <img src="~/images/logo.png" alt="The Book Cave">   
             </a>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact"><span class="	glyphicon glyphicon-envelope"></span> Contact Us</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="info"><span class="glyphicon glyphicon-info-sign"></span> Help</a></li>
@@ -49,7 +54,7 @@
     <!-- FOOTER START -->
     <footer>
         <div class="container text-center text-md-left">
-            <div class="row">
+            <div class="row footer-container">
                 <div class="col-md-4">
                     <ul>
                         <li>
@@ -75,12 +80,12 @@
                 </div>
                 <div class="col-md-4 logo-container">
                     <ul>
-                        <li>
+                        <li id="payment-options">
                             <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">We Accept These Payment Methods</h5>
                             <img src="~/images/visa.svg" alt="VISA" height="40px" width="auto">
                             <img src="~/images/mastercard-2.svg" alt="MASTERCARD" height="40px" width="auto">
                         </li>
-                        <li>
+                        <li id="media-options">
                             <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Follow Us</h5>
                             <img src="~/images/facebook-3.svg" alt="FACEBOOK" height="40px" width="auto">
                             <img src="~/images/twitter-3.svg" alt="TWITTER" height="40px" width="auto">
@@ -92,7 +97,7 @@
         </div>
         <div class="footer-copyright py-3 text-center">
             &copy; 2018 Copyright -
-            <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> BookApp </a>
+            <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> The Book Cave </a>
         </div>
     </footer>
     <!-- FOOTER END -->
