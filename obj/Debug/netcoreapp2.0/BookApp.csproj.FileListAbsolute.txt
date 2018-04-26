@@ -18,3 +18,13 @@ C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/Boo
 /Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
 /Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.dll
 /Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.deps.json
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.pdb
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.pdb
