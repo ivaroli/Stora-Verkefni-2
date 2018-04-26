@@ -123,13 +123,25 @@ footer{
 
 .sugestion-list{
     list-style: none;
+    padding-left: 5px;
 }
 
-.sugestion-list li{
+.sugestion-list li:not(.active){
     padding-top: 15px;
     font-size: 15px;
     font-weight: 600;
     color: gray;
+}
+
+.sugestion-list li:not(.active):hover{
+    color: #33b6bc;
+    cursor: pointer;
+}
+
+.active{
+    color: #33b6bc;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .input-container{
@@ -160,6 +172,9 @@ footer{
     margin: 0px;
 }
 /* INDEX END */
+
+/* SIGN-IN BEGIN */
+/* SIGN-IN END */
 
 /* Hide/rearrange for smaller screens */
 @media only screen and (min-width: 300px) and (max-width: 700px) {
