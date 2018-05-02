@@ -17,6 +17,10 @@
 *.csproj.nuget.g.props
 *.csproj.nuget.g.targets
 *.assets.json
+*.json
+*.cache
+*.props
+*.targets
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
