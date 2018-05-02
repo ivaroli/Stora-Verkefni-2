@@ -7561,7 +7561,7 @@
       ]
     },
     "Remotion.Linq/2.1.1": {
-      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
+      "sha512": "z6MTvmwLf4QkqBQAsarzYh1jJ2UNry4QTc/PVySCsWS6ID/Y4UD+iEEzXHFfD+G6t6f2Ohao8Y98UPswOEXofg==",
       "type": "package",
       "path": "remotion.linq/2.1.1",
       "files": [
@@ -12536,28 +12536,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/arnabjorg/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\ivart\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/arnabjorg/Desktop/Stora-Verkefni-2/BookApp.csproj",
+      "projectUniqueName": "C:\\Users\\ivart\\Documents\\Vefforitun_verkefni\\BookApp\\BookApp.csproj",
       "projectName": "BookApp",
-      "projectPath": "/Users/arnabjorg/Desktop/Stora-Verkefni-2/BookApp.csproj",
-      "packagesPath": "/Users/arnabjorg/.nuget/packages/",
-      "outputPath": "/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/",
+      "projectPath": "C:\\Users\\ivart\\Documents\\Vefforitun_verkefni\\BookApp\\BookApp.csproj",
+      "packagesPath": "C:\\Users\\ivart\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivart\\Documents\\Vefforitun_verkefni\\BookApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/arnabjorg/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ivart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
