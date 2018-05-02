@@ -21,14 +21,15 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult SignIn(BookApp.Models.UserInputModel m)
         {
-            
+            Console.WriteLine("\nSigned in user \"" + m.UserName +"\" with password + "+ m.Password +"\n");
             return View();
         }
 
         [HttpPost]
         public IActionResult SignUp(BookApp.Models.UserInputModel m)
         {
-            return View();
+            Console.WriteLine("\nCreateing user \"" + m.UserName +"\" with password + "+ m.Password +"\n");
+            return RedirectToAction("SignIn");
         }
 
         //Býr til sha256 hash úr string

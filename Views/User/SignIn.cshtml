@@ -10,7 +10,7 @@
         <div class="col-md-6 left-sign-container">
             <div  class="component sign-container">
                 <h3>Sign In</h3>
-                <form autocomplete="off" id="signin-form" method="post">
+                <form asp-controller="User" asp-action="SignIn" autocomplete="off" id="signin-form" method="post">
                     <div class="form-group">
                         <label asp-for="Email">Username</label>
                         <input asp-for="Email" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="signin-email" required>
@@ -26,18 +26,18 @@
         <div class="col-md-6 right-sign-container">
             <div  class="component sign-container">
                 <h3>Sign Up</h3>
-                <form autocomplete="off" id="signup-form">
+                <form asp-controller="User" asp-action="SignUp" autocomplete="off" id="signup-form" method="post">
                     <div class="form-group">
-                        <label for="signup-email">Email address</label>
-                        <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email" name="signin-email" required>
+                        <label asp-for="Email">Email address</label>
+                        <input asp-for="Email" type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email" name="signin-email" required>
                     </div>
                     <div class="form-group">
-                        <label for="signup-name">Name</label>
-                        <input type="text" class="form-control" id="signup-name" aria-describedby="emailHelp" placeholder="Enter name" name="signin-email" required>
+                        <label asp-for="UserName">Name</label>
+                        <input asp-for="UserName" type="text" class="form-control" id="signup-name" aria-describedby="emailHelp" placeholder="Enter name" name="signin-email" required>
                     </div>
                     <div class="form-group">
-                        <label for="signup-password">Password</label>
-                        <input type="password" class="form-control" id="signup-password" aria-describedby="emailHelp" placeholder="Enter password" name="signin-email" required>
+                        <label asp-for="Password">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" id="signup-password" aria-describedby="emailHelp" placeholder="Enter password" name="signin-email" required>
                     </div>
                     <div class="form-group">
                         <label for="signup-password-verify">Verify Password</label>
