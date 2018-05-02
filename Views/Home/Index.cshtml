@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container" id="index-container">
+    <div id="tree"><a href="#">Home page</a> >> </div>
+    <div class="row" id="index-main-row">
+        <div class="col-md-2 left-container component">
+            <!-- Það sem fer vinstrameginn fer hér svosem eins og "best sellers" -->
+            <ul class="sugestion-list">
+                <li class="active">All Books And Authors <span class="glyphicon glyphicon-ok"></span></li>
+                <li>Books</li>
+                <li>Authors</li>
+                <li>Comming Soon</li>
+                <li>Seccond Hand</li>
+                <li>E-Books</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+                <li>ASDFASDF</li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <div class="input-container component">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span id="search_concept">All Genres</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">Drama</a></li>
+                            <li><a href="#its_equal">Romance</a></li>
+                            <li><a href="#greather_than">Sci-Fi</a></li>
+                            <li><a href="#less_than">Action</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">         
+                    <input type="text" class="form-control" name="x" placeholder="Search for book by title or author by name...">
+                    <span class="input-group-btn search-icon">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+            <div class="book-display component">
+                <h1 id="announcement">No Books To Show...</h1>
+                <!-- Það sem á að koma hér eru allar bækurnar sem eru sýndar -->
+            </div>
+        </div>
+    </div>
+</div>
