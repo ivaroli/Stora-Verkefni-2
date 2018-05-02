@@ -1,3 +1,4 @@
+@model BookApp.Models.UserInputModel
 @{
     ViewData["Title"] = "Sign In";
 }
@@ -9,14 +10,14 @@
         <div class="col-md-6 left-sign-container">
             <div  class="component sign-container">
                 <h3>Sign In</h3>
-                <form autocomplete="off" id="signin-form">
+                <form autocomplete="off" id="signin-form" method="post">
                     <div class="form-group">
-                        <label for="signin-email">Email address</label>
-                        <input type="email" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="signin-email" required>
+                        <label asp-for="Email">Username</label>
+                        <input asp-for="Email" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="signin-email" required>
                     </div>
                     <div class="form-group">
-                        <label for="signin-password">Password</label>
-                        <input type="password" class="form-control" id="signin-password" placeholder="Password" name="signin-password" required>
+                        <label asp-for="Password">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" id="signin-password" placeholder="Password" name="signin-password" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Sign In</button>
                 </form>
