@@ -22,6 +22,12 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+.component{
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
+    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
+}
 /*BODY END*/
 
 /* NAVBAR BEGIN */
@@ -114,11 +120,8 @@ footer{
 
 .left-container{
     padding: 10px;
-    background-color: white;
     max-height: 670px;
     min-height: 670px;
-    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
-    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
 }
 
 .sugestion-list{
@@ -148,9 +151,6 @@ footer{
     padding: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: white;
-    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
-    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
 }
 
 .book-display{
@@ -158,9 +158,6 @@ footer{
     margin-bottom: 15px;
     min-height: 600px;
     max-height: 600px;
-    background-color: white;
-    -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
-    box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
 }
 
 #announcement{
@@ -174,6 +171,61 @@ footer{
 /* INDEX END */
 
 /* SIGN-IN BEGIN */
+#signin-container{
+    padding: 0px;
+    width: 100%;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 15px;
+}
+
+#signin-main-row{
+    padding: 0px;
+    margin-top: -15px;
+    margin-bottom: 0px;
+}
+
+#signin-main-row h1{
+    color: gray;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sign-container{
+    padding-top: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+.sign-container h3{
+    color: gray;
+    font-weight: bold;
+}
+
+#signin-form .form-group{
+    padding-bottom: 25px;
+    color: gray;
+}
+
+#signup-form .form-group{
+    padding-bottom: 15px;
+    color: gray;
+}
+
+#signin-form button{
+    float: right;
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+}
+
+#signup-form button{
+    float: right;
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+}
 /* SIGN-IN END */
 
 /* Hide/rearrange for smaller screens */
