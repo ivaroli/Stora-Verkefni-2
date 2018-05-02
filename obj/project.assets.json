@@ -12536,23 +12536,40 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "/Users/arnabjorg/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+=======
+    "C:\\Users\\Margretvalab\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+>>>>>>> d9be4fb021886ee2eb90d56e951e1029ebb2be50
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "/Users/arnabjorg/Desktop/Stora-Verkefni-2/BookApp.csproj",
       "projectName": "BookApp",
       "projectPath": "/Users/arnabjorg/Desktop/Stora-Verkefni-2/BookApp.csproj",
       "packagesPath": "/Users/arnabjorg/.nuget/packages/",
       "outputPath": "/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/",
+=======
+      "projectUniqueName": "C:\\Users\\Margretvalab\\Documents\\T-220-VLN2 Verklegt Námskeið 2\\Verkefni\\Verkefni\\Stora-Verkefni-2\\BookApp.csproj",
+      "projectName": "BookApp",
+      "projectPath": "C:\\Users\\Margretvalab\\Documents\\T-220-VLN2 Verklegt Námskeið 2\\Verkefni\\Verkefni\\Stora-Verkefni-2\\BookApp.csproj",
+      "packagesPath": "C:\\Users\\Margretvalab\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Margretvalab\\Documents\\T-220-VLN2 Verklegt Námskeið 2\\Verkefni\\Verkefni\\Stora-Verkefni-2\\obj\\",
+>>>>>>> d9be4fb021886ee2eb90d56e951e1029ebb2be50
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "/Users/arnabjorg/.nuget/NuGet/NuGet.Config"
+=======
+        "C:\\Users\\Margretvalab\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> d9be4fb021886ee2eb90d56e951e1029ebb2be50
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
