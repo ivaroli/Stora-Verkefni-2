@@ -7,6 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using BookApp.Data;
+using BookApp.Models;
 
 namespace BookApp
 {
@@ -21,5 +23,15 @@ namespace BookApp
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
+        
+        /*public static void seedData()
+        {
+            var db = new DataContext();
+
+            var initailUsers = new List<User>()
+            {
+                new User{UserName = "ivaroli"}
+            };
+        }*/
     }
 }
