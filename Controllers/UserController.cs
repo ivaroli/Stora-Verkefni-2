@@ -29,6 +29,7 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult SignUp(BookApp.Models.UserInputModel m)
         {
+            Console.WriteLine("\nTrying to create user");
             if(userService.SignUp(m))
             {
                 Console.WriteLine("\nCreated user!!!!!!");

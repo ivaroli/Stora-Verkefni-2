@@ -11,8 +11,8 @@ using System;
 namespace BookApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180503112259_otherTables")]
-    partial class otherTables
+    [Migration("20180503173946_initialMigration")]
+    partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,16 +23,18 @@ namespace BookApp.Migrations
 
             modelBuilder.Entity("BookApp.Models.User", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email");
+
+                    b.Property<string>("Password");
 
                     b.Property<string>("Type");
 
                     b.Property<string>("UserName");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("User");
                 });

@@ -27,6 +27,8 @@ namespace BookApp.Migrations
 
                     b.Property<string>("Email");
 
+                    b.Property<string>("Password");
+
                     b.Property<string>("Type");
 
                     b.Property<string>("UserName");

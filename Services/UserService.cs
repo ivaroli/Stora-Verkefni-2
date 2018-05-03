@@ -46,19 +46,21 @@ namespace BookApp.Services
 
         public bool SignUp(UserInputModel input)
         {
-            Console.WriteLine("\n1");
+            Console.WriteLine("\n**1**");
             string pass = GetHash(input.Password);
-            Console.WriteLine("\n2");
+            Console.WriteLine("\n**2**");
+            Console.WriteLine("\nUsername: " + input.UserName + "\n");
             if(userRepo.GetUserFromName(input.UserName) != null)
             {
+                Console.WriteLine("\nnot good");
                 return false;
             }
 
-            Console.WriteLine("\n3");
+            Console.WriteLine("\n**3**");
 
             var user = new User{UserName = input.UserName, Email = input.Email, Type="user", Password = pass};
             userRepo.CreateUser(user);
-            Console.WriteLine("\n4");
+            Console.WriteLine("\n**4**");
             return true;
         }
 
