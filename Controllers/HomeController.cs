@@ -27,6 +27,12 @@ namespace BookApp.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult Help()
+        {
+            return View();
+        }
+
 
         [HttpGet]
         public IActionResult Error()
