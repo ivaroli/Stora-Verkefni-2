@@ -170,6 +170,17 @@ footer{
 }
 /* INDEX END */
 
+/* ABOUT BEGIN */
+.about-container{
+    padding: 30px;
+    margin-bottom: 150px;
+}
+
+#about-container{
+    margin-top: 10px;
+}
+/* About END */
+
 /* SIGN-IN BEGIN */
 #signin-container{
     padding: 0px;
