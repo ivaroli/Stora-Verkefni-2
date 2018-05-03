@@ -171,13 +171,10 @@ footer{
 /* INDEX END */
 
 /* ABOUT BEGIN */
-.about-container{
-    padding: 30px;
-    margin-bottom: 150px;
-}
 
 #about-container{
     margin-top: 10px;
+    margin-bottom: 150px;
 }
 /* About END */
 
