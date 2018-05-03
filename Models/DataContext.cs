@@ -5,9 +5,9 @@ namespace BookApp.Data
 {
     public class DataContext : DbContext
     {
-        DbSet<User> Users {get; set;}
-        DbSet<User> Books {get; set;}
-        DbSet<User> Authors {get; set;}
+        public DbSet<User> Users {get; set;}
+        public DbSet<User> Books {get; set;}
+        public DbSet<User> Authors {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

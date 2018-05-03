@@ -5,13 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BookApp.Models;
-using System.Security.Cryptography;
-using System.Text;
+using BookApp.Services;
 
 namespace BookApp.Controllers
 {
     public class UserController : Controller
     {
+        UserService userService = new UserService();
+
         [HttpGet]
         public IActionResult SignIn()
         {
@@ -21,12 +22,17 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult SignIn(BookApp.Models.UserInputModel m)
         {
+            //sign in
             return View();
         }
 
         [HttpPost]
         public IActionResult SignUp(BookApp.Models.UserInputModel m)
         {
+            if(userService.SignUp(m))
+            {
+                Console.WriteLine("\nCreated user!!!!!!");
+            }
             return RedirectToAction("SignIn");
         }
     }
