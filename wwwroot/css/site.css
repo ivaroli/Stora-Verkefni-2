@@ -171,6 +171,7 @@ footer{
 /* INDEX END */
 
 /* ABOUT BEGIN */
+<<<<<<< HEAD
 .about-container{
     padding: 30px;
     margin-bottom: 150px;
@@ -178,6 +179,12 @@ footer{
 
 #about-container{
     margin-top: 10px;
+=======
+
+#about-container{
+    margin-top: 10px;
+    margin-bottom: 150px;
+>>>>>>> 1b46aec8335f601252ff147be4a9ff05e77b1e8e
 }
 /* About END */
 
