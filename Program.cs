@@ -28,7 +28,7 @@ namespace BookApp
         
         public static void seedData()
         {
-            var db = new DataContext();
+            /*var db = new DataContext();
 
             if(!db.Users.Any())
             {
@@ -39,7 +39,7 @@ namespace BookApp
 
                 db.AddRange(initailUsers);
                 db.SaveChanges();
-            }
+            }*/
         }
     }
 }

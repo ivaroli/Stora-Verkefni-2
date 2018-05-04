@@ -32,7 +32,7 @@ body {
 .container{
     padding-left: 25px;
     padding-right: 25px;
-    color: gray;
+    color: grey;
 }
 /*BODY END*/
 
@@ -208,7 +208,6 @@ footer{
 }
 
 #staff_books{
-    float: left;
     border-collapse: collapse;
     margin-top: 20px;
     width: 100%;
@@ -240,6 +239,13 @@ footer{
   border: 1px solid;
 }
 
+#add_book{
+    background-color: #33b6bc;
+}
+
+#staffpage-container{
+    padding: 25px;
+}
 /* STAFFPAGE END */
 
 /* SIGN-IN BEGIN */

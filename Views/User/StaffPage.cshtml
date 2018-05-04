@@ -1,17 +1,18 @@
 @{
     ViewData["Title"] = "StaffPage";
 }
-<div class="container" id="staffpage-container">
+<div class="container" id="">
     <div class="tree"><a href="#">Home page</a> >> <a href="#">Staff page</a></div>
         <h1>Staff page</h1>
-        <input type="hidden" name="staff_search" value="all" id="staff_search">
-        <input type="text" class="form-control" name="s" placeholder="Search for book by title or id...">
-        <span class="input-group-btn search-icon">
-            <button class="btn btn-default" type="button" value="HALLO"><span class="glyphicon glyphicon-search"></span></button>
-        </span>
-        <input type="button" name="add_book" value="Add book" id="add_book">
-
-        <div class="component staffpage-container" id="">
+        <div class="component" id="staffpage-container">
+                <div class="input-group">
+                    <input type="hidden" name="search_param" value="all" id="search_param">         
+                    <input type="text" class="form-control" name="x" placeholder="Search for book by title or author by name...">
+                    <span class="input-group-btn search-icon">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            <button type="submit" class="btn btn-primary" id="add_book">Sign In</button>
             <table id="staff_books">
                 <tr>
                     <th class="col-1">Name</th>

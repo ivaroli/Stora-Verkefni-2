@@ -10,6 +10,7 @@ namespace BookApp.Repositories
     public class BookRepository
     {
         private DataContext db;
+        
         public BookRepository()
         {
             db = new DataContext();
