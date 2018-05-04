@@ -313,12 +313,17 @@ footer{
 }
 /* SIGN-IN END */
 
-<<<<<<< HEAD
 /* USERDETAILS BEGIN */
 #user-details-main-row{
     width: 100%;
     margin: auto;
     margin-top: 100px;
+}
+
+#user-details{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
 }
 
 #user-details img{
@@ -331,14 +336,16 @@ footer{
     cursor: pointer;
     border-radius: 50%;
 }
-/* USERDETAILS END */
-=======
-/*HELP BEGIN */
-#help-container{
-    text-align: center;
+
+.user-form-input input{
+    border-radius: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    margin-bottom: 30px;
+    box-shadow: white;
 }
-/*HELP END */
->>>>>>> 5fc7f066bf68c3f9af2f3c27898e555c0eccc7cc
+/* USERDETAILS END */
 
 /* Hide/rearrange for smaller screens */
 @media only screen and (min-width: 300px) and (max-width: 700px) {
@@ -373,6 +380,12 @@ footer{
         margin-top: 100px;
     }
     
+    #user-details{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 30px;
+    }
+
     #user-details img{
         height: 100px;
         width: 100px;

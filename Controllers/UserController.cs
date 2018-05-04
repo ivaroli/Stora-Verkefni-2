@@ -33,7 +33,7 @@ namespace BookApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SignUp(BookApp.Models.UserInputModel model)
         {
-            if(!ModelState.IsValid)
+            if(!ModelState.IsValid || model.Email == "")
             {
                 Console.WriteLine("\n**Vesen**");
                 return RedirectToAction("SignIn");
@@ -61,12 +61,15 @@ namespace BookApp.Controllers
                 Console.WriteLine("\n**Vesen**");
                 return RedirectToAction("SignIn");
             }
-            var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, true, false);
+            var result = await signInManager.PasswordSignInAsync(model.UserName, model.Password, true, false);
+            Console.WriteLine("\nEmail: " + model.Email + "\nPassword: " + model.Password + "\nUsername: " + model.UserName);
 
             if(result.Succeeded)
             {
+                Console.WriteLine("\n**ASDF**");
                 return RedirectToAction("Index", "Home");
             }
+            Console.WriteLine("\n**TYPPI**");
             return RedirectToAction("SignIn");
         }
 

@@ -11,6 +11,7 @@ namespace BookApp.Models
         public string Country{get; set;}
         public string City{get; set;}
         public string Address{get; set;}
-        //public HttpPostedFileBase Image{get; set;}
+
+        public HttpPostedFileBase Image { get; set; }
     }
 }
