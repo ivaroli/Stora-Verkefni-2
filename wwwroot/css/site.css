@@ -28,6 +28,12 @@ body {
     -webkit-box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09); 
     box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.09);
 }
+
+.container{
+    padding-left: 25px;
+    padding-right: 25px;
+    color: gray;
+}
 /*BODY END*/
 
 /* NAVBAR BEGIN */
@@ -170,6 +176,17 @@ footer{
 }
 /* INDEX END */
 
+/* ABOUT BEGIN */
+.about-container{
+    padding: 30px;
+    margin-bottom: 150px;
+}
+
+#about-container{
+    margin-top: 10px;
+}
+/* About END */
+
 /* SIGN-IN BEGIN */
 #signin-container{
     padding: 0px;
@@ -228,15 +245,11 @@ footer{
 }
 /* SIGN-IN END */
 
-
-
-/* CONTACT US BEGIN */
-
-#contact-us{
-    color: gray;
+/*HELP BEGIN */
+#help-container{
+    text-align: center;
 }
-
-/* CONTACT US END */
+/*HELP END */
 
 /* Hide/rearrange for smaller screens */
 @media only screen and (min-width: 300px) and (max-width: 700px) {

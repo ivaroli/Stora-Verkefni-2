@@ -5,13 +5,35 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BookApp.Models;
-using System.Security.Cryptography;
-using System.Text;
+using BookApp.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace BookApp.Controllers
 {
     public class UserController : Controller
     {
+        private UserService userService = new UserService();
+        private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly UserManager<ApplicationUser> userManager;
+
+        public UserController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
+        {
+            this.signInManager = signInManager;
+            this.userManager = userManager;
+        }
+
+        [HttpGet]
+        public IActionResult Details()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult StaffPage()
+        {
+            return View();//asdf
+        }
+
         [HttpGet]
         public IActionResult SignIn()
         {
@@ -21,29 +43,24 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult SignIn(BookApp.Models.UserInputModel m)
         {
-            Console.WriteLine("\nSigned in user \"" + m.UserName +"\" with password + "+ m.Password +"\n");
+            if(userService.SignIn(m))
+            {
+                Console.WriteLine("\nSigned In!!!!");
+            }
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult SignUp(BookApp.Models.UserInputModel m)
         {
-            Console.WriteLine("\nCreateing user \"" + m.UserName +"\" with password + "+ m.Password +"\n");
-            return RedirectToAction("SignIn");
-        }
-
-        //Býr til sha256 hash úr string
-        public string GetHash(string password)
-        {
-            byte[] bytes = Encoding.UTF8.GetBytes(password);
-            SHA256Managed hashstring = new SHA256Managed();
-            byte[] hash = hashstring.ComputeHash(bytes);
-            string hashString = string.Empty;
-            foreach (byte x in hash)
+            /*Console.WriteLine("\nTrying to create user");
+            if(userService.SignUp(m))
             {
-                hashString += String.Format("{0:x2}", x);
+                Console.WriteLine("\nCreated user!!!!!!");
             }
-            return hashString;
+            return RedirectToAction("SignIn");*/
+            return RedirectToAction("SignIn");
         }
     }
 }

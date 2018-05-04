@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BookApp.Models;
+using BookApp.Services;
 
 namespace BookApp.Controllers
 {
@@ -24,6 +25,18 @@ namespace BookApp.Controllers
 
         [HttpGet]
         public IActionResult Contact()
+        {
+            return View();
+        }
+        
+        [HttpGet]
+        public IActionResult Help()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Search()
         {
             return View();
         }
