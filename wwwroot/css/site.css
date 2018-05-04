@@ -231,10 +231,13 @@ footer{
 
 .col-3{
     width: 10%;
+    text-align: center;
 }
 
 .col-4{
     width: 10%;
+    text-align: center;
+
 }
 
 #staff_books td, #staff_books th{
@@ -245,13 +248,11 @@ footer{
   border: 1px solid;
 }
 
-#add_book{
-    background-color: #33b6bc;
-}
 
 #staffpage-container{
     padding: 25px;
 }
+
 /* STAFFPAGE END */
 
 /* SIGN-IN BEGIN */
