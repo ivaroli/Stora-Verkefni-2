@@ -1,6 +1,4 @@
-using System;
 using System.Web;
-using Microsoft.AspNetCore.Http.Extensions;
 
 namespace BookApp.Models
 {
@@ -12,6 +10,6 @@ namespace BookApp.Models
         public string City{get; set;}
         public string Address{get; set;}
 
-        public HttpPostedFileBase Image { get; set; }
+        //public HttpPostedFilesBase Image { get; set; }
     }
 }
