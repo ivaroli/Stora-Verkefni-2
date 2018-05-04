@@ -29,6 +29,12 @@ namespace BookApp.Controllers
         }
 
         [HttpGet]
+        public IActionResult StaffPage()
+        {
+            return View();//asdf
+        }
+
+        [HttpGet]
         public IActionResult SignIn()
         {
             return View();
