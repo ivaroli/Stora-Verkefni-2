@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BookApp.Models;
 using BookApp.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace BookApp.Controllers
 {
     public class UserController : Controller
     {
-        UserService userService = new UserService();
+        private UserService userService = new UserService();
+        private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly UserManager<ApplicationUser> userManager;
+
+        public UserController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
+        {
+            this.signInManager = signInManager;
+            this.userManager = userManager;
+        }
 
         [HttpGet]
         public IActionResult Details()
@@ -36,13 +45,15 @@ namespace BookApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult SignUp(BookApp.Models.UserInputModel m)
         {
-            Console.WriteLine("\nTrying to create user");
+            /*Console.WriteLine("\nTrying to create user");
             if(userService.SignUp(m))
             {
                 Console.WriteLine("\nCreated user!!!!!!");
             }
+            return RedirectToAction("SignIn");*/
             return RedirectToAction("SignIn");
         }
     }

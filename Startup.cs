@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using BookApp.Data;
+using BookApp.Models;
 
 namespace BookApp
 {
@@ -23,7 +25,7 @@ namespace BookApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            /*services.AddDbContext<AuthenticationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("AuthenticationConnection")));
+            services.AddDbContext<AuthenticationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AuthenticationConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<AuthenticationDbContext>()
@@ -31,21 +33,17 @@ namespace BookApp
 
             services.Configure<IdentityOptions>(config =>{
                 config.User.RequireUniqueEmail = true;
-                config.User.PasswordRequiredLength = 8;
+                config.Password.RequiredLength = 8;
             });
 
             services.ConfigureApplicationCookie(options => {
                 options.Cookie.HttpOnly = true;
                 options.ExpireTimeSpan = TimeSpan.FromHours(3);
 
-                options.LoginPath = "User/SignIn";
-                options.AccessDeniedPath = "User/AccessDenied";
+                options.LoginPath = "/User/SignIn";
+                options.AccessDeniedPath = "/User/AccessDenied";
                 options.SlidingExpiration = true;
-            });*/
-
-
-
-
+            });
 
             services.AddMvc();
         }
@@ -63,6 +61,7 @@ namespace BookApp
             }
 
             app.UseStaticFiles();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

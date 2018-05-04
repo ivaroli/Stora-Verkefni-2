@@ -1,9 +1,10 @@
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using BookApp.Models;
 
 namespace BookApp.Data
 {
-    /*public class AuthenticationDbContext : IdentityDbContext<ApplicationUser>
+    public class AuthenticationDbContext : IdentityDbContext<ApplicationUser>
     {
         public AuthenticationDbContext(DbContextOptions<AuthenticationDbContext> options): base(options)
         {
@@ -13,5 +14,5 @@ namespace BookApp.Data
         {
             base.OnModelCreating(builder);
         }
-    }*/
+    }
 }
