@@ -185,7 +185,62 @@ footer{
 #about-container{
     margin-top: 10px;
 }
-/* About END */
+/* ABOUT END */
+
+/* STAFFPAGE BEGIN */
+
+.staffpage-container{
+    padding: 30px;
+    margin-bottom: 150px;
+}
+
+#staffpage-container{
+    margin-top: 10px;
+}
+
+#add_book {
+    float: left;
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+    margin: 10px;
+    color: white;
+
+}
+
+#staff_books{
+    float: left;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.col-1{
+    width: 60%;
+}
+
+.col-2{
+    width: 20%;
+}
+
+.col-3{
+    width: 10%;
+}
+
+.col-4{
+    width: 10%;
+}
+
+#staff_books td, #staff_books th{
+    padding: 8px;
+  }
+  
+#staff_books tr{
+  border: 1px solid;
+}
+
+/* STAFFPAGE END */
 
 /* SIGN-IN BEGIN */
 #signin-container{
