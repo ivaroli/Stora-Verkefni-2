@@ -18,11 +18,9 @@ namespace BookApp.Repositories
 
         public User GetUserFromName(string userName)
         {
-            Console.WriteLine("\ngetting username: " + userName);
             var user = (from a in db.Users
                         where a.UserName == userName
                         select a).FirstOrDefault();
-            Console.WriteLine("\nwat");
             return user;
         }
 

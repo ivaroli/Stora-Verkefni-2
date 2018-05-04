@@ -22,7 +22,10 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult SignIn(BookApp.Models.UserInputModel m)
         {
-            //sign in
+            if(userService.SignIn(m))
+            {
+                Console.WriteLine("\nSigned In!!!!");
+            }
             return View();
         }
 

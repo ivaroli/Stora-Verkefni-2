@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookApp
 {
@@ -21,6 +23,30 @@ namespace BookApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /*services.AddDbContext<AuthenticationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("AuthenticationConnection")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<AuthenticationDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(config =>{
+                config.User.RequireUniqueEmail = true;
+                config.User.PasswordRequiredLength = 8;
+            });
+
+            services.ConfigureApplicationCookie(options => {
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromHours(3);
+
+                options.LoginPath = "User/SignIn";
+                options.AccessDeniedPath = "User/AccessDenied";
+                options.SlidingExpiration = true;
+            });*/
+
+
+
+
+
             services.AddMvc();
         }
 
