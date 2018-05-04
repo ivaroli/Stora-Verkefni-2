@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using BookApp.Models;
-
+using BookApp.Data;
 namespace BookApp.Data
 {
-    public class DataContext : DbContext
+  public class DataContext : DbContext
     {
         public DbSet<User> Users {get; set;}
-        public DbSet<User> Books {get; set;}
-        public DbSet<User> Authors {get; set;}
+        public DbSet<Book> Books {get; set;}
+        public DbSet<Author> Authors {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
