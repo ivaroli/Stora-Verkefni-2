@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using BookApp.Models;
 using BookApp.Services;
@@ -23,6 +24,61 @@ namespace BookApp.Controllers
         }
 
         [HttpGet]
+        public IActionResult SignIn()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SignUp(BookApp.Models.UserInputModel model)
+        {
+            if(!ModelState.IsValid)
+            {
+                Console.WriteLine("\n**Vesen**");
+                return RedirectToAction("SignIn");
+            }
+            var user = new ApplicationUser {UserName = model.UserName, Email = model.Email};
+            var result = await userManager.CreateAsync(user, model.Password);
+
+            if(result.Succeeded)
+            {
+                await userManager.AddClaimAsync(user, new Claim("UserName", $"{model.UserName}"));
+                await signInManager.SignInAsync(user, false);
+
+                return RedirectToAction("Index", "Home");
+            }
+            Console.WriteLine("\n**Ekki Eins Mikid Vesen**");
+            return RedirectToAction("SignIn");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SignIn(BookApp.Models.UserInputModel model)
+        {
+            if(!ModelState.IsValid)
+            {
+                Console.WriteLine("\n**Vesen**");
+                return RedirectToAction("SignIn");
+            }
+            var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, true, false);
+
+            if(result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("SignIn");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SignOut()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
         public IActionResult Details()
         {
             return View();
@@ -32,35 +88,6 @@ namespace BookApp.Controllers
         public IActionResult StaffPage()
         {
             return View();//asdf
-        }
-
-        [HttpGet]
-        public IActionResult SignIn()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult SignIn(BookApp.Models.UserInputModel m)
-        {
-            if(userService.SignIn(m))
-            {
-                Console.WriteLine("\nSigned In!!!!");
-            }
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult SignUp(BookApp.Models.UserInputModel m)
-        {
-            /*Console.WriteLine("\nTrying to create user");
-            if(userService.SignUp(m))
-            {
-                Console.WriteLine("\nCreated user!!!!!!");
-            }
-            return RedirectToAction("SignIn");*/
-            return RedirectToAction("SignIn");
         }
     }
 }

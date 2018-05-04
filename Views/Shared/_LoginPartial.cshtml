@@ -1,0 +1,20 @@
+@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+@using BookApp.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    var claim = ((ClaimsIdentity) User.Identity).Claims.FirstOrDefault(c => c.Type == "UserName")?.Value;
+}
+
+@if(SignInManager.IsSignedIn(User))
+{
+    <form asp-controller="User" asp-action="SignOut" method="POST">
+        <a href="#" onclick="this.parentNode.submit()"><span class="glyphicon glyphicon-user"></span> @claim</a>
+    </form>
+}
+else
+{
+    <a asp-controller="User" asp-action="SignIn"><span class="glyphicon glyphicon-user"></span> Sign In</a>
+}
