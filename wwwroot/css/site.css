@@ -176,6 +176,84 @@ footer{
 }
 /* INDEX END */
 
+/* DETAILS BEGIN */
+
+.details-left{
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.details-right{
+    padding: 20px;
+}
+
+#short-description{
+    font-size: 120%;
+}
+
+#stars-book{
+}
+
+#author-details-for-book{
+    font-size: 120%;
+    display: inline;
+
+}
+
+#h3-author-details-for-book{
+    display: inline;
+}
+
+#wishlist-box{
+    background-color: white;
+    border: solid;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    float: left;
+    margin: 20px;
+}
+
+#basket-box{
+    background-color: white;
+    border: solid;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    float: left;
+    margin: 20px;
+}
+
+#basket-box p{
+    text-align: center;
+    padding: 5px;
+}
+
+#wishlist-box p{
+    text-align: center;
+    padding: 5px;
+}
+
+.icon{
+    padding-left: 60px;
+}
+
+#h3-rate{
+    margin-left: 50px;
+}
+
+#label-rate{
+    margin-left: 80px;
+    font-size: 110%;
+}
+
+.rate-stars-selector{
+    padding: 50px;
+}
+
+/* DETAILS END */
+
+
 /* ABOUT BEGIN */
 .about-container{
     padding: 30px;
