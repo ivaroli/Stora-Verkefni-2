@@ -225,10 +225,13 @@ footer{
 
 .col-3{
     width: 10%;
+    text-align: center;
 }
 
 .col-4{
     width: 10%;
+    text-align: center;
+
 }
 
 #staff_books td, #staff_books th{
