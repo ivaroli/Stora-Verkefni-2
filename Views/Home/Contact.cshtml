@@ -1,17 +1,44 @@
 ﻿@{
-    ViewData["Title"] = "Contact";
+ViewData["Title"] = "Contact";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<div id="tree"><a href="#">Home page</a> >> <a href="#">Contact us</a></div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <div class="component help-container input-container container">
+        <div id="contact-us">
+                <h1>Contact us</h1>
+                 <p>No able to find the answear in our help section?</p>
+                 <p>Please fill in this form.</p>
+        </div>
+        <form action="example.com/register" method="post" id="signin-form">
+            <div class="form-group">
+            <label for="username-input" id="fullname">Full name</label>
+            <input id="username-input" class="form-control" type=text name="username" />
+    </div>
+    <div class="form-group">
+            <label for="email-input">Email</label>
+            <input id="email-input" class="form-control" type=email name="email"  />
+            <p>We will reply the message to this email</p>
+    </div>
+    <div class="form-group">
+            <label for="number-input">Order number</label>
+            <input id="number-input" class="form-control" type=text name="number" />
+    </div>
+    <div class="form-group">
+            <label for="reason-input">Reason</label>
+            <select name="reason" id="reason-dropdown" class="form-control">
+                <option value="myorder">My order</option>
+                <option value="changeorder">Change my order</option>
+                <option value="damaged">Damaged product</option>
+                <option value="payment">Payment</option>
+                <option value="myaccount">My account</option>
+                <option value="other">Other</option>
+            </select>
+    </div>
+    <div class="form-group">
+            <label for="review-textarea">Your message</label>
+            <br />
+            <textarea name="review" id="review-textarea" class="form-control" ></textarea>
+    </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+</div>
