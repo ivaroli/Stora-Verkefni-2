@@ -11,9 +11,17 @@ namespace BookApp.Controllers
 {
     public class BooksController : Controller
     {
+         private BookService _bookService;
+        public BooksController()
+        {
+            _bookService = new BookService();
+        }
+
         [HttpGet]
         public IActionResult Details()
         {
+            //var books = _bookService.GetAllBooks();
+            //return View(books);
             return View();
         }
     }

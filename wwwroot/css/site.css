@@ -32,7 +32,7 @@ body {
 .container{
     padding-left: 25px;
     padding-right: 25px;
-    color: gray;
+    color: grey;
 }
 /*BODY END*/
 
@@ -47,6 +47,12 @@ body {
 }
 
 .navbar-nav > li > a {  color: #33b6bc !important;}
+.navbar-nav > li > form > a {  color: #33b6bc !important;}
+.navbar-nav > li > form {
+    margin: auto;
+    padding-top: 15px;
+    padding-left: 10px;
+}
 
 .navbar-brand img{
     min-height: 100%;
@@ -185,7 +191,69 @@ footer{
 #about-container{
     margin-top: 10px;
 }
-/* About END */
+/* ABOUT END */
+
+/* STAFFPAGE BEGIN */
+
+.staffpage-container{
+    padding: 30px;
+    margin-bottom: 150px;
+}
+
+#staffpage-container{
+    margin-top: 10px;
+}
+
+#add_book {
+    float: left;
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+    margin: 10px;
+    color: white;
+
+}
+
+#staff_books{
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.col-1{
+    width: 60%;
+}
+
+.col-2{
+    width: 20%;
+}
+
+.col-3{
+    width: 10%;
+    text-align: center;
+}
+
+.col-4{
+    width: 10%;
+    text-align: center;
+
+}
+
+#staff_books td, #staff_books th{
+    padding: 8px;
+  }
+  
+#staff_books tr{
+  border: 1px solid;
+}
+
+
+#staffpage-container{
+    padding: 25px;
+}
+
+/* STAFFPAGE END */
 
 /* SIGN-IN BEGIN */
 #signin-container{

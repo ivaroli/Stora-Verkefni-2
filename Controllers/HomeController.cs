@@ -11,6 +11,11 @@ namespace BookApp.Controllers
 {
     public class HomeController : Controller
     {
+//        private BookService _bookService;
+//        public HomeController()
+//        {
+//            _bookService = new BookService();
+//        }
         [HttpGet]
         public IActionResult Index()
         {
