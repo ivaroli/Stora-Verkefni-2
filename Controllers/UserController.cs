@@ -14,6 +14,12 @@ namespace BookApp.Controllers
         UserService userService = new UserService();
 
         [HttpGet]
+        public IActionResult Details()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult SignIn()
         {
             return View();
