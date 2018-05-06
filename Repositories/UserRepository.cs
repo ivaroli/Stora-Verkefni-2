@@ -16,9 +16,9 @@ namespace BookApp.Repositories
             db = new DataContext();
         }
 
-        public UserDetails GetUserDetails(int userID)
-        {
-            return null;
-        }
+        // public UserDetails GetUserDetails(int userID)
+        // {
+        //     return null;
+        // }
     }
 }
