@@ -23,6 +23,7 @@ namespace BookApp.Repositories
                             Title = a.Title,
                             Genre = a.Genre,
                             Description = a.Description,
+                            Author = a.Author,
                             Image = a.Image
                         }).ToList();    
             return books;
