@@ -3,20 +3,21 @@
     ViewData["Title"] = "Books";
 }
 <div class="container" id="">
-    <div class="tree"><a href="#">Home page</a> >> <a href="#">Books</a></div>
- <h1>BOOKS</h1>
- <ul>
-@foreach(var book in Model)
-{
-<li>
-Title: @book.Title <br/>
-Author: @book.Author.Name<br/>
-Genre: @book.Genre <br/>
-Description: @book.Description <br/>
-<img src="@book.Image" alt=""> <br/>
-</li>
-<br/>
-}
-</ul>
-
- </div>
+    <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Books" asp-action="Books">Books</a></div>
+    <h1 id="books-title">BOOKS</h1>
+    <ul>
+    @foreach(var book in Model)
+        {
+        <li class="book-frame">
+            <div class="book-div">
+                <h2 class="book-title">@book.Title </h2>
+                <h5 class="book-author">By @book.Author.Name</h5>
+                <img class="book-img" src="@book.Image" alt="">
+                <h5 class="book-genre">Genre: @book.Genre</h5>
+                <h5 class="book-small-description">Description: </h5><p class="p-small-description">@book.Description</p>
+            </div>
+        </li>
+        <br/>
+        }
+    </ul>
+</div>
