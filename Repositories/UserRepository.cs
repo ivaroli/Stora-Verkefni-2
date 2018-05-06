@@ -16,25 +16,9 @@ namespace BookApp.Repositories
             db = new DataContext();
         }
 
-        public User GetUserFromName(string userName)
+        public UserDetails GetUserDetails(int userID)
         {
-            var user = (from a in db.Users
-                        where a.UserName == userName
-                        select a).FirstOrDefault();
-            return user;
-        }
-
-        public void CreateUser(User user)
-        {
-            db.Add(user);
-            db.SaveChanges();
-        }
-
-        public List<User> GetAllUsers()
-        {
-            var users = (from a in db.Users
-                        select a).ToList();
-            return users;
+            return null;
         }
     }
 }
