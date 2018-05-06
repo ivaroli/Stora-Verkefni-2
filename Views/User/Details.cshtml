@@ -8,32 +8,29 @@
     <div class="row" id="user-details-main-row">
         <div class="component" id="user-details">
             <img src="~/images/user.svg" alt="User Image" width="300px" height="300px" id="userimage">
-            <form>
-                <input name="Image" type="file" id="file1" name="image" accept="image/*" capture style="display:none"/>
+            <form asp-controller="User" asp-action="Details" autocomplete="off" method="post">
+                <input type="file" id="file1" name="image" accept="image/*" capture style="display:none"/>
                 <div class="form-group user-form-input">
                     <label asp-for="FirstName">First Name</label>
                     <input asp-for="FirstName" type="text" name="FirstName" class="form-control">
                 </div>
                 <div class="form-group user-form-input">
-                    <label asp-for="FirstName">First Name</label>
-                    <input asp-for="FirstName" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Email" required>
-                </div>
-                <div class="form-group user-form-input">
                     <label asp-for="LastName">Last Name</label>
-                    <input asp-for="LastName" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Email" required>
+                    <input asp-for="LastName" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="LastName">
                 </div>
                 <div class="form-group user-form-input">
                     <label asp-for="Country">Country</label>
-                    <input asp-for="Country" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Email" required>
+                    <input asp-for="Country" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Country">
                 </div>
                 <div class="form-group user-form-input">
                     <label asp-for="City">City</label>
-                    <input asp-for="City" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Email" required>
+                    <input asp-for="City" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="City">
                 </div>
                 <div class="form-group user-form-input">
                     <label asp-for="Address">Address</label>
-                    <input asp-for="Address" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Email" required>
+                    <input asp-for="Address" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Address">
                 </div>
+                <button class="btn btn-default">Save</button>
             </form>
         </div>
     </div>

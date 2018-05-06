@@ -15,16 +15,14 @@ namespace BookApp.Repositories
         {
             db = new DataContext();
         }
-        public List<Book> GetAllBooks()
+        public List<BookAuthorViewModel> GetAllBooks()
         {
             var books = (from a in db.Books
-                        select new Book
+                        select new BookAuthorViewModel
                         {
                             Id = a.Id,
-                            Title = a.Title,
-                            Genre = a.Genre,
-                            Description = a.Description,
-                            Author = a.Author,
+                            Name = a.Title,
+                            Type = "Book",
                             Image = a.Image
                         }).ToList();    
             return books;

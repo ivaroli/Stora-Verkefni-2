@@ -9,6 +9,7 @@ namespace BookApp.Models
         public string Genre{get; set;}
         public Author Author{get; set;}
         public string Description{get; set;}
-        public byte[] Image;
+        public int AuthorId{get; set;}
+        public string Image{get; set;}
     }
 }

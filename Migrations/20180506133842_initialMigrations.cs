@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BookApp.Migrations
 {
-    public partial class initialMigration : Migration
+    public partial class initialMigrations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,9 +28,11 @@ namespace BookApp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Author = table.Column<string>(nullable: true),
                     AuthorId = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     Genre = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -39,19 +41,22 @@ namespace BookApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "Details",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Email = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true),
-                    Type = table.Column<string>(nullable: true),
-                    UserName = table.Column<string>(nullable: true)
+                    Address = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: true),
+                    Country = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: true),
+                    Image = table.Column<byte[]>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    UserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_Details", x => x.Id);
                 });
         }
 
@@ -64,7 +69,7 @@ namespace BookApp.Migrations
                 name: "Books");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Details");
         }
     }
 }
