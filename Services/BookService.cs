@@ -20,16 +20,14 @@ namespace BookApp.Services
         }
         public List<BookViewModel> GetAllBooks()
         {
-            //var books = _bookrepository.GetAllBooks();
-            //return books;
-            return null;
+            var books = _bookrepository.GetAllBooks();
+            return books;
         }
 
         public List<BookAuthorViewModel> GetAllBooksAndAuthors()
         {
-            // var books = _bookrepository.GetAllBooksView();
-            // return books;
-            return null;
+            var books = _bookrepository.GetAllBooksView();
+            return books;
         }
     }
 }
