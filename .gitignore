@@ -11,3 +11,4 @@
 *.targets
 .*dll
 .*sln
+obj/
