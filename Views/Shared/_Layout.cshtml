@@ -30,17 +30,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span> 
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                 <img src="~/images/logo.png" alt="The Book Cave">   
             </a>
             <div class="navbar-collapse collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact"><span class="	glyphicon glyphicon-envelope"></span> Contact Us</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="info"><span class="glyphicon glyphicon-info-sign"></span> Help</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Help"><span class="glyphicon glyphicon-info-sign"></span> Help</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-heart"></span> Wishlist</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    <li><a asp-area="" asp-controller="User" asp-action="Wishlist"><span class="glyphicon glyphicon-heart"></span> Wishlist</a></li>
+                    <li><a sp-area="" asp-controller="User" asp-action="Basket"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                     <li>
                         @await Html.PartialAsync("_LoginPartial")
                     </li>
@@ -63,23 +63,23 @@
                 <div class="col-md-4">
                     <ul>
                         <li>
-                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">About Us</a></h5>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></h5>
                         </li>
                         <li>
-                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Sign In</a></h5>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a asp-area="" asp-controller="User" asp-action="SignIn">Sign In</a></h5>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul>
                         <li>
-                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Help</a></h5>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a asp-area="" asp-controller="Home" asp-action="Help">Help</a></h5>
                         </li>
                         <li>
-                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Contact Us</a></h5>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></h5>
                         </li>
                         <li>
-                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a href="#">Where Do We Deliver?</a></h5>
+                            <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"><a asp-area="" asp-controller="Home" asp-action="Help">Where Do We Deliver?</a></h5>
                         </li>
                     </ul>
                 </div>

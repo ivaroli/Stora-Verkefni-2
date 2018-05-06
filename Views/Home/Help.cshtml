@@ -1,19 +1,144 @@
 @{
 ViewData["Title"] = "Help";
 }
-<div class="tree"><a href="#">Home page</a> >> <a href="#">Help</a></div>
-<div class="component help-container" id="help-container">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Home" asp-action="Help">Help</a></div><div class="component help-container" id="help-container">
+
 <h1>Help</h1>
+
 <h2>Common questions</h2>
-<p>How can I contact you?</p></br>
-<p>What payment types do you accept?</p></br>
-<p>When will my order arrive?</p></br>
-<p>Which country will you deliver to?</p></br>
-</br>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">How can I contact you?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">Not able to find the answer in our Help section? Email us at help@thebookcave.com. All emails are personally read and replied to by our Customer Service staff.</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">What payment types do you accept?</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">We accept payments with the following credit cards: Visa and MasterCards. Once you have entered your details online through our secure server, you have the option to store the card for use in the future.</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse3">When will my order arrive?</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">You will receive an email when your item has been dispatched! Once your order has been dispatched, we offer the following times for delivery in business days (Mon-Fri). The delivery will take maximum 5 days. You can track your order at trackingbook@thebookcave.com</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse4">Which country will you deliver to?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">We currently ship to europe and north america free of charge</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
 <h2>Other</h2>
-<p>Pre orders</p></br>
-<p>Terms and conditions</p></br>
-<p>Website security</p></br>
-<p>Lost password</p></br>
+
+ <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse5">Pre orders</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">If you order a book that is out of stock or on it's way to the book cave you can go on a waiting list and pre-order the book! You will have to pay for it and when the book arrives to the book cave we will then ship it to you!</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+ <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse6">Terms and conditions</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">
+Any contract for purchases made through The Book Depository website will be with The Book Depository Limited (company registration number 5124926) whose registered office is situated at 1 Principal Place, Worship Street, London, EC2A 2FA . Our VAT registration numbers are listed in the Value Added Tax (VAT) section below.
+The Book Depository must receive payment of the whole of the price for the goods that you order before your order can be processed. Payment of the advertised price will be taken at the point of order. Charging your payment method does not mean that an order has been accepted by The Book Depository. Once payment has been processed, The Book Depository will confirm that your order has been received by sending an email to you at the email address you provide. The email will include your name, the order number and the total price charged. The Book Depository acceptance of your order (which will happen when The Book Depository dispatches your order) brings into existence a legally binding contract between us on these terms. Any term sought to be imposed by you in your order will not form part of the contract.
+The Book Depository will not process any orders in the case of errors or inaccuracies regarding the goods (including the advertised price of the goods) appearing on our website. If an error or inaccuracy is discovered with regards to the advertised price of the goods that you have ordered, we will contact you as soon as possible by email and reserve the right to cancel your order.
+This Site is for personal and non-commercial use. You may not use the site to place orders which will be, or are being, sold on to a third party. If you are suspected of using the site in this way then we reserve the right to withdraw from any relevant contract(s) and cancel your order(s).</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+ <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse7">Website security</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">We have taken all possible steps to secure your credit card details by using high grade Secure Socket Layer (SSL) for all transactions involving information passed between your computer and our server. SSL encrypts the data so that no-one will be able to access the data in its original format.</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+ <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse8">Lost password</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">Did you really forgot your password ? Really ? OK, send  email to help@thebookcave.com. The staff will give you a new password and you have to change it  right away.</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
 </div>
 
