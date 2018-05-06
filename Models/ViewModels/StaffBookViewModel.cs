@@ -1,9 +1,9 @@
 using System;
 namespace BookApp.Models
 {
-    public class Author
+    public class StaffBookViewModel
     {
         public int Id{get; set;}
-        public string Name{get; set;}
+        public string Title{get; set;}
     }
 }

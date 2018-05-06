@@ -25,7 +25,7 @@ namespace BookApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("AuthorName");
+                    b.Property<string>("Name");
 
                     b.HasKey("Id");
 
@@ -71,7 +71,7 @@ namespace BookApp.Migrations
 
                     b.Property<string>("LastName");
 
-                    b.Property<int>("UserId");
+                    b.Property<string>("UserId");
 
                     b.HasKey("Id");
 

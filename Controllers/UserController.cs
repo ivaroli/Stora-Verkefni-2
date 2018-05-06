@@ -16,6 +16,7 @@ namespace BookApp.Controllers
     public class UserController : Controller
     {
         private UserService userService = new UserService();
+        private BookService booksService = new BookService();
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly UserManager<ApplicationUser> userManager;
 
@@ -85,15 +86,18 @@ namespace BookApp.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult Details()
+        public IActionResult Details(UserDetailsViewModel model)
         {
-            return View();
+            var details = userService.GetUserDetails(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+            return View(details);
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Details(UserDetailsInputModel model)
         {
-            return View();
+            userService.SaveUserDetails(model, this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+            return Ok();
         }
 
         [HttpGet]

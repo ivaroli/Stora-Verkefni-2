@@ -1,6 +1,5 @@
 using System;
 namespace BookApp.Models
-//namespace BookApp.Models.EntityModels
 {
     public class BookViewModel
     {

@@ -11,7 +11,7 @@ using System;
 namespace BookApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180506133842_initialMigrations")]
+    [Migration("20180506193925_initialMigrations")]
     partial class initialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,7 +26,7 @@ namespace BookApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("AuthorName");
+                    b.Property<string>("Name");
 
                     b.HasKey("Id");
 
@@ -72,7 +72,7 @@ namespace BookApp.Migrations
 
                     b.Property<string>("LastName");
 
-                    b.Property<int>("UserId");
+                    b.Property<string>("UserId");
 
                     b.HasKey("Id");
 
