@@ -9,7 +9,7 @@
             <!-- Það sem fer vinstrameginn fer hér svosem eins og "best sellers" -->
             <ul class="sugestion-list">
                 <li class="active">All Books And Authors <span class="glyphicon glyphicon-ok"></span></li>
-                <li>Books</li>
+                <li><a asp-controller="Books" asp-action="Books">Books</a></li>
                 <li>Authors</li>
                 <li>Comming Soon</li>
                 <li>Seccond Hand</li>
@@ -49,6 +49,7 @@
                 </div>
             </div>
             <div class="book-display component">
+                
                 <h1 id="announcement">No Books To Show...</h1>
                 <!-- Það sem á að koma hér eru allar bækurnar sem eru sýndar -->
             </div>
