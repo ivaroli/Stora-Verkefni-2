@@ -230,6 +230,14 @@ footer{
     margin: 20px;
 }
 
+#basket-box:hover{
+    cursor: pointer;
+}
+
+#wishlist-box:hover{
+    cursor: pointer;
+}
+
 #basket-box p{
     text-align: center;
     padding: 5px;
@@ -239,6 +247,7 @@ footer{
     text-align: center;
     padding: 5px;
 }
+
 
 .icon{
     padding-left: 60px;
@@ -256,7 +265,6 @@ footer{
 .rate-stars-selector{
     padding: 50px;
 }
-
 /* DETAILS END */
 
 

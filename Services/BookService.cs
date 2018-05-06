@@ -18,7 +18,7 @@ namespace BookApp.Services
         {
             _bookrepository = new BookRepository();
         }
-        List<Book> GetAllBooks()
+        public List<Book> GetAllBooks()
         {
             var books = _bookrepository.GetAllBooks();
             return books;
