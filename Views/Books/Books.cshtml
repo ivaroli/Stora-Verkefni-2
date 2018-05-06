@@ -1,4 +1,4 @@
-@model List<BookApp.Models.Book>
+@model List<BookApp.Models.BookViewModel>
 @{
     ViewData["Title"] = "Books";
 }
@@ -10,7 +10,7 @@
 {
 <li>
 Title: @book.Title <br/>
-Author: @book.Author.Name <br/>
+Author: @book.Author<br/>
 Genre: @book.Genre <br/>
 Description: @book.Description <br/>
 @book.Image <br/>

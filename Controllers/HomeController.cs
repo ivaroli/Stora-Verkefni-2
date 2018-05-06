@@ -19,7 +19,7 @@ namespace BookApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var books = _bookService.GetAllBooks();
+            var books = _bookService.GetAllBooksAndAuthors();
             return View(books);
         }
 
