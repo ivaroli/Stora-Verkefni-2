@@ -10,3 +10,4 @@
 *.props
 *.targets
 .*dll
+.*sln
