@@ -1,4 +1,4 @@
-using System.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace BookApp.Models
 {
@@ -9,7 +9,5 @@ namespace BookApp.Models
         public string Country{get; set;}
         public string City{get; set;}
         public string Address{get; set;}
-
-        //public HttpPostedFilesBase Image { get; set; }
     }
 }

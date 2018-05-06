@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using BookApp.Models;
 using BookApp.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookApp.Controllers
 {
@@ -81,8 +83,15 @@ namespace BookApp.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Details()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Details(UserDetailsInputModel model)
         {
             return View();
         }
