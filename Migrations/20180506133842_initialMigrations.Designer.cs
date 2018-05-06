@@ -11,8 +11,8 @@ using System;
 namespace BookApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180504152656_initialMigration")]
-    partial class initialMigration
+    [Migration("20180506133842_initialMigrations")]
+    partial class initialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,11 +38,15 @@ namespace BookApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Author");
+
                     b.Property<int>("AuthorId");
 
                     b.Property<string>("Description");
 
                     b.Property<string>("Genre");
+
+                    b.Property<string>("Image");
 
                     b.Property<string>("Title");
 
@@ -51,22 +55,28 @@ namespace BookApp.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("BookApp.Models.User", b =>
+            modelBuilder.Entity("BookApp.Models.UserDetails", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Address");
 
-                    b.Property<string>("Password");
+                    b.Property<string>("City");
 
-                    b.Property<string>("Type");
+                    b.Property<string>("Country");
 
-                    b.Property<string>("UserName");
+                    b.Property<string>("FirstName");
+
+                    b.Property<byte[]>("Image");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<int>("UserId");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Details");
                 });
 #pragma warning restore 612, 618
         }
