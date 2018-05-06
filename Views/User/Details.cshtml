@@ -1,5 +1,5 @@
 @using BookApp.Models;
-@model BookApp.Models.UserDetailsInputModel
+@model BookApp.Models.UserDetailsViewModel;
 @{
     ViewData["Title"] = "Account Information";
 }
@@ -8,30 +8,66 @@
     <div class="row" id="user-details-main-row">
         <div class="component" id="user-details">
             <img src="~/images/user.svg" alt="User Image" width="300px" height="300px" id="userimage">
-            <form asp-controller="User" asp-action="Details" autocomplete="off" method="post">
+            <form autocomplete="off">
                 <input type="file" id="file1" name="image" accept="image/*" capture style="display:none"/>
                 <div class="form-group user-form-input">
-                    <label asp-for="FirstName">First Name</label>
-                    <input asp-for="FirstName" type="text" name="FirstName" class="form-control">
+                    @{
+                        <label asp-for="FirstName">First Name</label>
+                        if(@Model != null && @Model.FirstName != ""){
+                            <input id="fname" asp-for="FirstName" type="text" name="FirstName" class="form-control" value="@Model.FirstName">
+                        }
+                        else{
+                            <input id="fname" asp-for="FirstName" type="text" name="FirstName" class="form-control" value="">
+                        }
+                    }
                 </div>
                 <div class="form-group user-form-input">
-                    <label asp-for="LastName">Last Name</label>
-                    <input asp-for="LastName" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="LastName">
+                    @{
+                        <label asp-for="LastName">Last Name</label>
+                        if(@Model != null && @Model.LastName != ""){
+                            <input id="lname" asp-for="LastName" type="text" name="LastName" class="form-control" value="@Model.LastName">
+                        }
+                        else{
+                            <input id="lname" asp-for="LastName" type="text" name="LastName" class="form-control" value="">
+                        }
+                    }
                 </div>
                 <div class="form-group user-form-input">
-                    <label asp-for="Country">Country</label>
-                    <input asp-for="Country" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Country">
+                    @{
+                        <label asp-for="Country">Country</label>
+                        if(@Model != null && @Model.Country != ""){
+                            <input id="country" asp-for="Country" type="text" name="Country" class="form-control" value="@Model.Country">
+                        }
+                        else{
+                            <input id="country" asp-for="Country" type="text" name="Country" class="form-control" value="">
+                        }
+                    }
                 </div>
                 <div class="form-group user-form-input">
-                    <label asp-for="City">City</label>
-                    <input asp-for="City" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="City">
+                    @{
+                        <label asp-for="City">City</label>
+                        if(@Model != null && @Model.City != ""){
+                            <input id="city" asp-for="City" type="text" name="City" class="form-control" value="@Model.City">
+                        }
+                        else{
+                            <input id="city" asp-for="City" type="text" name="City" class="form-control" value="">
+                        }
+                    }
                 </div>
                 <div class="form-group user-form-input">
-                    <label asp-for="Address">Address</label>
-                    <input asp-for="Address" type="text" class="form-control" id="signin-email" aria-describedby="emailHelp" placeholder="Enter email" name="Address">
+                    @{
+                        <label asp-for="Address">Address</label>
+                        if(@Model != null && @Model.City != ""){
+                            <input id="address" asp-for="Address" type="text" name="Address" class="form-control" value="@Model.Address">
+                        }
+                        else{
+                            <input id="address" asp-for="Address" type="text" name="Address" class="form-control" value="">
+                        }
+                    }
                 </div>
-                <button class="btn btn-default">Save</button>
             </form>
+            <button id="save_btn" class="btn btn-default">Save</button>
+            <button id="sign-out" class="btn btn-default">Sign Out</button>
         </div>
     </div>
 </div>
