@@ -15,9 +15,9 @@ namespace BookApp.Services
     {
         private UserRepository userRepo;
 
-        public UserService()
-        {
-            userRepo = new UserRepository();
-        }
+         public UserService()
+         {
+             userRepo = new UserRepository();
+         }
     }
 }
