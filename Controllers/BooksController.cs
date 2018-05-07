@@ -18,11 +18,18 @@ namespace BookApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details()
+        public IActionResult Details(int? id)
         {
-            //var books = _bookService.GetAllBooks();
-            //return View(books);
-            return View();
+            if(id == null)
+            {
+                return RedirectToAction("Index","Home");
+            }
+            var book = _bookService.GetBookById(id);
+            if(book == null)
+            {
+                return RedirectToAction("Index","Home");
+            }
+            return View(book);
         }
         [HttpGet]
         public IActionResult Books()

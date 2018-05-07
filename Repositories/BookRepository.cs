@@ -56,5 +56,19 @@ namespace BookApp.Repositories
                         }).ToList();
             return books;
         }
+        public BookViewModel GetBookById(int? id)
+        {
+            var book = (from a in db.Books
+                        where a.Id == id
+                        select new BookViewModel()
+                        {
+                            Title = a.Title,
+                            Genre = a.Genre,
+                            Description = a.Description,
+                            Author = a.Author,
+                            Image = a.Image
+                        }).FirstOrDefault();
+            return book;
+        }
     }
 }
