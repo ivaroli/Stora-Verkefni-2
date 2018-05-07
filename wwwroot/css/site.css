@@ -209,8 +209,11 @@ footer{
     padding: 20px;
 }
 
-#short-description{
+#book-description{
     font-size: 120%;
+    width: 600px;
+    height: 100px;
+    overflow: scroll;
 }
 
 #author-details-for-book{
