@@ -270,6 +270,21 @@ footer{
 .rate-stars-selector{
 }
 
+#stars-color{
+    color: #FFD700;
+}
+
+#heart-color{
+    color: #CD5C5C;
+    font-size: 200%;
+
+}
+
+#cart-color{
+    color: #33b6bc;
+    font-size: 200%;
+}
+
 #send-rate{
     float: right;
     background-color: #33b6bc;
@@ -481,7 +496,7 @@ footer{
     width: 220px;
     height: 350px;;
     padding: 20px;
-    margin: 10px;
+    margin: 30px;
     margin-right: 0px;
 }
 
@@ -585,7 +600,7 @@ footer{
 /* WISHLIST BEGINS */
 
 #wishlist-heart{
-    color: palevioletred;
+    color: #CD5C5C;;
     padding: 0px;
 }
 
