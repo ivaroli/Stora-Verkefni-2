@@ -29,5 +29,10 @@ namespace BookApp.Services
             var books = _bookrepository.GetAllBooksView();
             return books;
         }
+
+        public List<StaffBookViewModel> GetAllBooksStaffView()
+        {
+            return _bookrepository.GetAllBooksStaffView();
+        }
     }
 }

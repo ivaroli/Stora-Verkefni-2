@@ -103,7 +103,7 @@ namespace BookApp.Controllers
         [HttpGet]
         public IActionResult StaffPage()
         {
-            return View();//asdf
+            return View(booksService.GetAllBooksStaffView());//asdf
         }
     }
 }
