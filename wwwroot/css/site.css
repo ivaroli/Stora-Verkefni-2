@@ -38,6 +38,10 @@ body {
 .break{
     clear: both;
 }
+
+a{
+    color: gray;
+}
 /*BODY END*/
 
 /* NAVBAR BEGIN */
