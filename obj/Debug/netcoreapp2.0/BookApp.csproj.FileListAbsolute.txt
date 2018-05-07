@@ -24,7 +24,6 @@ C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/Boo
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.dev.json
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.dll
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.pdb
-/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.csprojResolveAssemblyReference.cache
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.csproj.CoreCompileInputs.cache
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfoInputs.cache
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
