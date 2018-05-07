@@ -67,7 +67,10 @@
                 </div>
             </form>
             <button id="save_btn" class="btn btn-default">Save</button>
-            <button id="sign-out" class="btn btn-default">Sign Out</button>
+            <form asp-controller="User" asp-action="SignOut" method="post">
+                <button id="sign-out" class="btn btn-default">Sign Out</button>
+            </form>
+            <div class="break"></div>
         </div>
     </div>
 </div>
