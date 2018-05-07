@@ -75,8 +75,8 @@ namespace BookApp.Repositories
 
         public List<BookViewModel> GetBooksByName(string search)
         {
-            var books = (from a in db.Books
-                        where a.Id == id
+            /*var books = (from a in db.Books
+                        where a.Id == 
                         select new BookViewModel()
                         {
                             Title = a.Title,
@@ -85,7 +85,8 @@ namespace BookApp.Repositories
                             Author = a.Author,
                             Image = a.Image
                         }).ToList();
-            return books;
+            return books;*/
+            return null;
         }
     }
 }
