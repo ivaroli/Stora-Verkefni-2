@@ -11,7 +11,7 @@
             <div class="col-md-4 details-left">
                 <img src="~/images/i-see-you.jpg" alt="I see you">
             </div>
-            <div class="col-md-6 details-right">
+            <div class="col-md-7 details-right">
                 <h3>Description about the book</h3>
                 <p id="short-description">@Model.Description</p>
                 <h3 id="stars-book">Stars: <span class="glyphicon glyphicon-star"></span></h3>
@@ -34,9 +34,9 @@
                         <option value="5-star">5 stars!</option></label>
                     </select>
                     <label for="rate-comment" id="label-rate">Comment about the book 
-                        <textarea name="rate-comment" id="rate-comment" cols="30" rows="3">Write here..</textarea>
+                        <textarea name="rate-comment" id="rate-comment" cols="25" rows="3" placeholder="Write here..."></textarea>
                     </label>
-                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <button type="submit" class="btn btn-primary" id="send-rate">Send message</button>
                 </form>
             </div>
         </div>

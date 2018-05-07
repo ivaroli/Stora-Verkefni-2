@@ -177,8 +177,6 @@ footer{
     overflow-y: scroll;
 }
 
-
-
 #announcement{
     color: gray;
     text-align: center;
@@ -268,6 +266,16 @@ footer{
 .rate-stars-selector{
     padding: 50px;
 }
+
+#send-rate{
+    float: right;
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+    margin: 10px;
+    margin-top: 40px;
+    color: white;
+}
+
 /* DETAILS END */
 
 
@@ -462,7 +470,7 @@ footer{
 
 .frontpage-title{
     text-align: center;
-
+    font-size: 130%;
 }
 
 .book-div-frontpage{
@@ -471,6 +479,7 @@ footer{
     height: 350px;;
     padding: 20px;
     margin: 10px;
+    margin-right: 0px;
 }
 
 /* FRONTPAGE-BOOKS END */
