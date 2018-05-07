@@ -618,16 +618,40 @@ footer{
 }
 /* WISHLIST ENDS */
 
-/* BASKET BEGINS */
+/* CART BEGINS */
 
-.basket-left{
+#cart-left {
+    width:65%;
     float: left;
+    height: 300px;
+    margin-right: 20px;
 
 }
 
-.basket-rigth{
-    float: right;
+#cart-right {
+    width: 30%;
+    float: left;
+    height: 300px;
 
 }
 
-/* BASKET ENDS */
+#cart-mynd {
+    color: #33b6bc;
+    padding: 2px;
+
+}
+
+#cart-title {
+    text-align: center;
+    font-weight: bolor;
+}
+
+#button-cart {
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* CART ENDS */
