@@ -42,6 +42,13 @@ body {
 a{
     color: gray;
 }
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 /*BODY END*/
 
 /* NAVBAR BEGIN */
@@ -202,8 +209,11 @@ footer{
     padding: 20px;
 }
 
-#short-description{
+#book-description{
     font-size: 120%;
+    width: 600px;
+    height: 100px;
+    overflow: scroll;
 }
 
 #author-details-for-book{
@@ -268,6 +278,21 @@ footer{
 }
 
 .rate-stars-selector{
+}
+
+#stars-color{
+    color: #FFD700;
+}
+
+#heart-color{
+    color: #CD5C5C;
+    font-size: 200%;
+
+}
+
+#cart-color{
+    color: #33b6bc;
+    font-size: 200%;
 }
 
 #send-rate{
@@ -481,7 +506,7 @@ footer{
     width: 220px;
     height: 350px;;
     padding: 20px;
-    margin: 10px;
+    margin: 30px;
     margin-right: 0px;
 }
 
@@ -585,7 +610,7 @@ footer{
 /* WISHLIST BEGINS */
 
 #wishlist-heart{
-    color: palevioletred;
+    color: #CD5C5C;;
     padding: 0px;
 }
 
@@ -596,16 +621,40 @@ footer{
 }
 /* WISHLIST ENDS */
 
-/* BASKET BEGINS */
+/* CART BEGINS */
 
-.basket-left{
+#cart-left {
+    width:65%;
     float: left;
+    height: 300px;
+    margin-right: 20px;
 
 }
 
-.basket-rigth{
-    float: right;
+#cart-right {
+    width: 30%;
+    float: left;
+    height: 300px;
 
 }
 
-/* BASKET ENDS */
+#cart-mynd {
+    color: #33b6bc;
+    padding: 2px;
+
+}
+
+#cart-title {
+    text-align: center;
+    font-weight: bolor;
+}
+
+#button-cart {
+    background-color: #33b6bc;
+    border-color: #33b6bc;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* CART ENDS */
