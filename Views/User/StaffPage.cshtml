@@ -12,7 +12,8 @@
                         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                     </span>
                 </div>
-            <button type="submit" class="btn btn-primary" id="add_book" data-toggle="modal" data-target="#addModal">Add book</button>
+            <button class="btn btn-primary" id="add_book" data-toggle="modal" data-target="#addModal">Add Book</button>
+            <button class="btn btn-primary" id="add_book" data-toggle="modal" data-target="#addAuthorModal">Add Author</button>
             <table id="staff_books">
                 <tr>
                     <th class="col-1">Name</th>
@@ -33,21 +34,65 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
+                            <h5 class="modal-title">Add New Book</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form asp-controller="Books" asp-action="AddBook" autocomplete="off" id="add-book-form" method="post">
+                            <form autocomplete="off" id="add-book-form" method="post">
                                 <div class="form-group">
                                     <label for="Title">Title</label>
-                                    <input name="Title" for="Title" type="text" class="form-control" placeholder="Enter username" required>
+                                    <input name="Title" for="Title" id="title" type="text" class="form-control" placeholder="Enter Title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Genre">Genre</label>
+                                    <input name="Genre" for="Genre" id="genre" type="text" class="form-control" placeholder="Enter Genre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Description">Description</label>
+                                    <input name="Description" for="Description" id="description" type="text" class="form-control" placeholder="Enter Description" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="AuthorId">AuthorId</label>
+                                    <input name="AuthorId" for="Genre" id="authorId" type="number" class="form-control" placeholder="Enter Author Id" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Image">Image</label>
+                                    <input name="Image" for="Image" id="image" type="text" class="form-control" placeholder="Enter img url" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Rating">Rating</label>
+                                    <input name="Rating" for="Rating" id="rating" type="number" class="form-control" placeholder="Enter rating" required>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Add Book</button>
+                            <button id="add_book_btn" type="button" class="btn btn-primary">Add Book</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="addAuthorModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add New Author</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form autocomplete="off" id="add-book-form" method="post">
+                                <div class="form-group">
+                                    <label for="Name">Name</label>
+                                    <input name="Name" for="Name" type="text" class="form-control" placeholder="Enter username" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Add Author</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
