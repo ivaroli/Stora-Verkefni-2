@@ -37,5 +37,11 @@ namespace BookApp.Controllers
             var books = _bookService.GetAllBooks();
             return View(books);
         }
+
+        [HttpPost]
+        public IActionResult Search(string searchInput)
+        {
+            return View();
+        }
     }
 }
