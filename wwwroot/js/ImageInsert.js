@@ -26,5 +26,6 @@ $(document).ready(function(e) {
 
     $("#save_btn").click(function(){
         insert();
+        document.location.href = "/Home/Index";
     });
 });
