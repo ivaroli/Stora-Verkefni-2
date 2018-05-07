@@ -14,7 +14,11 @@
             <div class="col-md-7 details-right">
                 <h3>Description about the book</h3>
                 <p id="short-description">@Model.Description</p>
+<<<<<<< HEAD
                 <h3 id="stars-book">Stars: <span id="stars-color" class="glyphicon glyphicon-star"></span></h3>
+=======
+                <h3 id="stars-book">Stars: @for(var i = 0; i < @Model.Rating; i++){<span class="glyphicon glyphicon-star"></span>}</h3>
+>>>>>>> 4f5531f573e1d172e482eceaa7282be555e1d43e
                 <h3 id="h3-author-details-for-book">Author: </h3>
                 <p id="author-details-for-book">@Model.Author.Name</p>
                 

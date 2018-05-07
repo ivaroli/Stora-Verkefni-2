@@ -41,7 +41,7 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Search(string searchInput)
         {
-            return View();
+            return Ok(_bookService.GetBooksByName(searchInput));
         }
     }
 }

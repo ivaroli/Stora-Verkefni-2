@@ -25,7 +25,8 @@ namespace BookApp.Repositories
                             Genre = a.Genre,
                             Description = a.Description,
                             Author = a.Author,
-                            Image = a.Image
+                            Image = a.Image,
+                            Rating = a.Rating
                         }).ToList();    
             return books;
         }
@@ -68,25 +69,26 @@ namespace BookApp.Repositories
                             Genre = a.Genre,
                             Description = a.Description,
                             Author = a.Author,
-                            Image = a.Image
+                            Image = a.Image,
+                            Rating = a.Rating
                         }).FirstOrDefault();
             return book;
         }
 
         public List<BookViewModel> GetBooksByName(string search)
         {
-            /*var books = (from a in db.Books
-                        where a.Id == 
+            var books = (from a in db.Books
+                        where a.Title.Contains(search)
                         select new BookViewModel()
                         {
                             Title = a.Title,
                             Genre = a.Genre,
                             Description = a.Description,
                             Author = a.Author,
-                            Image = a.Image
+                            Image = a.Image,
+                            Rating = a.Rating
                         }).ToList();
-            return books;*/
-            return null;
+            return books;
         }
     }
 }
