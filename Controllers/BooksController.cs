@@ -18,10 +18,11 @@ namespace BookApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details()
+        public IActionResult Details(int ?id)
         {
             //var books = _bookService.GetAllBooks();
             //return View(books);
+            
             return View();
         }
         [HttpGet]
