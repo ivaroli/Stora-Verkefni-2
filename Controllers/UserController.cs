@@ -106,5 +106,16 @@ namespace BookApp.Controllers
         {
             return View(booksService.GetAllBooksStaffView());//asdf
         }
+
+        [HttpGet]
+         public IActionResult Wishlist()
+        {
+            return View();
+        }
+        [HttpGet]
+         public IActionResult Basket()
+        {
+            return View();
+        }
     }
 }

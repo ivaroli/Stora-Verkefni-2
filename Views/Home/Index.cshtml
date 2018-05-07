@@ -45,7 +45,11 @@
                     @for(var i = 0; i < @Model.Count; i++)
                     {
                         
+<<<<<<< HEAD
+                        <div class="col-md-4 ">
+=======
                         <div class="col-md-3 ">
+>>>>>>> 76a41a765e9c20d5c885a466e3ce1371eb32165d
                         <div class="book-div-frontpage">
                             <img class="book-img" src="@Model[i].Image" alt="@Model[i].Name id="book-img">
                             <a asp-controller="Books" asp-action="Details" asp-route-id="@Model[i].Id"><h3 class="book-title frontpage-title" id="book-title">@Model[i].Name</h3></a>

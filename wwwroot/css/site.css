@@ -578,3 +578,31 @@ footer{
         top: -20px;
     }
 }
+
+/* WISHLIST BEGINS */
+
+#wishlist-heart{
+    color: palevioletred;
+    padding: 0px;
+}
+
+#wishlist{
+   padding: 50px;
+   margin: 50px;
+    
+}
+/* WISHLIST ENDS */
+
+/* BASKET BEGINS */
+
+.basket-left{
+    float: left;
+
+}
+
+.basket-rigth{
+    float: right;
+
+}
+
+/* BASKET ENDS */
