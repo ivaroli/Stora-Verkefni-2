@@ -20,6 +20,7 @@ namespace BookApp.Repositories
             var books = (from a in db.Books
                         select new BookViewModel
                         {
+                            Id = a.Id,
                             Title = a.Title,
                             Genre = a.Genre,
                             Description = a.Description,
@@ -62,6 +63,7 @@ namespace BookApp.Repositories
                         where a.Id == id
                         select new BookViewModel()
                         {
+                            Id = a.Id,
                             Title = a.Title,
                             Genre = a.Genre,
                             Description = a.Description,
@@ -69,6 +71,21 @@ namespace BookApp.Repositories
                             Image = a.Image
                         }).FirstOrDefault();
             return book;
+        }
+
+        public List<BookViewModel> GetBooksByName(string search)
+        {
+            var books = (from a in db.Books
+                        where a.Id == id
+                        select new BookViewModel()
+                        {
+                            Title = a.Title,
+                            Genre = a.Genre,
+                            Description = a.Description,
+                            Author = a.Author,
+                            Image = a.Image
+                        }).ToList();
+            return books;
         }
     }
 }

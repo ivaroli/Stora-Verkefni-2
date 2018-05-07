@@ -1,20 +1,50 @@
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.deps.json
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.dll
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.pdb
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.dll
-C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.pdb
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.deps.json
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.dll
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.pdb
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.dll
-C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.pdb
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 76a41a765e9c20d5c885a466e3ce1371eb32165d
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.deps.json
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.dev.json
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.dll
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.pdb
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.csproj.CoreCompileInputs.cache
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfoInputs.cache
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.dll
+C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/bin/Debug/netcoreapp2.0/BookApp.deps.json
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.dev.json
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/bin/Debug/netcoreapp2.0/BookApp.dll
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/bin/Debug/netcoreapp2.0/BookApp.pdb
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/BookApp.csproj.CoreCompileInputs.cache
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfoInputs.cache
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/BookApp.dll
+C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/BookApp.pdb
+<<<<<<< HEAD
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.deps.json
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.dev.json
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.dll
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.pdb
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.csproj.CoreCompileInputs.cache
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfoInputs.cache
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.dll
+/Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
+=======
+>>>>>>> 94ea01c987047238fdea97084b69a6d5d2a24012
+>>>>>>> c63be7be619b16c5910d55b591bcedd45ec2670a
+=======
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.deps.json
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.dev.json
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.dll
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.pdb
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.csproj.CoreCompileInputs.cache
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfoInputs.cache
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.dll
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
+>>>>>>> 76a41a765e9c20d5c885a466e3ce1371eb32165d
