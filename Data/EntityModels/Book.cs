@@ -11,5 +11,6 @@ namespace BookApp.Models
         public string Description{get; set;}
         public int AuthorId{get; set;}
         public string Image{get; set;}
+        public int Rating {get; set;}
     }
 }
