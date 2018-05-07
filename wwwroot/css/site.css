@@ -34,6 +34,10 @@ body {
     padding-right: 25px;
     color: grey;
 }
+
+.break{
+    clear: both;
+}
 /*BODY END*/
 
 /* NAVBAR BEGIN */
@@ -503,6 +507,16 @@ footer{
     border-right-width: 0px;
     margin-bottom: 30px;
     box-shadow: white;
+}
+
+#sign-out{
+    float: right;
+    background-color: maroon;
+    color: white;
+}
+
+#save_btn{
+    float: left;
 }
 /* USERDETAILS END */
 

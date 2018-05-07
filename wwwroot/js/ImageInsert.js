@@ -26,10 +26,6 @@ $(document).ready(function(e) {
 
     $("#save_btn").click(function(){
         insert();
-    });
-
-    $("#sign-out").click(function(){
-        $.post("/User/SignOut", obj, function(result){
-        });
+        document.location.href = "/Home/Index";
     });
 });
