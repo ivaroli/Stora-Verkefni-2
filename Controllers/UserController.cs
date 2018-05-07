@@ -100,6 +100,7 @@ namespace BookApp.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult StaffPage()
         {
