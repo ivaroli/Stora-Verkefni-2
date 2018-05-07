@@ -1,11 +1,11 @@
-@model List<BookApp.Models.BookViewModel>
+@model BookApp.Models.BookViewModel
 @{
     ViewData["Title"] = "Details";
 }
 
 <div class="container" id="">
 <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Books" asp-action="Details">Details</a></div>    
-<h1>@book.Title</h1>
+<h1>@Model.Title</h1>
     <div class="component" id="details-container">
         <div class="row">
             <div class="col-md-4 details-left">
@@ -13,10 +13,10 @@
             </div>
             <div class="col-md-6 details-right">
                 <h3>Description about the book</h3>
-                <p id="short-description">@book.Description</p>
+                <p id="short-description">@Model.Description</p>
                 <h3 id="stars-book">Stars: <span class="glyphicon glyphicon-star"></span></h3>
                 <h3 id="h3-author-details-for-book">Author: </h3>
-                <p id="author-details-for-book">@book.Author.Name</p>
+                <p id="author-details-for-book">@Model.Author.Name</p>
                 
                 <br>
                 <div id="wishlist-box"><p>Add to bakset</p><span class="glyphicon glyphicon-heart icon"></span></div>
