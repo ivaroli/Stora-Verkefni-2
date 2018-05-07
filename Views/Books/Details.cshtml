@@ -1,22 +1,23 @@
+@model BookApp.Models.BookViewModel
 @{
     ViewData["Title"] = "Details";
 }
+
 <div class="container" id="">
-<div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Books" asp-action="Details">Details</a></div>    <h1>TITILL BÓKAR</h1>
+<div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Books" asp-action="Details">Details</a></div>    
+<h1>@Model.Title</h1>
     <div class="component" id="details-container">
         <div class="row">
             <div class="col-md-4 details-left">
-                <img src="~/images/i-see-you.jpg" alt="Jólatré">
+                <img src="~/images/i-see-you.jpg" alt="I see you">
             </div>
             <div class="col-md-6 details-right">
-                <h3>Short description about the book</h3>
-                <p id="short-description">Stutt lýsing um bók....Stutt lýsing um bók....Stutt lýsing um bók....Stutt lýsing um bók....Stutt lýsing um bók....Stutt lýsing um bók....Stutt lýsing um bók....</p>
+                <h3>Description about the book</h3>
+                <p id="short-description">@Model.Description</p>
                 <h3 id="stars-book">Stars: <span class="glyphicon glyphicon-star"></span></h3>
                 <h3 id="h3-author-details-for-book">Author: </h3>
-                <p id="author-details-for-book">Þorbjörg Hekla</p>
-                <h3>Details about the book</h3>
-                <p id="long-description">Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...Mjög ítarleg lýsing á bók...</p>
-                <!--> VANTAR AÐ GERA READ MORE GÆJA - mögulega láta koma pop up glugga með öllum textanum? <!-->
+                <p id="author-details-for-book">@Model.Author.Name</p>
+                
                 <br>
                 <div id="wishlist-box"><p>Add to bakset</p><span class="glyphicon glyphicon-heart icon"></span></div>
                 <div id="basket-box"><p>Add to wishlist</p><span class="glyphicon glyphicon-shopping-cart icon"></span></div>
@@ -35,6 +36,7 @@
                     <label for="rate-comment" id="label-rate">Comment about the book 
                         <textarea name="rate-comment" id="rate-comment" cols="30" rows="3">Write here..</textarea>
                     </label>
+                    <button type="submit" class="btn btn-primary">Send message</button>
                 </form>
             </div>
         </div>
