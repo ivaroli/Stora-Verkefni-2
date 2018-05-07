@@ -8,15 +8,18 @@ using BookApp.Models;
 using System.Security.Cryptography;
 using System.Text;
 using BookApp.Repositories;
+
 namespace BookApp.Services
 {
     public class BookService
     {
         private BookRepository _bookrepository;
+        private AuthorRepository authorRepository;
 
         public BookService()
         {
             _bookrepository = new BookRepository();
+            authorRepository = new AuthorRepository();
         }
         public List<BookViewModel> GetAllBooks()
         {
@@ -47,5 +50,18 @@ namespace BookApp.Services
             return _bookrepository.GetAllBooksStaffView();
         }
 
+        public void AddBook(BookInputModel model)
+        {
+            var author = authorRepository.getAuthorFromId(model.AuthorId);
+            var book = new Book(){
+                Title = model.Title,
+                Genre = model.Genre,
+                //Author = author,
+                Description = model.Description,
+                AuthorId = model.AuthorId,
+                Rating = model.Rating
+            };
+            _bookrepository.addBook(book);
+        }
     }
 }
