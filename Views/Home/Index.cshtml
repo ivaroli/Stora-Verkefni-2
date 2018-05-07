@@ -9,23 +9,12 @@
         <div class="col-md-2 left-container component">
             <!-- Það sem fer vinstrameginn fer hér svosem eins og "best sellers" -->
             <ul class="sugestion-list">
-                <li class="active">All Books And Authors <span class="glyphicon glyphicon-ok"></span></li>
+                <li class="active">Bestsellers<span class="glyphicon glyphicon-ok"></span></li>
                 <li><a asp-controller="Books" asp-action="Books">Books</a></li>
                 <li>Authors</li>
                 <li>Coming Soon</li>
                 <li>Second Hand</li>
                 <li>E-Books</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
-                <li>ASDFASDF</li>
             </ul>
         </div>
         <div class="col-md-10">
@@ -57,8 +46,15 @@
                     {
                         
                         <div class="col-md-4 ">
+<<<<<<< HEAD
                             <img src="@Model[i].Image" alt="@Model[i].Name" id="book-img">
                             <h3 id="book-title">@Model[i].Name</h3>
+=======
+                        <div class="book-div-frontpage">
+                            <img class="book-img" src="@Model[i].Image" alt="@Model[i].Name id="book-img">
+                            <h3 class="book-title frontpage-title" id="book-title">@Model[i].Name</h3>
+                        </div>
+>>>>>>> c63be7be619b16c5910d55b591bcedd45ec2670a
                         </div>
                     }
                     </div>

@@ -41,5 +41,20 @@ namespace BookApp.Repositories
                         }).ToList();    
             return books;
         }
+
+        public List<StaffBookViewModel> GetAllBooksStaffView()
+        {
+            var books = (from a in db.Books
+                        select new StaffBookViewModel
+                        {
+                            Id = a.Id,
+                            Title = a.Title,
+                            Genre = a.Genre,
+                            AuthorId = a.AuthorId,
+                            Description = a.Description,
+                            Image = a.Image
+                        }).ToList();
+            return books;
+        }
     }
 }
