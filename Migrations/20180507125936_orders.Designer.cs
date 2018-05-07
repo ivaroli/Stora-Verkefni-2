@@ -11,9 +11,10 @@ using System;
 namespace BookApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20180507125936_orders")]
+    partial class orders
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,8 +45,6 @@ namespace BookApp.Migrations
                     b.Property<string>("Genre");
 
                     b.Property<string>("Image");
-
-                    b.Property<int>("Rating");
 
                     b.Property<string>("Title");
 
