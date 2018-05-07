@@ -47,6 +47,7 @@ h1{
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
+    padding-bottom: 30px;
 }
 
 /*BODY END*/
@@ -615,9 +616,39 @@ footer{
 }
 
 #wishlist{
-   padding: 50px;
-   margin: 50px;
+   padding: 20px;
     
+}
+
+.wishlist-div{
+    border: solid;
+    width: 220px;
+    height: 350px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px; 
+    margin: 10px;
+    padding-top: 0px;
+}
+
+.wishlist-book-title{
+    display: inline;
+}
+
+#wishlist-remove-book{
+    float: right;
+    padding-left: 25px;
+    padding-top: 7px;
+    font-size: 150%
+}
+
+#wishlist-remove-book:hover{
+    cursor: pointer;
+}
+
+
+#top-text{
+    padding-bottom: 30px;
 }
 /* WISHLIST ENDS */
 
