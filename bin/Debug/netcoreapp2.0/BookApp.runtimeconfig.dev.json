@@ -1,9 +1,39 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\Margretvalab\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Margretvalab\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+=======
+<<<<<<< HEAD
+      "C:\\Users\\ivart\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ivart\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+=======
+<<<<<<< HEAD
+      "/Users/Hekla/.dotnet/store/|arch|/|tfm|",
+      "/Users/Hekla/.nuget/packages",
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+=======
+<<<<<<< HEAD
+      "/Users/arnabjorg/.dotnet/store/|arch|/|tfm|",
+      "/Users/arnabjorg/.nuget/packages",
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+=======
+<<<<<<< HEAD
+      "C:\\Users\\Margretvalab\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Margretvalab\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+=======
+      "/Users/Hekla/.dotnet/store/|arch|/|tfm|",
+      "/Users/Hekla/.nuget/packages",
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+>>>>>>> baf8c02ade272e28ae40275e96f5bf5ce9da10da
+>>>>>>> e9504dad73ee02b91cffda0721df8015a8ffdb9b
+>>>>>>> bd5dbeea06891dbd6181dc2f3bbb0fe2f0e0ae98
+>>>>>>> d3c12aabd412adad7e04b3da0834436e77ffc8e7
+>>>>>>> f1d8a42cb4e6380e65957bb84a59afb41e1d77bf
     ]
   }
 }

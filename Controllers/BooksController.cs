@@ -41,7 +41,15 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Search(string searchInput)
         {
-            return Ok(_bookService.GetBooksByName(searchInput));
+            if(searchInput == "" || searchInput == null){
+                Console.WriteLine("\n**ASDFASDFASDF");
+                var books = _bookService.GetAllBooks();
+                return Json(books);
+            }
+            else{
+                var books = _bookService.GetBooksByName(searchInput);
+                return Json(books);
+            }
         }
     }
 }

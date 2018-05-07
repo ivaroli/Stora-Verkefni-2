@@ -1,17 +1,23 @@
 
 @{
-    ViewData["Title"] = "Basket";
+    ViewData["Title"] = "Cart";
 }
-<div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Home" asp-action="Basket">Basket</a></div>
+<div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Home" asp-action="Cart">Cart</a></div>
 
+<h1 id="cart-title">My Cart<span id="cart-mynd"class="glyphicon glyphicon-shopping-cart icon"></span></h1>
 <div class="container">
-  <div class="component help-container" id="basket">
-    <div  class="component sign-container">
-<div class=" col-md-6 right-sign-container">
-      <h1>My Basket<span class="glyphicon glyphicon-shopping-cart icon"></span></h1>
+  <div class="help-container" id="cart">
+    <div  class=" sign-container">
+<div class=" col-md-6 right-sign-container component" id="cart-left">
+      <h3>Hér koma bækur inn....</h3>
 </div>
-<div class="col-md-6 left-sign-container">
-      <h2>Total</h2>
+<div class="col-md-6 left-sign-container component" id="cart-right">
+      <h1>Total</h1>
+      <p>Sub total: </p>
+      <button type="submit" class="btn btn-primary" id="button-cart">Check out</button>
+      <p>We accept these payment methods</p>
+      <img src="~/images/visa.svg" alt="VISA" height="40px" width="auto">
+      <img src="~/images/mastercard-2.svg" alt="MASTERCARD" height="40px" width="auto">
 </div>
 </div>
 </div>
