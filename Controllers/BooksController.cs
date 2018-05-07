@@ -51,5 +51,19 @@ namespace BookApp.Controllers
                 return Json(books);
             }
         }
+
+        [HttpPost]
+        public IActionResult AddBook(BookInputModel input)
+        {
+            Console.WriteLine("\n**TYPPI ADF BOOK: " + input.Title);
+            _bookService.AddBook(input);
+            return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult RemoveBook(int id)
+        {
+            return Ok();
+        }
     }
 }
