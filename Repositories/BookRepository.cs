@@ -90,5 +90,11 @@ namespace BookApp.Repositories
                         }).ToList();
             return books;
         }
+
+        public void addBook(Book b)
+        {
+            db.Add(b);
+            db.SaveChanges();
+        }
     }
 }

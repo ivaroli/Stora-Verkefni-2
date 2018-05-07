@@ -42,15 +42,6 @@ function generate_Author_html(obj){
     }
 }
 
-/**
- * public string Title{get; set;}
-        public string Genre{get; set;}
-        public string Description{get; set;}
-        public int AuthorId{get; set;}
-        public string Image{get; set;}
-        public int Rating {get; set;}
- */
-
 function createBookInput(){
     var obj = {
         Title: $("#title").val(),
@@ -76,5 +67,9 @@ $(document).ready(function(e) {
     });
 
     $("#add_book_btn").click(function(){
+        var obj = createBookInput();
+        $.post("/Books/AddBook", obj, function(result){
+            $('#addModal').modal('hide');
+        });
     });
 });

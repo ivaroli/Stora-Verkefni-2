@@ -26,5 +26,13 @@ namespace BookApp.Repositories
                            }).ToList();
             return authors;
         }
+
+        public Author getAuthorFromId(int id)
+        {
+            var author = (from a in db.Authors
+                           where a.Id == id
+                           select a).FirstOrDefault();
+            return author;
+        }
     }
 }
