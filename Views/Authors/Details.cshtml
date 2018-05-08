@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 @model List<BookApp.Models.BookViewModel>
+=======
+@model BookApp.Models.AuthorViewModel
+>>>>>>> 0b3f3ca46cfcab8f8f41f84aabd7717fed28389e
 @{
     ViewData["Title"] = "Details";
 }
 
 <div class="container" id="">
+<<<<<<< HEAD
 <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Authors" asp-action="Details">Details</a></div>
 <h1>AUTHORS</h1>
 <ul>
@@ -14,4 +19,8 @@
     </li>
   }
 </ul>
+=======
+<div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Authors" asp-action="Details">Details</a></div>    
+<h1 id="title-details">@Model.Title</h1>
+>>>>>>> 0b3f3ca46cfcab8f8f41f84aabd7717fed28389e
 </div>

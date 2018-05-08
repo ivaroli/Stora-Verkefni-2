@@ -523,7 +523,7 @@ box-shadow: white;
 
 .form-for-checkout{
     padding-left: 50px;
-    padding-right: 20px;
+    padding-right: 50px;
 }
 
 .label-save-card{
@@ -544,6 +544,15 @@ margin-bottom: 30px;
 color: white;
 margin-left: 200px;
 font-size: 150%
+}
+
+#exp-selects{
+    border-radius: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    margin-bottom: 30px;
+    box-shadow: white;
 }
 
 /* CCHECKOUT END */
