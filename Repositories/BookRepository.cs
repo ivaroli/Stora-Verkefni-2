@@ -75,6 +75,22 @@ namespace BookApp.Repositories
             return book;
         }
 
+ public List<BookViewModel> GetBooksByAuthorId(int? id)
+        {
+            var books = (from a in db.Books
+                        where a.AuthorId == id
+                        select new BookViewModel()
+                        {
+                            Id = a.Id,
+                            Title = a.Title,
+                            Genre = a.Genre,
+                            Description = a.Description,
+                            Author = a.Author,
+                            Image = a.Image,
+                            Rating = a.Rating
+                        });
+            return books.ToList();
+        }
         public List<BookViewModel> GetBooksByName(string search)
         {
             var books = (from a in db.Books

@@ -12,16 +12,28 @@ namespace BookApp.Controllers
     public class AuthorsController : Controller
     {
         AuthorService authorService;
+        BookService bookService;
 
         public AuthorsController()
         {
             authorService = new AuthorService();
+            bookService = new BookService();
+            
         }
 
         [HttpGet]
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            return View();
+            Console.WriteLine("ID = " + id );
+            var result = bookService.GetBooksByAuthorId(id);
+            Console.WriteLine("nr of books = " + result.Count);
+            return View(result);
+        }
+        [HttpGet]
+        public IActionResult Authors()
+        {
+            var authors = authorService.getAllAuthors();
+            return View(authors);
         }
 
         [HttpPost]
