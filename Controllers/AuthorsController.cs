@@ -37,5 +37,20 @@ namespace BookApp.Controllers
                 return Json(authors);
             }
         }
+
+        [HttpPost]
+        public IActionResult AddAuthor(AuthorInputModel input)
+        {
+            authorService.AddAuthor(input);
+            return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult RemoveAuthor(int id)
+        {
+            Console.WriteLine("\n**REMOVEING AUTHOR W ID: " + id);
+            authorService.RemoveAuthor(id);
+            return Ok();
+        }
     }
 }

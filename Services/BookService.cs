@@ -68,5 +68,10 @@ namespace BookApp.Services
         {
             _bookrepository.removeBook(id);
         }
+
+        public void RemoveBooksByAuthor(int id)
+        {
+            _bookrepository.RemoveBooksByAuthor(id);
+        }
     }
 }
