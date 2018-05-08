@@ -19,9 +19,16 @@ namespace BookApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
+            Console.WriteLine("ID = " + id );
             return View();
+        }
+        [HttpGet]
+        public IActionResult Authors()
+        {
+            var authors = authorService.getAllAuthors();
+            return View(authors);
         }
 
         [HttpPost]

@@ -27,6 +27,16 @@ namespace BookApp.Repositories
             return authors;
         }
 
+        public List<AuthorViewModel> getAllAuthors()
+        {
+            var authors = (from a in db.Authors
+                           select new AuthorViewModel(){
+                               Id = a.Id,
+                               Name = a.Name
+                           }).ToList();
+            return authors;
+        }
+
         public Author getAuthorFromId(int id)
         {
             var author = (from a in db.Authors
