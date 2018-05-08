@@ -63,5 +63,10 @@ namespace BookApp.Services
             };
             _bookrepository.addBook(book);
         }
+
+        public void removeBook(int id)
+        {
+            _bookrepository.removeBook(id);
+        }
     }
 }

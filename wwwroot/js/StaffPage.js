@@ -12,6 +12,12 @@ function getAuthors(search, callback)
     });
 }
 
+function update(){
+    getBooks("", function(result){
+        generate_html(result);
+    });
+}
+
 function generate_html(obj){
     var length = Object.keys(obj).length
     for(var i = 0; i < length; i++)
@@ -21,7 +27,7 @@ function generate_html(obj){
         html += "<td class=\"col-1\">" + item.title + "</td>\n";
         html += "<td class=\"col-2\">" + item.id + "</td>\n";
         html += "<td class=\"col-3\"><span class=\"glyphicon glyphicon-pencil icon\"></span></td>\n";
-        html += "<td class=\"col-4\"><span class=\"glyphicon glyphicon-remove\"></span></td>\n";
+        html += "<td class=\"col-4\" id=\"book-" + item.id +"\"><span class=\"glyphicon glyphicon-remove\"></span></td>\n";
         html += "</tr>\n";
         $("#staff_books").append(html);
     }
@@ -36,7 +42,7 @@ function generate_Author_html(obj){
         html += "<td class=\"col-1\"><span class=\"glyphicon glyphicon-user\"></span>" + item.name + "</td>\n";
         html += "<td class=\"col-2\">" + item.id + "</td>\n";
         html += "<td class=\"col-3\"><span class=\"glyphicon glyphicon-pencil icon\"></span></td>\n";
-        html += "<td class=\"col-4\"><span class=\"glyphicon glyphicon-remove\"></span></td>\n";
+        html += "<td class=\"col-4\" id=\"author-" + item.id +"\"><span class=\"glyphicon glyphicon-remove\"></span></td>\n";
         html += "</tr>\n";
         $("#staff_books").append(html);
     }
@@ -55,6 +61,18 @@ function createBookInput(){
     return obj;
 }
 
+function removeBook(ID)
+{
+    $.post("/Books/RemoveBook", {id: ID}, function(result){
+        callback(result);
+    });
+}
+
+function removeAuthor(id)
+{
+
+}
+
 $(document).ready(function(e) {
     $('#search').on('input',function(e){
         $(".tableRow").remove();
@@ -71,5 +89,28 @@ $(document).ready(function(e) {
         $.post("/Books/AddBook", obj, function(result){
             $('#addModal').modal('hide');
         });
+    });
+
+    $("td.col-4").click(function(event){
+        if(!confirm("Are you sure?")){
+            return;
+        }
+
+        var clickeElement = $(event.target);
+        if(event.target.id == "" || event.target.id == undefined){
+            clickeElement = $(event.target).parent();
+        }
+
+        var type = clickeElement.attr('id').split("-")[0];
+        var id = clickeElement.attr('id').split("-")[1];
+
+        if(type == "book"){
+            removeBook(parseInt(id));
+        }
+        else{
+            removeAuthor(parseInt(id));
+        }
+
+        update();
     });
 });
