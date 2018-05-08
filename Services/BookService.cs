@@ -56,10 +56,10 @@ namespace BookApp.Services
             var book = new Book(){
                 Title = model.Title,
                 Genre = model.Genre,
-                //Author = author,
                 Description = model.Description,
                 AuthorId = model.AuthorId,
-                Rating = model.Rating
+                Rating = model.Rating,
+                Image = model.Image
             };
             _bookrepository.addBook(book);
         }
@@ -72,6 +72,11 @@ namespace BookApp.Services
         public void RemoveBooksByAuthor(int id)
         {
             _bookrepository.RemoveBooksByAuthor(id);
+        }
+
+        public List<BookAuthorViewModel> GetTopBooks()
+        {
+            return _bookrepository.GetTopSellers(12);
         }
     }
 }

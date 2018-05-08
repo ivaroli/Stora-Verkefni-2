@@ -16,6 +16,18 @@ namespace BookApp.Repositories
             db = new DataContext();
         }
 
+        public List<BookAuthorViewModel> GetAllAuthors()
+        {
+            var authors = (from a in db.Authors
+                           select new BookAuthorViewModel(){
+                               Id = a.Id,
+                               Name = a.Name,
+                               Type = "Authors",
+                               Image = a.Image
+                           }).ToList();
+            return authors;
+        }
+
         public List<AuthorViewModel> getAllAuthorsByName(string name)
         {
             var authors = (from a in db.Authors

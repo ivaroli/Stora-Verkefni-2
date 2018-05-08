@@ -12,9 +12,11 @@ namespace BookApp.Controllers
     public class BooksController : Controller
     {
          private BookService _bookService;
+         private AuthorService authorService;
         public BooksController()
         {
             _bookService = new BookService();
+            authorService = new AuthorService();
         }
 
         [HttpGet]
@@ -55,7 +57,7 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult AddBook(BookInputModel input)
         {
-            Console.WriteLine("\n**TYPPI ADF BOOK: " + input.Title);
+            Console.WriteLine("\n**TYPPI ADF BOOK: " + input.Image);
             _bookService.AddBook(input);
             return Ok();
         }
