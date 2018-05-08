@@ -113,7 +113,13 @@ namespace BookApp.Controllers
             return View();
         }
         [HttpGet]
-         public IActionResult Basket()
+         public IActionResult Cart()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult CheckOut()
         {
             return View();
         }
