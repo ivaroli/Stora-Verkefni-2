@@ -63,6 +63,8 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult RemoveBook(int id)
         {
+            Console.WriteLine("\n**Removing book with id: " + id);
+            _bookService.removeBook(id);
             return Ok();
         }
     }

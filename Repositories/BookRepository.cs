@@ -81,6 +81,7 @@ namespace BookApp.Repositories
                         where a.Title.Contains(search)
                         select new BookViewModel()
                         {
+                            Id = a.Id,
                             Title = a.Title,
                             Genre = a.Genre,
                             Description = a.Description,
@@ -94,6 +95,15 @@ namespace BookApp.Repositories
         public void addBook(Book b)
         {
             db.Add(b);
+            db.SaveChanges();
+        }
+
+        public void removeBook(int id)
+        {
+            var bookToRemove = (from c in db.Books
+                                where c.Id == id
+                                select c).FirstOrDefault();
+            db.Books.Remove(bookToRemove);
             db.SaveChanges();
         }
     }

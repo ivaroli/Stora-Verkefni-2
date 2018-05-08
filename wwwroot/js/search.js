@@ -1,9 +1,10 @@
-
 function search()
 {
-$("button").click(function(){
-  $.post("demo_test.asp", function(data, status){
-      alert("Data: " + data + "\nStatus: " + status);
-  });
-});
+    $.post("Home/Search", {}, function(result){
+    });
 }
+
+$(document).ready(function(e) {
+    $('#search_bar').on('input',function(e){
+    });
+});

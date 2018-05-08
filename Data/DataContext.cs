@@ -9,6 +9,9 @@ namespace BookApp.Data
         public DbSet<Book> Books {get; set;}
         public DbSet<Author> Authors {get; set;}
         public DbSet<Order> Orders {get; set;}
+        public DbSet<Order> Carts {get; set;}
+        public DbSet<Order> WishLists {get; set;}
+        public DbSet<Comment> Comments {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
