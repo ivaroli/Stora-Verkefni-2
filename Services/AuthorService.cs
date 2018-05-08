@@ -41,6 +41,7 @@ namespace BookApp.Services
         {
             bookService.RemoveBooksByAuthor(id);
             authorRepository.RemoveAuthor(id);
+            Console.WriteLine("\nREMOVED AUTHOR");
         }
     }
 }

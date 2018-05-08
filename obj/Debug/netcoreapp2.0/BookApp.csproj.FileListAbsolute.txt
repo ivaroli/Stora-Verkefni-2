@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.deps.json
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.pdb
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.pdb
+=======
+<<<<<<< HEAD
 =======
 C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.deps.json
 C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
@@ -55,3 +67,4 @@ C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/Boo
 >>>>>>> 864550612b436898f017f4c0c42f4738c5dc7b70
 >>>>>>> ab5f07cc7243b93ef7c27e982f4da540291979be
 >>>>>>> 813413e1c07a07198f56c833a373a5a70ae1fa0c
+>>>>>>> e641e5aba7028145915ea19fcea99d22e06dac02

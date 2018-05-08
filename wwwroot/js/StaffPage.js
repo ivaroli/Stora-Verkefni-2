@@ -128,6 +128,7 @@ $(document).on('click','td.col-4',function(event){
         removeBook(parseInt(id));
     }
     else{
+        alert("removing author");
         removeAuthor(parseInt(id));
     }
 
