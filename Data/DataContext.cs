@@ -12,6 +12,7 @@ namespace BookApp.Data
         public DbSet<Order> Carts {get; set;}
         public DbSet<Order> WishLists {get; set;}
         public DbSet<Comment> Comments {get; set;}
+         public DbSet<Review> Reviews {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
