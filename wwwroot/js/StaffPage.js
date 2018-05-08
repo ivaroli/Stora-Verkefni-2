@@ -20,7 +20,7 @@ function update(){
 }
 
 function generate_html(obj){
-    var length = Object.keys(obj).length
+    var length = Object.keys(obj).length;
     for(var i = 0; i < length; i++)
     {
         var item = obj[i];
@@ -97,6 +97,8 @@ $(document).ready(function(e) {
 
     $("#add_book_btn").click(function(){
         var obj = createBookInput();
+        console.log(JSON.stringify(obj));
+        
         $.post("/Books/AddBook", obj, function(result){
             $('#addModal').modal('hide');
         });
