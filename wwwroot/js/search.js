@@ -1,6 +1,6 @@
 function search()
 {
-    $.post("demo_test.asp", function(result){
+    $.post("Home/Search", {}, function(result){
     });
 }
 
