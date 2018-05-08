@@ -1,4 +1,56 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7aa72a6e23f1a4c55f605a6d2eeba156aeb3d51d
+>>>>>>> 0b3f3ca46cfcab8f8f41f84aabd7717fed28389e
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.deps.json
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.pdb
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\Margretvalab\Documents\T-220-VLN2 Verklegt Námskeið 2\Verkefni\Verkefni\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.pdb
+<<<<<<< HEAD
+C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.deps.json
+C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
+C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
+C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.dll
+C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.pdb
+C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
+C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
+C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
+C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.dll
+C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.pdb
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cff589ac4d92dbef221dc2eaf669b3c9d4eb38db
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.deps.json
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.pdb
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.dll
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.pdb
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 23d5d49668f1fd56d6f0c4c51dafe4e584ff100a
 =======
 C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.deps.json
 C:/Users/Margretvalab/Documents/T-220-VLN2 Verklegt Námskeið 2/Verkefni/Verkefni/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
@@ -55,3 +107,8 @@ C:/Users/ivart/Documents/Vefforitun_verkefni/BookApp/obj/Debug/netcoreapp2.0/Boo
 >>>>>>> 864550612b436898f017f4c0c42f4738c5dc7b70
 >>>>>>> ab5f07cc7243b93ef7c27e982f4da540291979be
 >>>>>>> 813413e1c07a07198f56c833a373a5a70ae1fa0c
+>>>>>>> e641e5aba7028145915ea19fcea99d22e06dac02
+>>>>>>> a5e95950995306a8b0188f3e02ab89188374ec6d
+>>>>>>> cff589ac4d92dbef221dc2eaf669b3c9d4eb38db
+>>>>>>> 7aa72a6e23f1a4c55f605a6d2eeba156aeb3d51d
+>>>>>>> 0b3f3ca46cfcab8f8f41f84aabd7717fed28389e

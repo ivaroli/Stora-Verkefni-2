@@ -13,15 +13,39 @@ namespace BookApp.Services
     public class AuthorService
     {
         private AuthorRepository authorRepository;
+        private BookService bookService;
 
         public AuthorService()
         {
             authorRepository = new AuthorRepository();
+            bookService = new BookService();
         }
 
         public List<AuthorViewModel> getAllAuthorsByName(string name)
         {
             return authorRepository.getAllAuthorsByName(name);
+        }
+        
+        public List<AuthorViewModel> getAllAuthors()
+        {
+            return authorRepository.getAllAuthors();
+        }
+        public void AddAuthor(AuthorInputModel model)
+        {
+            var author = new Author(){
+                Name = model.Name,
+                Description = model.Description,
+                Image = model.Image
+            };
+
+            authorRepository.AddAuthor(author);
+        }
+
+        public void RemoveAuthor(int id)
+        {
+            bookService.RemoveBooksByAuthor(id);
+            authorRepository.RemoveAuthor(id);
+            Console.WriteLine("\nREMOVED AUTHOR");
         }
     }
 }

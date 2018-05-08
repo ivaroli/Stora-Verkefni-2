@@ -33,9 +33,15 @@ namespace BookApp.Services
             return books;
         }
         
-        public BookViewModel GetBookById(int? id)
+        public BookViewModel GetBookById(int id)
         {
             var book = _bookrepository.GetBookById(id);
+            return book;
+        }
+
+         public List<BookViewModel> GetBooksByAuthorId(int id)
+        {
+            var book = _bookrepository.GetBooksByAuthorId(id);
             return book;
         }
 
@@ -56,10 +62,10 @@ namespace BookApp.Services
             var book = new Book(){
                 Title = model.Title,
                 Genre = model.Genre,
-                //Author = author,
                 Description = model.Description,
                 AuthorId = model.AuthorId,
-                Rating = model.Rating
+                Rating = model.Rating,
+                Image = model.Image
             };
             _bookrepository.addBook(book);
         }
@@ -67,6 +73,16 @@ namespace BookApp.Services
         public void removeBook(int id)
         {
             _bookrepository.removeBook(id);
+        }
+
+        public void RemoveBooksByAuthor(int id)
+        {
+            _bookrepository.RemoveBooksByAuthor(id);
+        }
+
+        public List<BookAuthorViewModel> GetTopBooks()
+        {
+            return _bookrepository.GetTopSellers(12);
         }
     }
 }

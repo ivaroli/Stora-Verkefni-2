@@ -15,6 +15,26 @@ namespace BookApp.Repositories
         {
             db = new DataContext();
         }
+
+        public List<BookAuthorViewModel> GetTopSellers(int top)
+        {
+            /*var books = (from b in db.Books
+                         join o in db.Orders on b.Id equals o.BookId
+                         group o.amount by o.BookId into g
+                         orderby g.Sum()
+                         select g.BookId).Take(top);*/
+            var books = (from b in db.Books
+                         orderby b.Rating descending
+                         select new BookAuthorViewModel(){
+                            Id = b.Id,
+                            Name = b.Title,
+                            Type = "Books",
+                            Image = b.Image
+                         }).Take(top).ToList();
+
+            return books;
+        }
+
         public List<BookViewModel> GetAllBooks()
         {
             var books = (from a in db.Books
@@ -75,6 +95,22 @@ namespace BookApp.Repositories
             return book;
         }
 
+ public List<BookViewModel> GetBooksByAuthorId(int? id)
+        {
+            var books = (from a in db.Books
+                        where a.AuthorId == id
+                        select new BookViewModel()
+                        {
+                            Id = a.Id,
+                            Title = a.Title,
+                            Genre = a.Genre,
+                            Description = a.Description,
+                            Author = a.Author,
+                            Image = a.Image,
+                            Rating = a.Rating
+                        });
+            return books.ToList();
+        }
         public List<BookViewModel> GetBooksByName(string search)
         {
             var books = (from a in db.Books
@@ -90,6 +126,15 @@ namespace BookApp.Repositories
                             Rating = a.Rating
                         }).ToList();
             return books;
+        }
+
+        public void RemoveBooksByAuthor(int AuthorId)
+        {
+            var books = (from a in db.Books
+                        where a.AuthorId == AuthorId
+                        select a).ToList();
+            db.RemoveRange(books);
+            db.SaveChanges();
         }
 
         public void addBook(Book b)

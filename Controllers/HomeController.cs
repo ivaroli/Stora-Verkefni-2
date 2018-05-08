@@ -11,16 +11,25 @@ namespace BookApp.Controllers
 {
     public class HomeController : Controller
     {
-        private BookService _bookService;
+        private HomeService homeService;
+
         public HomeController()
         {
-            _bookService = new BookService();
+            homeService = new HomeService();
         }
         [HttpGet]
         public IActionResult Index()
         {
-            var books = _bookService.GetAllBooksAndAuthors();
-            return View(books);
+            return View(homeService.InitialList);
+        }
+
+        [HttpPost]
+        public IActionResult Search(SearchInputModel input)
+        {
+            if(input == null || input.Search == "" || input.Search == null){
+                return Json(homeService.InitialList);
+            }
+            return Json(homeService.search(input));
         }
 
         [HttpGet]
@@ -37,12 +46,6 @@ namespace BookApp.Controllers
         
         [HttpGet]
         public IActionResult Help()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Search()
         {
             return View();
         }
