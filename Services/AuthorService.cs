@@ -25,7 +25,11 @@ namespace BookApp.Services
         {
             return authorRepository.getAllAuthorsByName(name);
         }
-
+        
+        public List<AuthorViewModel> getAllAuthors()
+        {
+            return authorRepository.getAllAuthors();
+        }
         public void AddAuthor(AuthorInputModel model)
         {
             var author = new Author(){

@@ -33,9 +33,15 @@ namespace BookApp.Services
             return books;
         }
         
-        public BookViewModel GetBookById(int? id)
+        public BookViewModel GetBookById(int id)
         {
             var book = _bookrepository.GetBookById(id);
+            return book;
+        }
+
+         public List<BookViewModel> GetBooksByAuthorId(int id)
+        {
+            var book = _bookrepository.GetBooksByAuthorId(id);
             return book;
         }
 

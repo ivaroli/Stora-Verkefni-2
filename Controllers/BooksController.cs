@@ -20,7 +20,7 @@ namespace BookApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details(int? id)
+        public IActionResult Details(int id)
         {
             if(id == null)
             {
