@@ -27,7 +27,6 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Search(string searchInput)
         {
-            Console.WriteLine("\n**searching in authors: " + searchInput);
             if(searchInput == "" || searchInput == null){
 
                 return Json(null);
@@ -36,6 +35,21 @@ namespace BookApp.Controllers
                 var authors = authorService.getAllAuthorsByName(searchInput);
                 return Json(authors);
             }
+        }
+
+        [HttpPost]
+        public IActionResult AddAuthor(AuthorInputModel input)
+        {
+            authorService.AddAuthor(input);
+            return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult RemoveAuthor(int id)
+        {
+            Console.WriteLine("\n**REMOVEING AUTHOR W ID: " + id);
+            authorService.RemoveAuthor(id);
+            return Ok();
         }
     }
 }

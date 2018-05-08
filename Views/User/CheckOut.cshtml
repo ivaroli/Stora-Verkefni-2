@@ -1,0 +1,76 @@
+@{
+    ViewData["Title"] = "Check Out";
+}
+
+<div class="container" id="signin-container">
+    <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="User" asp-action="Cart">Cart</a> >> <a asp-controller="User" asp-action="CheckOut">Check Out</a></div>
+    <h1>Payment</h1>
+    <div class="row" id="check-out-main-row">
+        <div class="component" id="check-out">
+            <h4 class="h4-your-details">Your details</h4>
+            <form action="post" class="form-for-checkout">
+                <div class="form-group user-form-input">
+                    <label for="email">Your email</label>
+                    <p id="p-email">Your order will be sent to this email</p>
+                    <input id="email" for="Email" type="text" name="Email" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="fname">First Name</label>
+                    <input id="fname" for="FirstName" type="text" name="FirstName" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="lname">Last Name</label>
+                    <input id="lname" for="LastName" type="text" name="LastName" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="country">Your Country</label>
+                    <input id="country" for="Country" type="text" name="Country" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="city">Your City</label>
+                    <input id="city" for="City" type="text" name="City" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="address">Your Address</label>
+                    <input id="address" for="Address" type="text" name="Address" class="form-control">
+                </div>
+            </form>
+            <h4 class="h4-your-details">Payment type</h4>
+            <p id="p-cedit">Debit / Credit card</p>
+
+            <form action="post" class="form-for-checkout">
+                <div class="form-group user-form-input">
+                    <label for="card-number">Card number</label>
+                    <input id="card-number" for="Card-number" type="text" name="Card-number" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="exp-date">Expiry date</label>
+                    <input id="exp-date" for="Expiry-date" type="text" name="Expiry-date" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="exp-date">Expiry date</label>
+                    <input id="exp-date" for="Expiry-date" type="text" name="Expiry-date" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="name-on-card">Name on card</label>
+                    <input id="name-on-card" for="Name-on-card" type="text" name="Name-on-card" class="form-control">
+                </div>
+                <div class="form-group user-form-input">
+                    <label for="cvv">CVV</label>
+                    <input id="cvv" for="CVV" type="text" name="CVV" class="form-control">
+                </div>
+            <label class="label-save-card" for="save-card">Save Card </label>
+            <input id="save-card" type="checkbox" name="Save-card" class="form-contol" checked>
+            <p class="label-save-card">We accept these payment methods</p>
+            <img class="label-save-card" src="~/images/visa.svg" alt="VISA" height="40px" width="auto">
+            <img class="label-save-card" src="~/images/mastercard-2.svg" alt="MASTERCARD" height="40px" width="auto">
+            <button type="submit" class="btn btn-primary" id="place-order">Place Order!</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+@section scripts {
+     <script  src="~/js/ImageInsert.js"></script>
+}

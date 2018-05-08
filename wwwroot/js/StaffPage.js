@@ -14,6 +14,7 @@ function getAuthors(search, callback)
 
 function update(){
     getBooks("", function(result){
+        $(".tableRow").remove();
         generate_html(result);
     });
 }
@@ -61,16 +62,26 @@ function createBookInput(){
     return obj;
 }
 
+function createAuthorInput(){
+    var obj = {
+        Name: $("#author_name").val(),
+        Description: $("#author_description").val(),
+        Image: $("#author_image").val()
+    };
+
+    return obj;
+}
+
 function removeBook(ID)
 {
     $.post("/Books/RemoveBook", {id: ID}, function(result){
-        callback(result);
     });
 }
 
-function removeAuthor(id)
+function removeAuthor(ID)
 {
-
+    $.post("/Authors/RemoveAuthor", {id: ID}, function(result){
+    });
 }
 
 $(document).ready(function(e) {
@@ -91,26 +102,35 @@ $(document).ready(function(e) {
         });
     });
 
-    $("td.col-4").click(function(event){
-        if(!confirm("Are you sure?")){
-            return;
-        }
-
-        var clickeElement = $(event.target);
-        if(event.target.id == "" || event.target.id == undefined){
-            clickeElement = $(event.target).parent();
-        }
-
-        var type = clickeElement.attr('id').split("-")[0];
-        var id = clickeElement.attr('id').split("-")[1];
-
-        if(type == "book"){
-            removeBook(parseInt(id));
-        }
-        else{
-            removeAuthor(parseInt(id));
-        }
-
-        update();
+    $("#add_author_btn").click(function(){
+        var obj = createAuthorInput();
+        alert(JSON.stringify(obj));
+        $.post("/Authors/AddAuthor", obj, function(result){
+            $('#addAuthorModal').modal('hide');
+        });
     });
+});
+
+$(document).on('click','td.col-4',function(event){
+    if(!confirm("Are you sure?")){
+        return;
+    }
+
+    var clickeElement = $(event.target);
+    if(event.target.id == "" || event.target.id == undefined){
+        clickeElement = $(event.target).parent();
+    }
+
+    var type = clickeElement.attr('id').split("-")[0];
+    var id = clickeElement.attr('id').split("-")[1];
+
+    if(type == "book"){
+        removeBook(parseInt(id));
+    }
+    else{
+        alert("removing author");
+        removeAuthor(parseInt(id));
+    }
+
+    update();
 });

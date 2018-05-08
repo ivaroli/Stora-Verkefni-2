@@ -92,6 +92,15 @@ namespace BookApp.Repositories
             return books;
         }
 
+        public void RemoveBooksByAuthor(int AuthorId)
+        {
+            var books = (from a in db.Books
+                        where a.AuthorId == AuthorId
+                        select a).ToList();
+            db.RemoveRange(books);
+            db.SaveChanges();
+        }
+
         public void addBook(Book b)
         {
             db.Add(b);

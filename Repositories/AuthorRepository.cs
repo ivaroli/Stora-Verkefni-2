@@ -34,5 +34,20 @@ namespace BookApp.Repositories
                            select a).FirstOrDefault();
             return author;
         }
+
+        public void AddAuthor(Author author)
+        {
+            db.Add(author);
+            db.SaveChanges();
+        }
+
+        public void RemoveAuthor(int id)
+        {
+            var authorToRemove = (from a in db.Authors
+                                  where a.Id == id
+                                  select a).FirstOrDefault();
+            db.Remove(authorToRemove);
+            db.SaveChanges();
+        }
     }
 }

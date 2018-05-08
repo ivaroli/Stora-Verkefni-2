@@ -495,6 +495,60 @@ footer{
 }
 /* BOOKS END */
 
+/* CCHECKOUT BEGIN */
+
+.h4-your-details{
+    padding: 30px;
+    font-size: 150%
+}
+
+#p-cedit{
+    padding-left: 30px;
+    font-size: 110%
+}
+
+#p-email{
+    padding-left: 10px;
+    font-size: 70%;
+}
+
+/*
+border-radius: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+border-right-width: 0px;
+margin-bottom: 30px;
+box-shadow: white;
+*/
+
+.form-for-checkout{
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.label-save-card{
+    margin-left: 80px; 
+    margin-bottom: 30px;
+    font-size: 130%;
+}
+
+#save-card{
+    margin-left: 15px;
+}
+
+#place-order{
+background-color: #33b6bc;
+border-color: #33b6bc;
+margin-top: 10px;
+margin-bottom: 30px;
+color: white;
+margin-left: 200px;
+font-size: 150%
+}
+
+/* CCHECKOUT END */
+
+
 /* FRONTPAGE-BOOKS BEGIN */
 
 .frontpage-title{
@@ -533,7 +587,6 @@ footer{
     margin-right: auto;
     position: relative;
     top: -100px;
-
     cursor: pointer;
     border-radius: 50%;
 }
