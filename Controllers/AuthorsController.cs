@@ -27,7 +27,6 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Search(string searchInput)
         {
-            Console.WriteLine("\n**searching in authors: " + searchInput);
             if(searchInput == "" || searchInput == null){
 
                 return Json(null);

@@ -47,6 +47,7 @@ namespace BookApp.Repositories
                                   where a.Id == id
                                   select a).FirstOrDefault();
             db.Remove(authorToRemove);
+            db.SaveChanges();
         }
     }
 }
