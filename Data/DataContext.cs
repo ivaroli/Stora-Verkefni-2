@@ -9,8 +9,8 @@ namespace BookApp.Data
         public DbSet<Book> Books {get; set;}
         public DbSet<Author> Authors {get; set;}
         public DbSet<Order> Orders {get; set;}
-        public DbSet<Order> Carts {get; set;}
-        public DbSet<Order> WishLists {get; set;}
+        public DbSet<CartOrder> Carts {get; set;}
+        public DbSet<Wish> WishLists {get; set;}
         public DbSet<Comment> Comments {get; set;}
          public DbSet<Review> Reviews {get; set;}
 

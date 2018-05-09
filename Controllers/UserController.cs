@@ -121,6 +121,24 @@ namespace BookApp.Controllers
         }
 
         [Authorize]
+        [HttpGet]
+         public IActionResult Cart()
+        {
+            return View(orderService.GetCart(User.FindFirst(ClaimTypes.Name).Value));
+        }
+
+        [Authorize]
+        [HttpPost]
+         public IActionResult AddToWishlist(OrderInputModel input)
+        {
+            input.ExpirationTime = DateTime.Now.AddDays(90);
+            input.UserId = User.FindFirst(ClaimTypes.Name).Value;
+
+            orderService.AddToWishlist(input);
+            return Ok();
+        }
+
+        [Authorize]
         [HttpPost]
          public IActionResult AddToCart(OrderInputModel input)
         {
@@ -134,10 +152,12 @@ namespace BookApp.Controllers
         }
 
         [Authorize]
-        [HttpGet]
-         public IActionResult Cart()
+        [HttpPost]
+        public IActionResult RemoveFromWishlist(int id)
         {
-            return View(orderService.GetCart(User.FindFirst(ClaimTypes.Name).Value));
+            Console.WriteLine("\n**REMOVING FROM WISHLIST:" + id);
+            orderService.RemoveFromWishlist(id);
+            return Ok();
         }
 
         [Authorize]
@@ -155,6 +175,14 @@ namespace BookApp.Controllers
         {
             Console.WriteLine("\n**CHECKING FOR BOOK: " + id);
             return Json(orderService.isInCart(id, User.FindFirst(ClaimTypes.Name).Value));
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult IsInWishlist(int id)
+        {
+            Console.WriteLine("\n**CHECKING FOR BOOK: " + id);
+            return Json(orderService.isInWishlist(id, User.FindFirst(ClaimTypes.Name).Value));
         }
 
         [HttpGet]

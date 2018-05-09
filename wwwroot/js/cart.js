@@ -4,11 +4,9 @@ function removeFromCart(id){
     });
 }
 
-$(document).ready(function(e){
-    $("#remove-icon").click(function(event){
-        var id = $(event.target).attr("data");
-        
-        console.log("Removing: " + id);
-        removeFromCart(id);
-    });
+$(document).on('click','#remove-icon',function(event){
+    var id = $(event.target).attr("data");
+    
+    console.log("Removing: " + id);
+    removeFromCart(id);
 });

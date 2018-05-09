@@ -18,6 +18,16 @@ function isInCart(callback)
     });
 }
 
+function isInWishlist(callback)
+{
+    var ids = window.location.href.split('/');
+    var id = ids[ids.length - 1];
+
+    $.post("/User/IsInWishlist", {id: id}, function(result){
+        callback(result);
+    });
+}
+
 function generateHtml(obj)
 {
     var length = Object.keys(obj).length;
@@ -43,6 +53,12 @@ $(document).ready(function(e) {
     isInCart(function(result){
         if(result == true){
             $("#basket-box").css("background-color", "#33b6bc");
+        }
+    });
+
+    isInWishlist(function(result){
+        if(result == true){
+            $("#wishlist-box").css("background-color", "#33b6bc");
         }
     });
 
@@ -82,6 +98,24 @@ $(document).ready(function(e) {
         
         $.post("/User/AddToCart", obj, function(result){
             $("#basket-box").css("background-color", "#33b6bc");
+        });
+    });
+
+    $("#wishlist-box").click(function(){
+        var ids = window.location.href.split('/');
+        var id = ids[ids.length - 1];
+
+        var obj = {
+            amount: 1,
+            UserId : "",
+            ExpirationTime : "",
+            BookId: id
+        };
+
+        console.log(JSON.stringify(obj));
+        
+        $.post("/User/AddToWishlist", obj, function(result){
+            $("#wishlist-box").css("background-color", "#33b6bc");
         });
     });
 });
