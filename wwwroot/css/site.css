@@ -50,6 +50,9 @@ h1{
     padding-bottom: 30px;
 }
 
+.button-default{
+    background-color: #2b9ca0;
+}
 /*BODY END*/
 
 /* NAVBAR BEGIN */
@@ -199,7 +202,7 @@ footer{
 }
 /* INDEX END */
 
-/* DETAILS BEGIN */
+/* BOOK DETAILS BEGIN */
 
 .details-left{
     padding: 20px;
@@ -270,7 +273,7 @@ footer{
 }
 
 #h3-rate{
-    margin-left: 50px;
+    clear: both;
 }
 
 #label-rate{
@@ -301,11 +304,32 @@ footer{
     background-color: #33b6bc;
     border-color: #33b6bc;
     margin: 10px;
-    margin-top: 40px;
     color: white;
 }
 
-/* DETAILS END */
+#comment-from{
+    clear: both;
+}
+
+#book_model_image{
+    width: 250px;
+    height: 400px;
+    object-fit: contain;
+}
+
+#stars{
+    font-size: 24px;
+}
+
+.comments{
+    padding: 20px;
+    border-top: grey 1px solid;
+}
+
+.media{
+    padding-left: 20px;
+}
+/* BOOK DETAILS END */
 
 
 /* ABOUT BEGIN */

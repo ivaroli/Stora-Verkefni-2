@@ -114,7 +114,7 @@ namespace BookApp.Repositories
         public List<BookViewModel> GetBooksByName(string search)
         {
             var books = (from a in db.Books
-                        where a.Title.Contains(search)
+                        where a.Title.ToLower().Contains(search.ToLower())
                         select new BookViewModel()
                         {
                             Id = a.Id,

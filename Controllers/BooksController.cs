@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BookApp.Models;
 using BookApp.Services;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
 
 namespace BookApp.Controllers
 {
@@ -13,20 +17,24 @@ namespace BookApp.Controllers
     {
          private BookService _bookService;
          private AuthorService authorService;
+         private ReviewService reviewService;
         public BooksController()
         {
             _bookService = new BookService();
             authorService = new AuthorService();
+            reviewService = new ReviewService();
         }
 
         [HttpGet]
-        public IActionResult Details(int id)
+        public IActionResult Details(int? id)
         {
             if(id == null)
             {
                 return RedirectToAction("Index","Home");
             }
-            var book = _bookService.GetBookById(id);
+
+            int id_not_null = id ?? default(int);
+            var book = _bookService.GetBookById(id_not_null);
             if(book == null)
             {
                 return RedirectToAction("Index","Home");
@@ -68,6 +76,33 @@ namespace BookApp.Controllers
             Console.WriteLine("\n**Removing book with id: " + id);
             _bookService.removeBook(id);
             return Ok();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult AddReview(int rating, string comment, int bookId)
+        {
+            var uId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            DateTime date = DateTime.Now;
+
+            var model = new ReviewInputModel(){
+                BookId = bookId,
+                Stars = rating,
+                UserId = uId,
+                UserName = User.FindFirst(ClaimTypes.Name).Value,
+                CommentText = comment,
+                time = date
+            };
+
+            reviewService.AddReview(model);
+            return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult GetReviews(int bookId)
+        {
+            var reviews = reviewService.GetReviewsByBookId(bookId);
+            return Json(reviews);
         }
     }
 }

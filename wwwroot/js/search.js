@@ -50,3 +50,8 @@ $(document).ready(function(e) {
         });
     });
 });
+
+$(document).on('click','.sugestion-list li',function(event){
+    var current_active_tag = $("#active_tag");
+    var child_elem = current_active_tag.children()[0].html();
+});

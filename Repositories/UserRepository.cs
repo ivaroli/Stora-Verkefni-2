@@ -49,5 +49,13 @@ namespace BookApp.Repositories
                                   }).FirstOrDefault();
             return details;
         }
+
+        public string GetUserName(string userID)
+        {
+            var details = (from c in db.Details
+                                  where c.UserId == userID 
+                                  select c.FirstName).FirstOrDefault();
+            return details;
+        }
     }
 }
