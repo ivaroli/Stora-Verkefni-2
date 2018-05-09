@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.deps.json
-C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
-C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
-C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.dll
-C:\Stora-Verkefni-2\bin\Debug\netcoreapp2.0\BookApp.pdb
-C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.csproj.CoreCompileInputs.cache
-C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfoInputs.cache
-C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
-C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.dll
-C:\Stora-Verkefni-2\obj\Debug\netcoreapp2.0\BookApp.pdb
-=======
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.deps.json
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.json
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\bin\Debug\netcoreapp2.0\BookApp.runtimeconfig.dev.json
@@ -20,4 +8,3 @@ C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\Boo
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.dll
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.pdb
->>>>>>> 26e1f4fc07a05259b4568700115dd43477a127e4
