@@ -43,5 +43,10 @@ namespace BookApp.Services
 
             return model;
         }
+
+        public void RemoveFromCart(int id)
+        {
+            orderRepository.RemoveFromCart(id);
+        }
     }
 }
