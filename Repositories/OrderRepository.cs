@@ -36,11 +36,16 @@ namespace BookApp.Repositories
         {
             var cart = (from c in db.Carts
                         where c.UserId == uId && c.ExpirationTime > DateTime.Now
+                        join b in db.Books on c.BookId equals b.Id
                         select new OrderViewModel(){
                            amount = c.amount,
                            UserId = c.UserId,
                            ExpirationTime = c.ExpirationTime,
-                           BookId = c.BookId
+                           OrderBook = new BookAuthorViewModel(){
+                               Name = b.Title,
+                               Type = "book",
+                               Image = b.Image
+                           }
                         }).ToList();
             return cart;
         }
