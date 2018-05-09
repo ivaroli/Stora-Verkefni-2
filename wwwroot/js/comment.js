@@ -50,4 +50,21 @@ $(document).ready(function(e) {
             location.reload();
         });
     });
+
+    $("#basket-box").click(function(){
+        var ids = window.location.href.split('/');
+        var id = ids[ids.length - 1];
+
+        var obj = {
+            amount: 1,
+            UserId : "",
+            ExpirationTime : "",
+            BookId: id
+        };
+
+        console.log(JSON.stringify(obj));
+        
+        $.post("/User/AddToCart", obj, function(result){
+        });
+    });
 });

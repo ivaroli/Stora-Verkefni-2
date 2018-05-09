@@ -15,8 +15,9 @@ namespace BookApp.Controllers
 {
     public class UserController : Controller
     {
-        private UserService userService = new UserService();
-        private BookService booksService = new BookService();
+        private UserService userService;
+        private BookService booksService;
+        private OrderService orderService;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly UserManager<ApplicationUser> userManager;
 
@@ -24,6 +25,11 @@ namespace BookApp.Controllers
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
+
+            userService = new UserService();
+            booksService = new BookService();
+            orderService = new OrderService();
+
         }
 
         [HttpGet]
@@ -107,15 +113,38 @@ namespace BookApp.Controllers
             return View(booksService.GetAllBooksStaffView());//asdf
         }
 
+        [Authorize]
         [HttpGet]
-         public IActionResult Wishlist()
+        public IActionResult Wishlist()
         {
             return View();
         }
+
+        [Authorize]
         [HttpGet]
          public IActionResult Cart()
         {
             return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+         public IActionResult AddToCart(OrderInputModel input)
+        {
+            input.ExpirationTime = DateTime.Now.AddDays(30);
+            input.UserId = User.FindFirst(ClaimTypes.Name).Value;
+
+            Console.WriteLine("\n**ADDING TO CART");
+
+            orderService.AddToCart(input);
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPost]
+         public IActionResult GetCart()
+        {
+            return Json(orderService.GetCart(User.FindFirst(ClaimTypes.Name).Value));
         }
 
         [HttpGet]
