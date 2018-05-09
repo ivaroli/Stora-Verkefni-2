@@ -7,7 +7,7 @@
         <div class="component" id="staffpage-container">
                 <div class="input-group">
                     <input type="hidden" name="search_param" value="all" id="search_param">
-                    <input type="text" class="form-control" name="x" placeholder="Search for book by title or id..." id="search">
+                    <input type="text" class="form-control" name="x" placeholder="Search for book by title..." id="search">
                     <span class="input-group-btn search-icon">
                         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                     </span>
@@ -18,14 +18,12 @@
                 <tr>
                     <th class="col-1">Name</th>
                     <th class="col-2">Id</th>
-                    <th class="col-3">Edit</th>
                     <th class="col-4">Delete</th>
                 </tr>
                     @foreach(var book in @Model){
                         <tr class="tableRow">
                         <td class="col-1">@book.Title</td>
                         <td class="col-2">@book.Id</td>
-                        <td class="col-3"><span class="glyphicon glyphicon-pencil icon"></span></td>
                         <td class="col-4" id="book-@book.Id"><span class="glyphicon glyphicon-remove"></span></td>
                         </tr>
                     }
