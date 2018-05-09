@@ -46,7 +46,8 @@ namespace BookApp.Repositories
                             Description = a.Description,
                             Author = a.Author,
                             Image = a.Image,
-                            Rating = a.Rating
+                            Rating = a.Rating,
+                            Price = a.Price
                         }).ToList();    
             return books;
         }
@@ -74,11 +75,12 @@ namespace BookApp.Repositories
                             Genre = a.Genre,
                             AuthorId = a.AuthorId,
                             Description = a.Description,
-                            Image = a.Image
+                            Image = a.Image,
+                            Price = a.Price
                         }).ToList();
             return books;
         }
-        public BookViewModel GetBookById(int? id)
+        public BookViewModel GetBookById(int id)
         {
             var book = (from a in db.Books
                         where a.Id == id
@@ -90,7 +92,8 @@ namespace BookApp.Repositories
                             Description = a.Description,
                             Author = a.Author,
                             Image = a.Image,
-                            Rating = a.Rating
+                            Rating = a.Rating,
+                            Price = a.Price
                         }).FirstOrDefault();
             return book;
         }
@@ -107,7 +110,8 @@ namespace BookApp.Repositories
                             Description = a.Description,
                             Author = a.Author,
                             Image = a.Image,
-                            Rating = a.Rating
+                            Rating = a.Rating,
+                            Price = a.Price
                         });
             return books.ToList();
         }
@@ -123,7 +127,8 @@ namespace BookApp.Repositories
                             Description = a.Description,
                             Author = a.Author,
                             Image = a.Image,
-                            Rating = a.Rating
+                            Rating = a.Rating,
+                            Price = a.Price
                         }).ToList();
             return books;
         }

@@ -378,14 +378,13 @@ footer{
     width: 20%;
 }
 
-.col-3{
-    width: 10%;
+.col-4{
+    width: 20%;
     text-align: center;
 }
 
-.col-4{
-    width: 10%;
-    text-align: center;
+.col-4:hover{
+    cursor: pointer;
 
 }
 
@@ -536,15 +535,6 @@ footer{
     font-size: 70%;
 }
 
-/*
-border-radius: 0px;
-border-top-width: 0px;
-border-left-width: 0px;
-border-right-width: 0px;
-margin-bottom: 30px;
-box-shadow: white;
-*/
-
 .form-for-checkout{
     padding-left: 50px;
     padding-right: 50px;
@@ -560,7 +550,7 @@ box-shadow: white;
     margin-left: 15px;
 }
 
-#place-order{
+.place-order{
 background-color: #33b6bc;
 border-color: #33b6bc;
 margin-top: 10px;
@@ -570,16 +560,45 @@ margin-left: 200px;
 font-size: 150%
 }
 
-#exp-selects{
+.select-exp{
     border-radius: 0px;
     border-top-width: 0px;
     border-left-width: 0px;
     border-right-width: 0px;
     margin-bottom: 30px;
     box-shadow: white;
+    border-color: #33b6bc;
+    color: white;
+
 }
 
+#close-btn{
+    float: left;
+    color: white;
+}
+
+#shop-more-btn{
+    float: left;
+    color: white;
+    font-size: 150%;
+}
+
+
 /* CCHECKOUT END */
+
+/* AUTHORS BEGINS */
+
+.ul-authors{
+    list-style-type: none;
+    font-size: 150%
+}
+
+.li-authors{
+    margin: 30px;
+}
+
+/* AUTHORS END */
+
 
 
 /* FRONTPAGE-BOOKS BEGIN */
