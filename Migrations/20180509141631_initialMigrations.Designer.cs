@@ -11,7 +11,7 @@ using System;
 namespace BookApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180506193925_initialMigrations")]
+    [Migration("20180509141631_initialMigrations")]
     partial class initialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,10 @@ namespace BookApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Image");
+
                     b.Property<string>("Name");
 
                     b.HasKey("Id");
@@ -38,8 +42,6 @@ namespace BookApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Author");
-
                     b.Property<int>("AuthorId");
 
                     b.Property<string>("Description");
@@ -48,11 +50,73 @@ namespace BookApp.Migrations
 
                     b.Property<string>("Image");
 
+                    b.Property<int>("Price");
+
+                    b.Property<int>("Rating");
+
                     b.Property<string>("Title");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AuthorId");
+
                     b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("BookApp.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CommentText");
+
+                    b.Property<string>("UserId");
+
+                    b.Property<DateTime>("time");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("BookApp.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("BookId");
+
+                    b.Property<DateTime>("ExpirationTime");
+
+                    b.Property<string>("UserId");
+
+                    b.Property<int>("amount");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Order");
+                });
+
+            modelBuilder.Entity("BookApp.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("BookId");
+
+                    b.Property<string>("CommentText");
+
+                    b.Property<int>("Stars");
+
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("UserName");
+
+                    b.Property<DateTime>("time");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("BookApp.Models.UserDetails", b =>
@@ -77,6 +141,14 @@ namespace BookApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Details");
+                });
+
+            modelBuilder.Entity("BookApp.Models.Book", b =>
+                {
+                    b.HasOne("BookApp.Models.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -121,13 +121,6 @@ namespace BookApp.Controllers
         }
 
         [Authorize]
-        [HttpGet]
-         public IActionResult Cart()
-        {
-            return View();
-        }
-
-        [Authorize]
         [HttpPost]
          public IActionResult AddToCart(OrderInputModel input)
         {
@@ -141,10 +134,19 @@ namespace BookApp.Controllers
         }
 
         [Authorize]
-        [HttpPost]
-         public IActionResult GetCart()
+        [HttpGet]
+         public IActionResult Cart()
         {
-            return Json(orderService.GetCart(User.FindFirst(ClaimTypes.Name).Value));
+            return View(orderService.GetCart(User.FindFirst(ClaimTypes.Name).Value));
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult RemoveFromCart(int id)
+        {
+            Console.WriteLine("\n**REMOVING FROM CART:" + id);
+            orderService.RemoveFromCart(id);
+            return Ok();
         }
 
         [HttpGet]
