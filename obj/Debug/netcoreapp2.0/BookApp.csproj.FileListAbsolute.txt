@@ -18,6 +18,7 @@ C:/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfoInputs.cache
 C:/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
 C:/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.dll
 C:/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
+<<<<<<< HEAD
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.deps.json
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.dev.json
@@ -28,3 +29,15 @@ C:/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.dll
 /Users/arnabjorg/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
+=======
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.deps.json
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.json
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.runtimeconfig.dev.json
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.dll
+/Users/Hekla/Desktop/Stora-Verkefni-2/bin/Debug/netcoreapp2.0/BookApp.pdb
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.csproj.CoreCompileInputs.cache
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfoInputs.cache
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.AssemblyInfo.cs
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.dll
+/Users/Hekla/Desktop/Stora-Verkefni-2/obj/Debug/netcoreapp2.0/BookApp.pdb
+>>>>>>> 27c531bb7f9c52591565f226816aa04d8fe7818f
