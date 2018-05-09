@@ -133,6 +133,9 @@ namespace BookApp.Controllers
         {
             input.ExpirationTime = DateTime.Now.AddDays(30);
             input.UserId = User.FindFirst(ClaimTypes.Name).Value;
+
+            Console.WriteLine("\n**ADDING TO CART");
+
             orderService.AddToCart(input);
             return Ok();
         }
