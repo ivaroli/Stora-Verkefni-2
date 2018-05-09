@@ -9,7 +9,7 @@
     <div class="component" id="details-container">
         <div class="row">
             <div class="col-md-4 details-left">
-                <img src="@Model.Image" alt="I see you">
+                <img id="book_model_image" src="@Model.Image" alt="I see you">
             </div>
             <div class="col-md-7 details-right">
                 <h3>Description about the book</h3>
@@ -23,25 +23,33 @@
                 <br>
                 <div id="wishlist-box"><p>Add to wishlist</p><span id="heart-color" class="glyphicon glyphicon-heart icon"></span></div>
                 <div id="basket-box"><p>Add to cart</p><span id="cart-color" class="glyphicon glyphicon-shopping-cart icon"></span></div>
-            </div>
-            <div class="col-md-10 details-right">
                 <h3 id="h3-rate">Rate the book!</h3>
-                <form action="#" method="post">
-                    <label for="rate-stars" id="label-rate">Stars: 
-                    <select name="rate-stars" class="rate-stars-selector">
-                        <option value="1-star">1 star!</option>
-                        <option value="2-star">2 stars!</option>
-                        <option value="3-star">3 stars!</option>
-                        <option value="4-star">4 stars!</option>
-                        <option value="5-star">5 stars!</option></label>
-                    </select>
-                    <label for="rate-comment" id="label-rate">Comment about the book 
-                        <textarea name="rate-comment" id="rate-comment" cols="25" rows="3" placeholder="Write here..."></textarea>
-                    </label>
-                    <button type="submit" class="btn-place-order" id="send-rate">Send message</button>
-                </form>
+                <div id="stars">
+                    <span id="1" class="glyphicon glyphicon-star-empty"></span>
+                    <span id="2" class="glyphicon glyphicon-star-empty"></span>
+                    <span id="3" class="glyphicon glyphicon-star-empty"></span>
+                    <span id="4" class="glyphicon glyphicon-star-empty"></span>
+                    <span id="5" class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <input type="number" style="display:none;" id="rating">
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <button class="btn  btn-default btn-place-order" id="send-rate">Send Review</button>
             </div>
         </div>
-        
+        <div class="row comment-row">
+            <div class="col-md-12">
+                <div class="comments">
+                    <h3>Comments from other people</h3>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+@section scripts {
+    <script  src="~/js/stars.js"></script>
+    <script  src="~/js/comment.js"></script>
+}

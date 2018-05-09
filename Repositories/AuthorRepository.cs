@@ -31,7 +31,7 @@ namespace BookApp.Repositories
         public List<AuthorViewModel> getAllAuthorsByName(string name)
         {
             var authors = (from a in db.Authors
-                           where a.Name.Contains(name)
+                           where a.Name.ToLower().Contains(name.ToLower())
                            select new AuthorViewModel(){
                                Id = a.Id,
                                Name = a.Name

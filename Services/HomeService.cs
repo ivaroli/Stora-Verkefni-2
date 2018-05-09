@@ -32,7 +32,7 @@ namespace BookApp.Services
             }
 
             var ret = (from c in InitialList
-                        where (c.Name.Contains(input.Search) &&
+                        where (c.Name.ToLower().Contains(input.Search.ToLower()) &&
                         ((c.Type == "" || c.Type == input.Genre) || input.Genre == "" || input.Genre == "All Genres")) 
                         select c).ToList();
             return ret;

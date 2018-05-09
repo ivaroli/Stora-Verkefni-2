@@ -8,6 +8,8 @@ using BookApp.Models;
 using System.Security.Cryptography;
 using System.Text;
 using BookApp.Repositories;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
 
 namespace BookApp.Services
 {
@@ -25,7 +27,7 @@ namespace BookApp.Services
             return reviews;
         }
 
-        public void AddReview(ReviewViewModel review)
+        public void AddReview(ReviewInputModel review)
         {
             _reviewRepository.AddReview(review);
         }

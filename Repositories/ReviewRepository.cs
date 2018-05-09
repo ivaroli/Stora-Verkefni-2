@@ -4,6 +4,8 @@ using BookApp.Data;
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
 
 namespace BookApp.Repositories
 {
@@ -26,13 +28,13 @@ namespace BookApp.Repositories
                             BookId = a.BookId,
                             Stars = a.Stars,
                             CommentText = a.CommentText,
-                            UserId = a.UserId,
+                            User = a.UserName,
                             time = a.time
                         });
             return book.ToList();
         }
 
-        public void AddReview(ReviewViewModel r)
+        public void AddReview(ReviewInputModel r)
         {
             var review = new Review
             {
@@ -40,6 +42,7 @@ namespace BookApp.Repositories
                 CommentText = r.CommentText,
                 Stars = r.Stars,
                 UserId = r.UserId,
+                UserName = r.UserName,
                 time = DateTime.Now
             };
             db.Add(review);
