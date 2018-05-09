@@ -3,6 +3,8 @@
     ViewData["Title"] = "Details";
 }
 
+
+
 <div class="container" id="">
 <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Books" asp-action="Details">Details</a></div>    
 <h1 id="title-details">@Model.Title</h1>
@@ -26,8 +28,12 @@
                 <h3 id="h3-author-details-for-book">Price: </h3>
                 <p id="author-details-for-book">@Model.Price euro</p>
                 <br>
-                <div id="wishlist-box"><p>Add to wishlist</p><span id="heart-color" class="glyphicon glyphicon-heart icon"></span></div>
+                
+                <div class="container">
+                <div id="wishlist-box"><p>Add to wishlist</p><span id="heart-color" class="glyphicon glyphicon-heart icon"></span>
+                </div>
                 <div id="basket-box"><p>Add to cart</p><span id="cart-color" class="glyphicon glyphicon-shopping-cart icon"></span></div>
+                </div>
                 <h3 id="h3-rate">Rate the book!</h3>
                 <div id="stars">
                     <span id="1" class="glyphicon glyphicon-star-empty"></span>
@@ -58,3 +64,6 @@
     <script  src="~/js/stars.js"></script>
     <script  src="~/js/comment.js"></script>
 }
+
+
+
