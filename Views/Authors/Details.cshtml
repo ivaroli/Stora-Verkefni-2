@@ -1,6 +1,4 @@
 @model List<BookApp.Models.BookViewModel>
-@model <BookApp.Models.AuthorViewModel>
-
 @{
 ViewData["Title"] = "Details";
 }
@@ -8,8 +6,6 @@ ViewData["Title"] = "Details";
     <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Authors" asp-action="Details">Details</a></div>
     <h1>Books</h1>
 <div class="component staffpage-container" id="author-books">
-<!-->    <p>@author.Name</p><!-->
-
 <ul class="ul-authors">
 @foreach(var books in Model)
 {
