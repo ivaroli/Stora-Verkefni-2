@@ -760,6 +760,10 @@ font-size: 150%
 /* WISHLIST ENDS */
 
 /* CART BEGINS */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f5b467dd943b699bd1eaea4c94e598bbd7e37f4
 
 #cart-left {
     width:65%;
@@ -774,10 +778,17 @@ font-size: 150%
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5873aca098d7237a077283a64d2099ee3e5a65d6
+>>>>>>> 3f5b467dd943b699bd1eaea4c94e598bbd7e37f4
 #cart-mynd {
     color: #33b6bc;
     padding: 2px;
 }
+<<<<<<< HEAD
+=======
 
 .cart-img{
     width: 100px;
@@ -785,12 +796,38 @@ font-size: 150%
     padding: 5px;
 }
 
+<<<<<<< HEAD
+.cart-book-title{
+>>>>>>> 3f5b467dd943b699bd1eaea4c94e598bbd7e37f4
+
+.cart-img{
+    width: 100px;
+    height: 150px;
+    padding: 5px;
+}
+
+<<<<<<< HEAD
 .cart-book-title{
 
 }
 
 .cart-img:hover{
     cursor: pointer;
+=======
+.cart-img:hover{
+    cursor: pointer;
+=======
+#cart-book-img{
+    width: 150px;
+    height: 300px;
+    object-fit: contain;
+}
+
+#cart-title {
+    text-align: center;
+    font-weight: bolor;
+>>>>>>> 5873aca098d7237a077283a64d2099ee3e5a65d6
+>>>>>>> 3f5b467dd943b699bd1eaea4c94e598bbd7e37f4
 }
 
 #button-cart {

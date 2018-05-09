@@ -12,6 +12,10 @@
                 <div class=" col-md-6" id="">
                     @foreach(var book in @Model.Cart)
                     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f5b467dd943b699bd1eaea4c94e598bbd7e37f4
                         <div class="cart-div">
                         <div>
                             <h3 class="cart-book-title">@book.OrderBook.Title</h3>
@@ -21,13 +25,37 @@
                         <div>
 
                         </div>
+<<<<<<< HEAD
+=======
+=======
+                        <div class="row component book-cart-row">
+                            <div class="col-md-6">
+                                <img id="cart-book-img" src="@book.OrderBook.Image" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <span id="remove-icon" class="glyphicon glyphicon-remove" data="@book.Id"></span>
+                                <h2 id="cart-item-title">@book.OrderBook.Title</h2>
+                                <h3>Price: @book.OrderBook.Price $</h3>
+                            </div>
+>>>>>>> 5873aca098d7237a077283a64d2099ee3e5a65d6
+>>>>>>> 3f5b467dd943b699bd1eaea4c94e598bbd7e37f4
                         </div>
                     }
                 </div>
                 <div class="col-md-5 component" id="cart-right">
                     <h1>Total</h1>
+<<<<<<< HEAD
                     <h3>Sub total: @Model.Total</h3>
                     <button type="submit" class="btn btn-primary" id="button-cart"><a asp-controller="User" asp-action="CheckOut">Check out</a></button>
+=======
+<<<<<<< HEAD
+                    <h3>Sub total: @Model.Total</h3>
+                    <button type="submit" class="btn btn-primary" id="button-cart"><a asp-controller="User" asp-action="CheckOut">Check out</a></button>
+=======
+                    <h3>Sub total: @Model.Total $</h3>
+                    <a asp-controller="User" asp-action="CheckOut"><button class="btn button-default" id="button-cart">Check out</button></a>
+>>>>>>> 5873aca098d7237a077283a64d2099ee3e5a65d6
+>>>>>>> 3f5b467dd943b699bd1eaea4c94e598bbd7e37f4
                     <p>We accept these payment methods</p>
                     <img src="~/images/visa.svg" alt="VISA" height="40px" width="auto">
                     <img src="~/images/mastercard-2.svg" alt="MASTERCARD" height="40px" width="auto">
