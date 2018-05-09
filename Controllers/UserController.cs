@@ -149,6 +149,14 @@ namespace BookApp.Controllers
             return Ok();
         }
 
+        [Authorize]
+        [HttpPost]
+        public IActionResult IsInCart(int id)
+        {
+            Console.WriteLine("\n**CHECKING FOR BOOK: " + id);
+            return Json(orderService.isInCart(id, User.FindFirst(ClaimTypes.Name).Value));
+        }
+
         [HttpGet]
         public IActionResult CheckOut()
         {

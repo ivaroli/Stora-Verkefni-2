@@ -48,5 +48,10 @@ namespace BookApp.Services
         {
             orderRepository.RemoveFromCart(id);
         }
+
+        public bool isInCart(int bookId, string uId)
+        {
+            return orderRepository.isInCart(bookId, uId);
+        }
     }
 }

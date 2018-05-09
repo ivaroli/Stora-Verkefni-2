@@ -61,5 +61,13 @@ namespace BookApp.Repositories
             db.SaveChanges();
             Console.WriteLine("\n**REMOVING COMPLETE");
         }
+
+        public bool isInCart(int bookId, string uId)
+        {
+            var isInDatabase = (from c in db.Carts
+                                where c.BookId == bookId && c.UserId == uId
+                                select c).Any();
+            return isInDatabase;
+        }
     }
 }
