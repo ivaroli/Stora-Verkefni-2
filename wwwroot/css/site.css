@@ -736,6 +736,9 @@ font-size: 150%
 
 .wishlist-book-title{
     display: inline;
+    width: 20px;
+    height: 30px;
+    overflow: scroll;
 }
 
 #wishlist-remove-book{
@@ -760,9 +763,7 @@ font-size: 150%
 #cart-left {
     width:65%;
     float: left;
-    height: 300px;
     margin-right: 20px;
-
 }
 
 #cart-right {
@@ -775,12 +776,20 @@ font-size: 150%
 #cart-mynd {
     color: #33b6bc;
     padding: 2px;
+}
+
+.cart-img{
+    width: 100px;
+    height: 150px;
+    padding: 5px;
+}
+
+.cart-book-title{
 
 }
 
-#cart-title {
-    text-align: center;
-    font-weight: bolor;
+.cart-img:hover{
+    cursor: pointer;
 }
 
 #button-cart {
@@ -789,6 +798,23 @@ font-size: 150%
     margin-top: 10px;
     margin-bottom: 30px;
     color: white;
+}
+
+.cart-div{
+    border: solid;
+    width: 600px;
+    height: 230px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px; 
+    margin: 10px;
+    padding-top: 0px;
+}
+
+#cart-remove-book{
+    float: right;
+
+    font-size: 150%
 }
 
 /* CART ENDS */
