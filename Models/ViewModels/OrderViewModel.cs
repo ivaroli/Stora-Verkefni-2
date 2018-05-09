@@ -6,6 +6,6 @@ namespace BookApp.Models
         public int amount{get; set;}
         public string UserId{get;set;}
         public DateTime ExpirationTime{get; set;}
-        public int BookId{get;set;}
+        public BookAuthorViewModel OrderBook{get; set;}
     }
 }

@@ -1,4 +1,4 @@
-
+@model List<BookApp.Models.OrderViewModel>
 @{
     ViewData["Title"] = "Cart";
 }
@@ -9,7 +9,14 @@
   <div class="help-container" id="cart">
     <div  class=" sign-container">
 <div class=" col-md-6 right-sign-container component" id="cart-left">
-      <h3>Hér koma bækur inn....</h3>
+      @foreach(var book in @Model)
+      {
+            <div class="wishlist-div">
+                  <h2 class="wishlist-book-title">@book.OrderBook.Name</h2>
+                  <span id="wishlist-remove-book" class="glyphicon glyphicon-remove"></span>
+                  <img class="book-img" src="@book.OrderBook.Image" alt="">
+            </div>
+      }
 </div>
 <div class="col-md-6 left-sign-container component" id="cart-right">
       <h1>Total</h1>
