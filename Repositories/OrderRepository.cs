@@ -41,9 +41,9 @@ namespace BookApp.Repositories
                            amount = c.amount,
                            UserId = c.UserId,
                            ExpirationTime = c.ExpirationTime,
-                           OrderBook = new BookAuthorViewModel(){
-                               Name = b.Title,
-                               Type = "book",
+                           OrderBook = new BookOrderViewModel(){
+                               Title = b.Title,
+                               Price = b.Price,
                                Image = b.Image
                            }
                         }).ToList();
