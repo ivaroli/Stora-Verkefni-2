@@ -140,6 +140,15 @@ namespace BookApp.Controllers
             return View(orderService.GetCart(User.FindFirst(ClaimTypes.Name).Value));
         }
 
+        [Authorize]
+        [HttpPost]
+        public IActionResult RemoveFromCart(int id)
+        {
+            Console.WriteLine("\n**REMOVING FROM CART:" + id);
+            orderService.RemoveFromCart(id);
+            return Ok();
+        }
+
         [HttpGet]
         public IActionResult CheckOut()
         {
