@@ -142,8 +142,9 @@ namespace BookApp.Controllers
 
         [Authorize]
         [HttpPost]
-         public IActionResult RemoveFromCart(int id)
+        public IActionResult RemoveFromCart(int id)
         {
+            Console.WriteLine("\n**REMOVING FROM CART:" + id);
             orderService.RemoveFromCart(id);
             return Ok();
         }

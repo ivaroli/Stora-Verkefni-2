@@ -52,6 +52,7 @@ h1{
 
 .button-default{
     background-color: #2b9ca0;
+    color: white;
 }
 /*BODY END*/
 
@@ -756,26 +757,16 @@ font-size: 150%
 /* WISHLIST ENDS */
 
 /* CART BEGINS */
-
-#cart-left {
-    width:65%;
-    float: left;
-    height: 300px;
-    margin-right: 20px;
-
-}
-
-#cart-right {
-    width: 30%;
-    float: left;
-    height: 300px;
-
-}
-
 #cart-mynd {
     color: #33b6bc;
     padding: 2px;
 
+}
+
+#cart-book-img{
+    width: 150px;
+    height: 300px;
+    object-fit: contain;
 }
 
 #cart-title {
@@ -789,6 +780,26 @@ font-size: 150%
     margin-top: 10px;
     margin-bottom: 30px;
     color: white;
+}
+
+#remove-icon{
+    font-size: 20px;
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.book-cart-row{
+    margin-bottom: 20px;
+}
+
+#cart-item-title{
+    clear: both;
+}
+
+#cart-right{
+    margin-left: 20px;
+    padding-bottom: 20px;
 }
 
 /* CART ENDS */

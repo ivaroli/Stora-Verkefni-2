@@ -56,7 +56,10 @@ namespace BookApp.Repositories
             var orderToRemove = (from c in db.Carts
                                  where c.Id == id
                                  select c).FirstOrDefault();
+            Console.WriteLine("\n**REMOVING: " + orderToRemove.Id);
             db.Carts.Remove(orderToRemove);
+            db.SaveChanges();
+            Console.WriteLine("\n**REMOVING COMPLETE");
         }
     }
 }
