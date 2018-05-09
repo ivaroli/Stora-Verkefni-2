@@ -122,5 +122,30 @@ namespace BookApp.Repositories
                                 select c).Any();
             return isInDatabase;
         }
+
+        public void ClearCart(string uId)
+        {
+            var toRemove = (from c in db.Carts
+                            where c.UserId == uId
+                            select c).ToList();
+            db.Carts.RemoveRange(toRemove);
+            db.SaveChanges();
+        }
+
+        public void CartToOrders(string uId)
+        {
+            var toAdd = (from c in db.Carts
+                            where c.UserId == uId
+                            select new Order{
+                                amount = c.amount,
+                                UserId = c.UserId,
+                                ExpirationTime = DateTime.Now.AddDays(20),
+                                BookId = c.BookId
+
+                            }).ToList();
+            db.Orders.AddRange(toAdd);
+            db.SaveChanges();
+            ClearCart(uId);
+        }
     }
 }

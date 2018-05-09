@@ -185,10 +185,19 @@ namespace BookApp.Controllers
             return Json(orderService.isInWishlist(id, User.FindFirst(ClaimTypes.Name).Value));
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult CheckOut()
         {
             return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult CartCheckOut()
+        {
+            orderService.CartToOrders(User.FindFirst(ClaimTypes.Name).Value);
+            return RedirectToAction("Index","Home");
         }
     }
 }

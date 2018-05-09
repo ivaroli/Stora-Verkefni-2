@@ -66,6 +66,11 @@ namespace BookApp.Services
             return model;
         }
 
+        public void CartToOrders(string uId)
+        {
+            orderRepository.CartToOrders(uId);
+        }
+
         public void RemoveFromCart(int id)
         {
             orderRepository.RemoveFromCart(id);
