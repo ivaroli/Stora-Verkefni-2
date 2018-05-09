@@ -75,9 +75,11 @@ namespace BookApp.Repositories
                             UserId = c.UserId,
                             ExpirationTime = c.ExpirationTime,
                             OrderBook = new BookOrderViewModel(){
+                                Id = b.Id,
                                 Title = b.Title,
                                 Price = b.Price,
-                                Image = b.Image
+                                Image = b.Image,
+                                Author = b.Author.Name
                            }
                         }).ToList();
             return cart;

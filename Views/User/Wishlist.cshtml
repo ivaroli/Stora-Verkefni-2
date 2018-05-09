@@ -1,17 +1,29 @@
-
+@model BookApp.Models.CartViewModel
 @{
     ViewData["Title"] = "Wishlist";
 }
 <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Home" asp-action="Wishlist">Wishlist</a></div>
 <div class="container">
-  <h1>My wishlist <span id="wishlist-heart" class="glyphicon glyphicon-heart icon"></span></h1>
+    <h1>My wishlist <span id="wishlist-heart" class="glyphicon glyphicon-heart icon"></span></h1>
     <div class="component help-container" id="wishlist">
-    <h4 id="top-text">All the books are saved here in 60 days</h4>
-      <div class="wishlist-div">
-        <h2 class="wishlist-book-title">Title</h2>
-        <span id="wishlist-remove-book" class="glyphicon glyphicon-remove"></span>
-        <h5 class="book-author">By Author.Name</h5>
-        <img class="book-img" src="" alt="">
-      </div>
-  </div>
+        <h4 id="top-text">All the books are saved here in 60 days</h4>
+        <div class="row wishlist-row">
+            @foreach(var book in @Model.Cart)
+            {
+            <div class="wishlist-div col-md-4">
+                <span id="wishlist-remove-book" class="glyphicon glyphicon-remove" data="@book.Id"></span>
+                <a asp-controller="Books" asp-action="Details" asp-route-id="@book.OrderBook.Id">
+                    <h2 class="wishlist-book-title">@book.OrderBook.Title</h2>
+                </a>
+                <h5 class="book-author">By @book.OrderBook.Author</h5>
+                <a asp-controller="Books" asp-action="Details" asp-route-id="@book.OrderBook.Id">
+                    <img class="book-img" src="https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover-tb-263x0.png" alt="">
+                </a>
+            </div>
+            }
+        </div>
+    </div>
 </div>
+@section scripts {
+     <script  src="~/js/wishlist.js"></script>
+}

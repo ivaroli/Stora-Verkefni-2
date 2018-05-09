@@ -117,7 +117,7 @@ namespace BookApp.Controllers
         [HttpGet]
         public IActionResult Wishlist()
         {
-            return View();
+            return View(orderService.GetWishlist(User.FindFirst(ClaimTypes.Name).Value));
         }
 
         [Authorize]
