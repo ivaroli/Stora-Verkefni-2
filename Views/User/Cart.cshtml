@@ -26,6 +26,7 @@
                 </div>
                 <div class="col-md-5 component" id="cart-right">
                     <h1>Total</h1>
+                    <h3>Items: @Model.Cart.Count</h3>
                     <h3>Sub total: @Model.Total $</h3>
                     <a asp-controller="User" asp-action="CheckOut"><button class="btn button-default" id="button-cart">Check out</button></a>
                     <p>We accept these payment methods</p>
