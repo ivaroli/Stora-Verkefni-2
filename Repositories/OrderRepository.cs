@@ -38,16 +38,25 @@ namespace BookApp.Repositories
                         where c.UserId == uId && c.ExpirationTime > DateTime.Now
                         join b in db.Books on c.BookId equals b.Id
                         select new OrderViewModel(){
-                           amount = c.amount,
-                           UserId = c.UserId,
-                           ExpirationTime = c.ExpirationTime,
-                           OrderBook = new BookOrderViewModel(){
-                               Title = b.Title,
-                               Price = b.Price,
-                               Image = b.Image
+                            Id = c.Id,
+                            amount = c.amount,
+                            UserId = c.UserId,
+                            ExpirationTime = c.ExpirationTime,
+                            OrderBook = new BookOrderViewModel(){
+                                Title = b.Title,
+                                Price = b.Price,
+                                Image = b.Image
                            }
                         }).ToList();
             return cart;
+        }
+
+        public void RemoveFromCart(int id)
+        {
+            var orderToRemove = (from c in db.Carts
+                                 where c.Id == id
+                                 select c).FirstOrDefault();
+            db.Carts.Remove(orderToRemove);
         }
     }
 }
