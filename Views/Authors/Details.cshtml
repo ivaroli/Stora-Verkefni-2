@@ -1,16 +1,23 @@
 @model List<BookApp.Models.BookViewModel>
+@model <BookApp.Models.AuthorViewModel>
+
 @{
 ViewData["Title"] = "Details";
 }
 <div class="container" id="">
-<div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Authors" asp-action="Details">Details</a></div>
-<h1>AUTHORS</h1>
-<ul>
+    <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Authors" asp-action="Details">Details</a></div>
+    <h1>Books</h1>
+<div class="component staffpage-container" id="author-books">
+<!-->    <p>@author.Name</p><!-->
+
+<ul class="ul-authors">
 @foreach(var books in Model)
 {
-<li>
+<li class="li-authors">
 <a asp-controller="Books" asp-action="Details"asp-route-id="@books.Id">@books.Title</a>
 </li>
 }
+</ul>
+<div>
 </ul>
 </div>

@@ -5,12 +5,14 @@ ViewData["Title"] = "Authors";
 <div class="container" id="">
 <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Authors" asp-action="Authors">Authors</a></div> 
 <h1>AUTHORS</h1>
-<ul>
+<div class="component staffpage-container" id="author-list">
+<ul class="ul-authors">
 @foreach(var author in Model)
 {
-<li>
+<li class="li-authors">
 <a asp-controller="Authors" asp-action="Details"asp-route-id="@author.Id">@author.Name</a>
 </li>
 }
 </ul>
+</div>
  
