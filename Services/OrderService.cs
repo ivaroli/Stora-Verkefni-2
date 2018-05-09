@@ -27,9 +27,21 @@ namespace BookApp.Services
             orderRepository.AddToCart(input);
         }
 
-        public List<OrderViewModel> GetCart(string uId)
+        public CartViewModel GetCart(string uId)
         {
-            return orderRepository.GetCart(uId);
+            var orders = orderRepository.GetCart(uId);
+            int total = 0;
+
+            foreach(var order in orders){
+                total += order.amount * order.OrderBook.Price;
+            }
+
+            var model = new CartViewModel(){
+                Cart = orders,
+                Total = total
+            };
+
+            return model;
         }
     }
 }
