@@ -39,6 +39,29 @@ ViewData["Title"] = "Contact";
             <br />
             <textarea name="review" id="review-textarea" class="form-control" ></textarea>
     </div>
-            <button type="submit" class="btn btn-primary">Send message</button>
+           
         </form>
+
+        <button type="submit" class="btn place-order" id="place-order" data-toggle="modal" data-target="#exampleModal">
+        Send message
+        </button>
+
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Message sent</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Thank you for sending us a message - We will answear you soon as possible!</p>
+                    </div>
+                        <div class="modal-footer">
+                            <button id="close-btn" type="button" class="btn place-order" data-dismiss="modal">Close</button>
+                            <button id="shop-more-btn" type="button" class="btn place-order"><a asp-controller="Home" asp-action="Index">Go to homepage</a></button>
+                        </div>
+                    </div>
+                </div>
 </div>
