@@ -25,6 +25,7 @@ namespace BookApp.Repositories
                             Id = b.Id,
                             Name = b.Title,
                             Type = "Books",
+                            Genre = b.Genre,
                             Image = b.Image,
                             Rating = b.Rating,
                             Price = b.Price
@@ -59,6 +60,7 @@ namespace BookApp.Repositories
                             Id = a.Id,
                             Name = a.Title,
                             Type = "Books",
+                            Genre = a.Genre,
                             Image = a.Image,
                             Rating = a.Rating,
                             Price = a.Price
@@ -74,6 +76,7 @@ namespace BookApp.Repositories
                             Id = a.Id,
                             Name = a.Title,
                             Type = "Book",
+                            Genre = a.Genre,
                             Image = a.Image,
                             Rating = a.Rating,
                             Price = a.Price

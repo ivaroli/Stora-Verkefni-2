@@ -29,6 +29,7 @@ namespace BookApp.Controllers
             /*if(input == null || input.Search == "" || input.Search == null){
                 return Json(homeService.InitialList);
             }*/
+            Console.WriteLine("\n**GENRE: " + input.Genre);
             return Json(homeService.search(input));
         }
 
