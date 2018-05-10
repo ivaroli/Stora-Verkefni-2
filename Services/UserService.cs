@@ -29,7 +29,8 @@ namespace BookApp.Services
                 LastName = model.LastName,
                 Country = model.Country,
                 City = model.City,
-                Address = model.Address
+                Address = model.Address,
+                FavoriteBook = model.FavoriteBook
             };
             userRepo.insertUserDetaisl(repoModel);
         }

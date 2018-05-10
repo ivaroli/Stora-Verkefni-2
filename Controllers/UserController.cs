@@ -102,11 +102,12 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Details(UserDetailsInputModel model)
         {
+            Console.WriteLine("\n**FAVORITE BOOK: " + model.FavoriteBook);
             userService.SaveUserDetails(model, this.User.FindFirstValue(ClaimTypes.NameIdentifier));
             return Ok();
         }
 
-        [Authorize(Roles="Staff")]
+        [Authorize]
         [HttpGet]
         public IActionResult StaffPage()
         {

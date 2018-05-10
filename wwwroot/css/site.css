@@ -611,7 +611,11 @@ font-size: 150%
 
 .frontpage-title{
     text-align: center;
-    font-size: 130%;
+    font-size: 16px;
+    text-align: left;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .book-div-frontpage{
@@ -666,6 +670,12 @@ font-size: 150%
 
 #save_btn{
     float: left;
+}
+
+.history-container{
+    max-height: 300px;
+    min-height: 300px;
+    overflow-y: scroll;
 }
 /* USERDETAILS END */
 
