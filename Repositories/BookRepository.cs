@@ -18,21 +18,17 @@ namespace BookApp.Repositories
 
         public List<BookAuthorViewModel> GetTopSellers(int top)
         {
-            /*var books = (from b in db.Books
-                         join o in db.Orders on b.Id equals o.BookId
-                         group o.amount by o.BookId into g
-                         orderby g.Sum()
-                         select g.BookId).Take(top);*/
             var books = (from b in db.Books
-                         orderby b.Rating descending
-                         select new BookAuthorViewModel(){
+                        join c in db.Orders on b.Id equals c.BookId into g
+                        orderby g.Count() descending
+                        select new BookAuthorViewModel(){
                             Id = b.Id,
                             Name = b.Title,
                             Type = "Books",
                             Image = b.Image,
                             Rating = b.Rating,
                             Price = b.Price
-                         }).Take(top).ToList();
+                        }).Take(top).ToList();
 
             return books;
         }
@@ -57,7 +53,7 @@ namespace BookApp.Repositories
         public List<BookAuthorViewModel> GetAllBooksWTag(string Tag)
         {
             var books = (from a in db.Books
-                        where a.Tag == Tag
+                        where a.Tag.ToLower() == Tag.ToLower()
                         select new BookAuthorViewModel
                         {
                             Id = a.Id,
