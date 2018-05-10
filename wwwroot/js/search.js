@@ -83,5 +83,5 @@ $(document).on('click','.sugestion-list li',function(event){
     $(event.target).addClass("active");
     $(event.target).append(check);
 
-    $("#search_bar").trigger( "input" );
+    $("#search_bar").trigger( "input" );//
 });
