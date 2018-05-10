@@ -60,7 +60,16 @@ namespace BookApp.Services
                 break;
                 case "Bestsellers":
                     InitialList = bookrepository.GetTopSellers(12);
-                break; 
+                    break; 
+                case "Coming Soon":
+                    InitialList = bookrepository.GetAllBooksWTag(tag);
+                    break;
+                case "E-Books":
+                    InitialList = bookrepository.GetAllBooksWTag(tag);
+                    break;
+                case "Second Hand":
+                    InitialList = bookrepository.GetAllBooksWTag(tag);
+                    break;
                 default:
                     InitialList = bookrepository.GetAllBooksView();
                     currentTag = "Books";

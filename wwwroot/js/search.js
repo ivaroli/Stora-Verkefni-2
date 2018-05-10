@@ -1,3 +1,5 @@
+var check = "<span class=\"glyphicon glyphicon-ok\"></span>"
+
 function search(obj, callback)
 {
     $.post("Home/Search", obj, function(result){
@@ -60,9 +62,11 @@ $(document).on('click','.sugestion-list li',function(event){
 
     $(current_active_tag).removeAttr('id');
     $(current_active_tag).removeClass("active");
+    $("span.glyphicon-ok").remove();
 
     event.target.id = "active_tag";
     $(event.target).addClass("active");
+    $(event.target).append(check);
 
     $("#search_bar").trigger( "input" );
 });

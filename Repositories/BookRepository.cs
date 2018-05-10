@@ -52,6 +52,20 @@ namespace BookApp.Repositories
             return books;
         }
 
+        public List<BookAuthorViewModel> GetAllBooksWTag(string Tag)
+        {
+            var books = (from a in db.Books
+                        where a.Tag == Tag
+                        select new BookAuthorViewModel
+                        {
+                            Id = a.Id,
+                            Name = a.Title,
+                            Type = "Book",
+                            Image = a.Image
+                        }).ToList();    
+            return books;
+        }
+
         public List<BookAuthorViewModel> GetAllBooksView()
         {
             var books = (from a in db.Books
