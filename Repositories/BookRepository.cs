@@ -62,7 +62,7 @@ namespace BookApp.Repositories
                         {
                             Id = a.Id,
                             Name = a.Title,
-                            Type = "Book",
+                            Type = "Books",
                             Image = a.Image,
                             Rating = a.Rating,
                             Price = a.Price
