@@ -12,7 +12,7 @@ $(document).ready(function(e) {
 
         var length = Object.keys(result).length;
         for(var i = 0; i < length; i++){
-            html += "<a asp-controller=\"Books\" asp-action=\"Details\" asp-route-id=\""+result[i].orderBook.id+"\"><li class=\"list-group-item\">"+result[i].orderBook.title+"</li></a>\n"
+            html += "<a href=\"/Books/Details/"+result[i].orderBook.id+"\"><li class=\"list-group-item\">"+result[i].orderBook.title+"</li></a>\n"
         }
 
         $(".list-group").append(html);

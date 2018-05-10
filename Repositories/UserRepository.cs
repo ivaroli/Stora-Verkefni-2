@@ -45,7 +45,8 @@ namespace BookApp.Repositories
                                     LastName = c.LastName,
                                     Country = c.Country,
                                     City = c.City,
-                                    Address = c.Address
+                                    Address = c.Address,
+                                    FavoriteBook = c.FavoriteBook
                                   }).FirstOrDefault();
             return details;
         }
