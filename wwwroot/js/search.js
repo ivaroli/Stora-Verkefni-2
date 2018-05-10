@@ -41,8 +41,8 @@ function generateHtml(obj)
             console.log(stars);
             
 
-            html += "<h3 id=\"stars-book\">Stars: " + stars +"</h3>\n";
-            html += "<h3 id=\"book-price\">Price: " + item.price + " euro</h3>\n"
+            html += "<h5 id=\"stars-book\">Stars: " + stars +"</h5>\n";
+            html += "<h5 id=\"book-price\">Price: " + item.price + " euro</h5>\n"
         }
 
         html += "</div>\n";
