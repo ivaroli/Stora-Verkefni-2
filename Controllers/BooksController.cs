@@ -15,12 +15,12 @@ namespace BookApp.Controllers
 {
     public class BooksController : Controller
     {
-         private BookService _bookService;
+         private BookService bookService;
          private AuthorService authorService;
          private ReviewService reviewService;
         public BooksController()
         {
-            _bookService = new BookService();
+            bookService = new BookService();
             authorService = new AuthorService();
             reviewService = new ReviewService();
         }
@@ -34,7 +34,7 @@ namespace BookApp.Controllers
             }
 
             int id_not_null = id ?? default(int);
-            var book = _bookService.GetBookById(id_not_null);
+            var book = bookService.GetBookById(id_not_null);
             if(book == null)
             {
                 return RedirectToAction("Index","Home");
@@ -44,7 +44,7 @@ namespace BookApp.Controllers
         [HttpGet]
         public IActionResult Books()
         {
-            var books = _bookService.GetAllBooks();
+            var books = bookService.GetAllBooks();
             return View(books);
         }
 
@@ -53,11 +53,11 @@ namespace BookApp.Controllers
         {
             if(searchInput == "" || searchInput == null){
                 Console.WriteLine("\n**ASDFASDFASDF");
-                var books = _bookService.GetAllBooks();
+                var books = bookService.GetAllBooks();
                 return Json(books);
             }
             else{
-                var books = _bookService.GetBooksByName(searchInput);
+                var books = bookService.GetBooksByName(searchInput);
                 return Json(books);
             }
         }
@@ -66,7 +66,7 @@ namespace BookApp.Controllers
         public IActionResult AddBook(BookInputModel input)
         {
             Console.WriteLine("\n**TYPPI ADF BOOK: " + input.Image);
-            _bookService.AddBook(input);
+            bookService.AddBook(input);
             return Ok();
         }
 
@@ -74,7 +74,7 @@ namespace BookApp.Controllers
         public IActionResult RemoveBook(int id)
         {
             Console.WriteLine("\n**Removing book with id: " + id);
-            _bookService.removeBook(id);
+            bookService.removeBook(id);
             return Ok();
         }
 

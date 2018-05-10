@@ -13,47 +13,47 @@ namespace BookApp.Services
 {
     public class BookService
     {
-        private BookRepository _bookrepository;
+        private BookRepository bookrepository;
         private AuthorRepository authorRepository;
 
         public BookService()
         {
-            _bookrepository = new BookRepository();
+            bookrepository = new BookRepository();
             authorRepository = new AuthorRepository();
         }
         public List<BookViewModel> GetAllBooks()
         {
-            var books = _bookrepository.GetAllBooks();
+            var books = bookrepository.GetAllBooks();
             return books;
         }
 
         public List<BookAuthorViewModel> GetAllBooksAndAuthors()
         {
-            var books = _bookrepository.GetAllBooksView();
+            var books = bookrepository.GetAllBooksView();
             return books;
         }
         
         public BookViewModel GetBookById(int id)
         {
-            var book = _bookrepository.GetBookById(id);
+            var book = bookrepository.GetBookById(id);
             return book;
         }
 
          public List<BookViewModel> GetBooksByAuthorId(int id)
         {
-            var book = _bookrepository.GetBooksByAuthorId(id);
+            var book = bookrepository.GetBooksByAuthorId(id);
             return book;
         }
 
         public List<BookViewModel> GetBooksByName(string search)
         {
-            var books = _bookrepository.GetBooksByName(search);
+            var books = bookrepository.GetBooksByName(search);
             return books;
         }
 
         public List<StaffBookViewModel> GetAllBooksStaffView()
         {
-            return _bookrepository.GetAllBooksStaffView();
+            return bookrepository.GetAllBooksStaffView();
         }
 
         public void AddBook(BookInputModel model)
@@ -68,22 +68,22 @@ namespace BookApp.Services
                 Image = model.Image,
                 Price = model.Price
             };
-            _bookrepository.addBook(book);
+            bookrepository.addBook(book);
         }
 
         public void removeBook(int id)
         {
-            _bookrepository.removeBook(id);
+            bookrepository.removeBook(id);
         }
 
         public void RemoveBooksByAuthor(int id)
         {
-            _bookrepository.RemoveBooksByAuthor(id);
+            bookrepository.RemoveBooksByAuthor(id);
         }
 
         public List<BookAuthorViewModel> GetTopBooks()
         {
-            return _bookrepository.GetTopSellers(12);
+            return bookrepository.GetTopSellers(12);
         }
     }
 }
