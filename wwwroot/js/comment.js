@@ -53,12 +53,14 @@ $(document).ready(function(e) {
     isInCart(function(result){
         if(result == true){
             $("#basket-box").css("background-color", "#33b6bc");
+            $("#basket-box span").css("color", "white");
         }
     });
 
     isInWishlist(function(result){
         if(result == true){
             $("#wishlist-box").css("background-color", "#33b6bc");
+            $("#wishlist-box span").css("color", "white");
         }
     });
 
@@ -98,6 +100,7 @@ $(document).ready(function(e) {
         
         $.post("/User/AddToCart", obj, function(result){
             $("#basket-box").css("background-color", "#33b6bc");
+            $("#basket-box span").css("color", "white");
         });
     });
 
@@ -116,6 +119,7 @@ $(document).ready(function(e) {
         
         $.post("/User/AddToWishlist", obj, function(result){
             $("#wishlist-box").css("background-color", "#33b6bc");
+            $("#wishlist-box span").css("color", "white");
         });
     });
 });

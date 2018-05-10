@@ -32,6 +32,11 @@ namespace BookApp.Services
             orderRepository.AddToWishlist(input);
         }
 
+        public List<OrderViewModel> GetOrders(string uId)
+        {
+            return orderRepository.GetOrders(uId);
+        }
+
         public CartViewModel GetCart(string uId)
         {
             var orders = orderRepository.GetCart(uId);

@@ -3,8 +3,6 @@
     ViewData["Title"] = "Details";
 }
 
-
-
 <div class="container" id="">
 <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Books" asp-action="Details">Details</a></div>    
 <h1 id="title-details">@Model.Title</h1>
@@ -20,7 +18,7 @@
                 </div>
                 <h3 id="stars-book">Stars: @for(var i = 0; i < @Model.Rating; i++){<span class="glyphicon glyphicon-star"></span>}</h3>
                 <h3 id="h3-author-details-for-book">Author: </h3>
-                <p id="author-details-for-book"><a asp-controller="Authors" asp-action="Details">@Model.Author.Name</a></p>
+                <p id="author-details-for-book"><a asp-controller="Authors" asp-action="Details" asp-route-id="@Model.Author.Id">@Model.Author.Name</a></p>
                 </br>
                 <h3 id="h3-author-details-for-book">Genre: </h3>
                 <p id="author-details-for-book">@Model.Genre</p>

@@ -17,7 +17,7 @@
                 </a>
                 <h5 class="book-author">By @book.OrderBook.Author</h5>
                 <a asp-controller="Books" asp-action="Details" asp-route-id="@book.OrderBook.Id">
-                    <img class="book-img" src="https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover-tb-263x0.png" alt="">
+                    <img class="book-img" src="@book.OrderBook.Image" alt="">
                 </a>
             </div>
             }

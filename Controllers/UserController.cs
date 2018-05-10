@@ -102,6 +102,7 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Details(UserDetailsInputModel model)
         {
+            Console.WriteLine("\n**FAVORITE BOOK: " + model.FavoriteBook);
             userService.SaveUserDetails(model, this.User.FindFirstValue(ClaimTypes.NameIdentifier));
             return Ok();
         }
@@ -198,6 +199,13 @@ namespace BookApp.Controllers
         {
             orderService.CartToOrders(User.FindFirst(ClaimTypes.Name).Value);
             return RedirectToAction("Index","Home");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult GetOrders()
+        {
+            return Json(orderService.GetOrders(User.FindFirst(ClaimTypes.Name).Value));
         }
     }
 }

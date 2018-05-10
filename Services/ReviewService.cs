@@ -15,21 +15,21 @@ namespace BookApp.Services
 {
     public class ReviewService
     {
-         private ReviewRepository _reviewRepository;
+         private ReviewRepository reviewRepository;
         public ReviewService()
         {
-            _reviewRepository = new ReviewRepository();
+            reviewRepository = new ReviewRepository();
         }
 
         public List<ReviewViewModel> GetReviewsByBookId(int id)
         {
-            var reviews = _reviewRepository.GetReviewsByBookId(id);
+            var reviews = reviewRepository.GetReviewsByBookId(id);
             return reviews;
         }
 
         public void AddReview(ReviewInputModel review)
         {
-            _reviewRepository.AddReview(review);
+            reviewRepository.AddReview(review);
         }
     }
 }

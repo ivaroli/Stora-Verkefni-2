@@ -26,9 +26,9 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Search(SearchInputModel input)
         {
-            if(input == null || input.Search == "" || input.Search == null){
+            /*if(input == null || input.Search == "" || input.Search == null){
                 return Json(homeService.InitialList);
-            }
+            }*/
             return Json(homeService.search(input));
         }
 

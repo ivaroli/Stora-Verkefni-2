@@ -10,11 +10,14 @@
             <!-- Það sem fer vinstrameginn fer hér svosem eins og "best sellers" -->
             <ul class="sugestion-list">
                 <li class="active" id="active_tag">Bestsellers<span class="glyphicon glyphicon-ok"></span></li>
-                <li><a asp-controller="Books" asp-action="Books">Books</a></li>
-                <li><a asp-controller="Authors" asp-action="Authors">Authors</a></li>
+                <!--<li><a asp-controller="Books" asp-action="Books">Books</a></li>
+                <li><a asp-controller="Authors" asp-action="Authors">Authors</a></li>-->
+                <li>Books</li>
+                <li>Authors</li>
                 <li>Coming Soon</li>
                 <li>Second Hand</li>
                 <li>E-Books</li>
+                <li>Classics</li>
             </ul>
         </div>
         <div class="col-md-10">
@@ -31,6 +34,7 @@
                             <li><a class="item">Sci-Fi</a></li>
                             <li><a class="item">Crime</a></li>
                             <li><a class="item">Action</a></li>
+                            <li><a class="item">Fiction</a></li>
                         </ul>
                     </div>
                     <input type="text" id="search_bar" class="form-control" name="x" placeholder="Search for book by title...">
@@ -50,6 +54,10 @@
                         <div class="book-div-frontpage">
                             <img class="book-img" src="@Model[i].Image" alt="@Model[i].Name" id="book-img">
                             <h3 class="book-title frontpage-title" id="book-title">@Model[i].Name</h3>
+                            @if(@Model[i].Price != null && @Model[i].Price != 0){
+                                <h5 id="stars-book">Stars: @for(var j = 0; j < @Model[i].Rating; j++){<span class="glyphicon glyphicon-star"></span>}</h5>
+                                <h5 id="book-price">Price: @Model[i].Price euro</h5>
+                            }
                         </div>
                         </div>
                         </a>

@@ -29,7 +29,9 @@ namespace BookApp.Repositories
                             Id = b.Id,
                             Name = b.Title,
                             Type = "Books",
-                            Image = b.Image
+                            Image = b.Image,
+                            Rating = b.Rating,
+                            Price = b.Price
                          }).Take(top).ToList();
 
             return books;
@@ -52,6 +54,22 @@ namespace BookApp.Repositories
             return books;
         }
 
+        public List<BookAuthorViewModel> GetAllBooksWTag(string Tag)
+        {
+            var books = (from a in db.Books
+                        where a.Tag == Tag
+                        select new BookAuthorViewModel
+                        {
+                            Id = a.Id,
+                            Name = a.Title,
+                            Type = "Books",
+                            Image = a.Image,
+                            Rating = a.Rating,
+                            Price = a.Price
+                        }).ToList();    
+            return books;
+        }
+
         public List<BookAuthorViewModel> GetAllBooksView()
         {
             var books = (from a in db.Books
@@ -60,7 +78,9 @@ namespace BookApp.Repositories
                             Id = a.Id,
                             Name = a.Title,
                             Type = "Book",
-                            Image = a.Image
+                            Image = a.Image,
+                            Rating = a.Rating,
+                            Price = a.Price
                         }).ToList();    
             return books;
         }
@@ -98,7 +118,7 @@ namespace BookApp.Repositories
             return book;
         }
 
- public List<BookViewModel> GetBooksByAuthorId(int? id)
+        public AuthorBookViewModel GetBooksByAuthorId(int? id)
         {
             var books = (from a in db.Books
                         where a.AuthorId == id
@@ -107,13 +127,21 @@ namespace BookApp.Repositories
                             Id = a.Id,
                             Title = a.Title,
                             Genre = a.Genre,
-                            Description = a.Description,
                             Author = a.Author,
+                            Description = a.Description,
                             Image = a.Image,
                             Rating = a.Rating,
                             Price = a.Price
-                        });
-            return books.ToList();
+                        }).ToList();
+            var author = (from a in db.Authors
+                          where a.Id == id
+                          select new AuthorBookViewModel(){
+                              Books = books,
+                              Name = a.Name,
+                              Image = a.Image,
+                              Description = a.Description
+                          }).FirstOrDefault();
+            return author;
         }
         public List<BookViewModel> GetBooksByName(string search)
         {

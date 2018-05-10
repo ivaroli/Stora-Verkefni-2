@@ -60,7 +60,7 @@
                 <div class="form-group user-form-input">
                     @{
                         <label asp-for="Address">Address</label>
-                        if(@Model != null && @Model.City != ""){
+                        if(@Model != null && @Model.Address != ""){
                             <input id="address" asp-for="Address" type="text" name="Address" class="form-control" value="@Model.Address">
                         }
                         else{
@@ -68,7 +68,25 @@
                         }
                     }
                 </div>
+                <div class="form-group user-form-input">
+                    @{
+                        <label asp-for="FavoriteBook">Favorite Book</label>
+                        if(@Model != null && @Model.FavoriteBook != ""){
+                            <input id="favoriteBook" asp-for="FavoriteBook" type="text" name="FavoriteBook" class="form-control" value="@Model.FavoriteBook">
+                        }
+                        else{
+                            <input id="favoriteBook" asp-for="FavoriteBook" type="text" name="FavoriteBook" class="form-control" value="">
+                        }
+                    }
+                </div>
             </form>
+            <div class="order-history">
+                <h3>Order History</h3>
+                <div class="history-container">
+                    <ul class="list-group">
+                    </ul>
+                </div>
+            </div>
             <button id="save_btn" class="btn btn-default">Save</button>
             <form asp-controller="User" asp-action="SignOut" method="post">
                 <button id="sign-out" class="btn btn-default">Sign Out</button>
@@ -78,5 +96,6 @@
     </div>
 </div>
 @section scripts {
-     <script  src="~/js/ImageInsert.js"></script>
+    <script  src="~/js/orderHistory.js"></script>
+    <script  src="~/js/ImageInsert.js"></script>
 }
