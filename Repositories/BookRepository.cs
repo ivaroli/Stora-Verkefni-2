@@ -29,7 +29,9 @@ namespace BookApp.Repositories
                             Id = b.Id,
                             Name = b.Title,
                             Type = "Books",
-                            Image = b.Image
+                            Image = b.Image,
+                            Rating = b.Rating,
+                            Price = b.Price
                          }).Take(top).ToList();
 
             return books;
@@ -61,7 +63,9 @@ namespace BookApp.Repositories
                             Id = a.Id,
                             Name = a.Title,
                             Type = "Book",
-                            Image = a.Image
+                            Image = a.Image,
+                            Rating = a.Rating,
+                            Price = a.Price
                         }).ToList();    
             return books;
         }
