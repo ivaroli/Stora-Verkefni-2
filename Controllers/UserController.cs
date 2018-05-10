@@ -106,7 +106,7 @@ namespace BookApp.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles="Staff")]
         [HttpGet]
         public IActionResult StaffPage()
         {
@@ -198,6 +198,13 @@ namespace BookApp.Controllers
         {
             orderService.CartToOrders(User.FindFirst(ClaimTypes.Name).Value);
             return RedirectToAction("Index","Home");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult GetOrders()
+        {
+            return Json(orderService.GetOrders(User.FindFirst(ClaimTypes.Name).Value));
         }
     }
 }

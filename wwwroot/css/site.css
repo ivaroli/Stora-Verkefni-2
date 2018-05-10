@@ -491,6 +491,7 @@ footer{
 .book-img{
     width: 170px;
     height: 250px;
+    object-fit:cover;
 }
 
 .book-img:hover{
@@ -587,6 +588,11 @@ font-size: 150%
 /* CCHECKOUT END */
 
 /* AUTHORS BEGINS */
+#author_model_image{
+    width: 250px;
+    height: 375px;
+    object-fit: cover;
+}
 
 .ul-authors{
     list-style-type: none;
