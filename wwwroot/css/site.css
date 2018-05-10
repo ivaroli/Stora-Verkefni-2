@@ -667,6 +667,12 @@ font-size: 150%
 #save_btn{
     float: left;
 }
+
+.history-container{
+    max-height: 300px;
+    min-height: 300px;
+    overflow-y: scroll;
+}
 /* USERDETAILS END */
 
 /* Hide/rearrange for smaller screens */
