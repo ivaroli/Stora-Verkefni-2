@@ -25,11 +25,26 @@ function generateHtml(obj)
 
     for(var i = 0; i < length; i++){
         var item = obj[i];
+
         html += "<a href=\"/" + item.type + "/Details/" + item.id + "\">\n";
         html += "<div class=\"col-md-4 \">\n";
         html += "<div class=\"book-div-frontpage\">\n";
         html += "<img class=\"book-img\" src=\"" + item.image + "\" alt=\"" + item.name + "\" id=\"book-img\">\n";
         html += "<h3 class=\"book-title frontpage-title\" id=\"book-title\">" + item.name + "</h3>\n";
+
+        if(item.type != "Authors"){
+            var stars = "";
+            for(var j = 0; j < item.rating; j++){
+                stars += "<span class=\"glyphicon glyphicon-star\"> ";
+            }
+
+            console.log(stars);
+            
+
+            html += "<h3 id=\"stars-book\">Stars: " + stars +"</h3>\n";
+            html += "<h3 id=\"book-price\">Price: " + item.price + " euro</h3>\n"
+        }
+
         html += "</div>\n";
         html += "</div>\n";
         html += "</a>\n";
