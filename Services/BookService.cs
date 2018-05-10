@@ -66,7 +66,8 @@ namespace BookApp.Services
                 AuthorId = model.AuthorId,
                 Rating = model.Rating,
                 Image = model.Image,
-                Price = model.Price
+                Price = model.Price,
+                Tag = model.Tag
             };
             _bookrepository.addBook(book);
         }

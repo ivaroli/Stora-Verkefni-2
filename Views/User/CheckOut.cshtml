@@ -24,7 +24,9 @@
                 </div>
                 <div class="form-group user-form-input">
                     <label for="country">Your Country</label>
-                    <input id="country" for="Country" type="text" class="form-control" required>
+                    <select name="country" class="form-control" id="" required>
+                        @await Html.PartialAsync("_Countries")
+                    </select>
                 </div>
                 <div class="form-group user-form-input">
                     <label for="city">Your City</label>

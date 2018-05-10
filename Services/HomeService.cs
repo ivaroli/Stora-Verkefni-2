@@ -31,11 +31,20 @@ namespace BookApp.Services
                 changeList(input.Tag);
             }
 
-            var ret = (from c in InitialList
+            if(input.Search != null && input.Search != "")
+            {
+                var ret = (from c in InitialList
                         where (c.Name.ToLower().Contains(input.Search.ToLower()) &&
                         ((c.Type == "" || c.Type == input.Genre) || input.Genre == "" || input.Genre == "All Genres")) 
                         select c).ToList();
-            return ret;
+                return ret;
+            }
+            else{
+                var ret = (from c in InitialList
+                           where ((c.Type == "" || c.Type == input.Genre) || input.Genre == "" || input.Genre == "All Genres")
+                           select c).ToList();
+                return ret;
+            }
         }
 
         private void changeList(string tag)

@@ -52,6 +52,17 @@ $(document).ready(function(e) {
 });
 
 $(document).on('click','.sugestion-list li',function(event){
+    if(event.target.id == "active_tag"){
+        return;
+    }
+
     var current_active_tag = $("#active_tag");
-    var child_elem = current_active_tag.children()[0].html();
+
+    $(current_active_tag).removeAttr('id');
+    $(current_active_tag).removeClass("active");
+
+    event.target.id = "active_tag";
+    $(event.target).addClass("active");
+
+    $("#search_bar").trigger( "input" );
 });

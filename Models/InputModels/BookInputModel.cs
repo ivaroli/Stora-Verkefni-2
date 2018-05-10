@@ -11,5 +11,6 @@ namespace BookApp.Models
         public string Image {get; set;}
         public int Rating {get; set;}
         public int Price {get; set;}
+        public string Tag {get; set;}
     }
 }

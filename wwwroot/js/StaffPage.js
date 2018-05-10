@@ -56,7 +56,8 @@ function createBookInput(){
         Description: $("#description").val(),
         AuthorId: parseInt($("#authorId").val()),
         Image: $("#image").val(),
-        Rating: parseInt($("#rating").val())
+        Rating: parseInt($("#rating").val()),
+        Tag: $("#tag").val()
     };
 
     return obj;
