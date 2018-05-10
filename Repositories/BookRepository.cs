@@ -60,7 +60,9 @@ namespace BookApp.Repositories
                             Id = a.Id,
                             Name = a.Title,
                             Type = "Book",
-                            Image = a.Image
+                            Image = a.Image,
+                            Rating = a.Rating,
+                            Price = a.Price
                         }).ToList();    
             return books;
         }
