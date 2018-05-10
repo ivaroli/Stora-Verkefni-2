@@ -53,7 +53,7 @@ namespace BookApp.Repositories
         public List<BookAuthorViewModel> GetAllBooksWTag(string Tag)
         {
             var books = (from a in db.Books
-                        where a.Tag.ToLower() == Tag.ToLower()
+                        where a.Tag.ToLower().Contains(Tag.ToLower())
                         select new BookAuthorViewModel
                         {
                             Id = a.Id,
