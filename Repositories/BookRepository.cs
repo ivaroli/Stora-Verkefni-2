@@ -98,7 +98,7 @@ namespace BookApp.Repositories
             return book;
         }
 
- public List<BookViewModel> GetBooksByAuthorId(int? id)
+        public AuthorBookViewModel GetBooksByAuthorId(int? id)
         {
             var books = (from a in db.Books
                         where a.AuthorId == id
@@ -107,13 +107,21 @@ namespace BookApp.Repositories
                             Id = a.Id,
                             Title = a.Title,
                             Genre = a.Genre,
-                            Description = a.Description,
                             Author = a.Author,
+                            Description = a.Description,
                             Image = a.Image,
                             Rating = a.Rating,
                             Price = a.Price
-                        });
-            return books.ToList();
+                        }).ToList();
+            var author = (from a in db.Authors
+                          where a.Id == id
+                          select new AuthorBookViewModel(){
+                              Books = books,
+                              Name = a.Name,
+                              Image = a.Image,
+                              Description = a.Description
+                          }).FirstOrDefault();
+            return author;
         }
         public List<BookViewModel> GetBooksByName(string search)
         {

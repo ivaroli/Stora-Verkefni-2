@@ -1,18 +1,26 @@
-@model List<BookApp.Models.BookViewModel>
+@model BookApp.Models.AuthorBookViewModel
 @{
 ViewData["Title"] = "Details";
 }
 <div class="container" id="">
     <div id="tree"><a asp-controller="Home" asp-action="Index">Home page</a> >> <a asp-controller="Authors" asp-action="Details">Details</a></div>
-    <h1>Books</h1>
-    <div class="component staffpage-container" id="author-books">
+    <h1>@Model.Name</h1>
+    <div class="component" id="details-container">
+        <div class="row">
+            <div class="col-md-4 details-left">
+                <img id="author_model_image" src="@Model.Image" alt="author">
+            </div>
+            <div class="col-md-7 details-right">
+                    <p>@Model.Description</p>
+                </div>
         <ul class="ul-authors">
-        @foreach(var books in Model)
+        @foreach(var books in @Model.Books)
         {
             <li class="li-authors">
             <a asp-controller="Books" asp-action="Details"asp-route-id="@books.Id">@books.Title</a>
             </li>
         }
         </ul>
+        </div>
     </div>
 </div>
