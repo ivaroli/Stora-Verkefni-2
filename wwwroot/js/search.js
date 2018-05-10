@@ -35,7 +35,7 @@ function generateHtml(obj)
         if(item.type != "Authors"){
             var stars = "";
             for(var j = 0; j < item.rating; j++){
-                stars += "<span class=\"glyphicon glyphicon-star\"> ";
+                stars += "<span class=\"glyphicon glyphicon-star\"></span>";
             }
 
             console.log(stars);
