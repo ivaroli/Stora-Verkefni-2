@@ -53,8 +53,8 @@
                             <img class="book-img" src="@Model[i].Image" alt="@Model[i].Name" id="book-img">
                             <h3 class="book-title frontpage-title" id="book-title">@Model[i].Name</h3>
                             @if(@Model[i].Price != null && @Model[i].Price != 0){
-                                <h3 id="stars-book">Stars: @for(var j = 0; j < @Model[i].Rating; j++){<span class="glyphicon glyphicon-star"></span>}</h3>
-                                <h3 id="book-price">Price: @Model[i].Price euro</h3>
+                                <h5 id="stars-book">Stars: @for(var j = 0; j < @Model[i].Rating; j++){<span class="glyphicon glyphicon-star"></span>}</h5>
+                                <h5 id="book-price">Price: @Model[i].Price euro</h5>
                             }
                         </div>
                         </div>

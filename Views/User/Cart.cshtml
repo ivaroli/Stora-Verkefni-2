@@ -14,11 +14,11 @@
                     {
                         <div class="row component book-cart-row">
                             <div class="col-md-6">
-                                <img id="cart-book-img" src="@book.OrderBook.Image" alt="">
+                                <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id"><img id="cart-book-img" src="@book.OrderBook.Image" alt=""></a>
                             </div>
                             <div class="col-md-6">
                                 <span id="remove-icon" class="glyphicon glyphicon-remove" data="@book.Id"></span>
-                                <h2 id="cart-item-title">@book.OrderBook.Title</h2>
+                                <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id"><h2 id="cart-item-title">@book.OrderBook.Title</h2></a>
                                 <h3>Price: @book.OrderBook.Price $</h3>
                             </div>
                         </div>
@@ -28,7 +28,12 @@
                     <h1>Total</h1>
                     <h3>Items: @Model.Cart.Count</h3>
                     <h3>Sub total: @Model.Total $</h3>
-                    <a asp-controller="User" asp-action="CheckOut"><button class="btn button-default" id="button-cart">Check out</button></a>
+                    @if(@Model.Total > 0){
+                        <a asp-controller="User" asp-action="CheckOut"><button class="btn button-default" id="button-cart">Check out</button></a>
+                    }
+                    else{
+                        <button class="btn button-default" id="button-cart">Check out</button>
+                    }
                     <p>We accept these payment methods</p>
                     <img src="~/images/visa.svg" alt="VISA" height="40px" width="auto">
                     <img src="~/images/mastercard-2.svg" alt="MASTERCARD" height="40px" width="auto">
