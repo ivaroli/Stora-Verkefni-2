@@ -23,7 +23,8 @@ namespace BookApp.Services
 
         public void SaveUserDetails(UserDetailsInputModel model, string uId)
         {
-            var repoModel = new UserDetails{
+            var repoModel = new UserDetails
+            {
                 UserId = uId,
                 FirstName=model.FirstName,
                 LastName = model.LastName,

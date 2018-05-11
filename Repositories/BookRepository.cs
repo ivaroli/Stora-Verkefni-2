@@ -23,7 +23,8 @@ namespace BookApp.Repositories
             var books = (from b in db.Books
                         join c in db.Orders on b.Id equals c.BookId into g
                         orderby g.Count() descending
-                        select new BookAuthorViewModel(){
+                        select new BookAuthorViewModel()
+                        {
                             Id = b.Id,
                             Name = b.Title,
                             Type = "Books",
@@ -145,7 +146,8 @@ namespace BookApp.Repositories
             
             var author = (from a in db.Authors
                           where a.Id == id
-                          select new AuthorBookViewModel(){
+                          select new AuthorBookViewModel()
+                          {
                               Books = books,
                               Name = a.Name,
                               Image = a.Image,

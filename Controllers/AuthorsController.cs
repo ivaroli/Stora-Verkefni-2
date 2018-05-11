@@ -47,11 +47,13 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Search(string searchInput)
         {
-            if(searchInput == "" || searchInput == null){
+            if(searchInput == "" || searchInput == null)
+            {
 
                 return Json(null);
             }
-            else{
+            else
+            {
                 var authors = authorService.getAllAuthorsByName(searchInput);
                 return Json(authors);
             }
