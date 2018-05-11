@@ -19,6 +19,7 @@ namespace BookApp.Repositories
             db = new DataContext();
         }
 
+        //bætir order í cart
         public void AddToCart(OrderInputModel order)
         {
             var newOrder = new CartOrder(){
@@ -32,6 +33,7 @@ namespace BookApp.Repositories
             db.SaveChanges();
         }
 
+        //bætir order í wishlist
         public void AddToWishlist(OrderInputModel order)
         {
             var newOrder = new Wish(){
@@ -45,6 +47,7 @@ namespace BookApp.Repositories
             db.SaveChanges();
         }
 
+        //Nær í all sem er í cart útfrá auðkenni notenda
         public List<OrderViewModel> GetCart(string uId)
         {
             var cart = (from c in db.Carts
@@ -64,6 +67,7 @@ namespace BookApp.Repositories
             return cart;
         }
 
+        //Nær í all sem er í wishlist útfrá auðkenni notenda
         public List<OrderViewModel> GetWishlist(string uId)
         {
             var cart = (from c in db.WishLists
@@ -85,6 +89,7 @@ namespace BookApp.Repositories
             return cart;
         }
 
+        //Nær í allar pantanir útfrá auðkenni notenda
         public List<OrderViewModel> GetOrders(string uId)
         {
             var cart = (from c in db.Orders
@@ -106,6 +111,7 @@ namespace BookApp.Repositories
             return cart;
         }
 
+        ////eyðir bók sem er í cart
         public void RemoveFromCart(int id)
         {
             var orderToRemove = (from c in db.Carts
@@ -117,6 +123,7 @@ namespace BookApp.Repositories
             Console.WriteLine("\n**REMOVING COMPLETE");
         }
 
+        //Eyðir bók sem er í wishlist
         public void RemoveFromWishlist(int id)
         {
             var orderToRemove = (from c in db.WishLists
@@ -128,7 +135,8 @@ namespace BookApp.Repositories
             Console.WriteLine("\n**REMOVING COMPLETE");
         }
 
-        public bool isInCart(int bookId, string uId)
+        //skilar true ef bók er í cart hjá notenda annars skilar false
+         public bool isInCart(int bookId, string uId)
         {
             var isInDatabase = (from c in db.Carts
                                 where c.BookId == bookId && c.UserId == uId
@@ -136,6 +144,7 @@ namespace BookApp.Repositories
             return isInDatabase;
         }
 
+        //skilar true ef bók er í wishlist hjá notenda annars skilar false
         public bool isInWishlist(int bookId, string uId)
         {
             var isInDatabase = (from c in db.WishLists
@@ -144,6 +153,7 @@ namespace BookApp.Repositories
             return isInDatabase;
         }
 
+        //Eyðir öllu sem er í cart útfrá auðkenni notenda
         public void ClearCart(string uId)
         {
             var toRemove = (from c in db.Carts
@@ -153,6 +163,7 @@ namespace BookApp.Repositories
             db.SaveChanges();
         }
 
+        //Færir allt sem er í cart yfir í orders
         public void CartToOrders(string uId)
         {
             var toAdd = (from c in db.Carts

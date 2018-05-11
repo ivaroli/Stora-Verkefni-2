@@ -4,6 +4,5 @@ namespace BookApp.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public string UserType{get;set;}
     }
 }
