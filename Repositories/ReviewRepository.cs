@@ -18,6 +18,8 @@ namespace BookApp.Repositories
         {
             db = new DataContext();
         }
+
+        //Nær í öll komment á bók útfá auðkenni hennar
         public List<ReviewViewModel> GetReviewsByBookId(int id)
         {
             var book = (from a in db.Reviews
@@ -34,6 +36,7 @@ namespace BookApp.Repositories
             return book.ToList();
         }
 
+        //bætir kommenti hjá bók
         public void AddReview(ReviewInputModel r)
         {
             var review = new Review
