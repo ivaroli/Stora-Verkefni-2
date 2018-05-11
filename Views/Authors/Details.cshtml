@@ -11,16 +11,16 @@
                 <img id="author_model_image" src="@Model.Image" alt="author">
             </div>
             <div class="col-md-7 details-right">
-                    <p>@Model.Description</p>
-                </div>
-        <ul class="ul-authors">
-        @foreach(var books in @Model.Books)
-        {
-            <li class="li-authors">
-            <a asp-controller="Books" asp-action="Details"asp-route-id="@books.Id">@books.Title</a>
-            </li>
-        }
-        </ul>
+                <p>@Model.Description</p>
+                <ul class="ul-authors">
+            @foreach(var books in @Model.Books)
+            {
+                <li class="li-authors">
+                    <a asp-controller="Books" asp-action="Details"asp-route-id="@books.Id">@books.Title</a>
+                </li>
+            }
+            </ul>
+            </div>
         </div>
     </div>
 </div>
