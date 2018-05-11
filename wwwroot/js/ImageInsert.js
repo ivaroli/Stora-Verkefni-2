@@ -5,8 +5,12 @@ function insert()
         LastName: $("#lname").val(),
         Country: $("#country").val(),
         City: $("#city").val(),
-        Address: $("#address").val()
+        Address: $("#address").val(),
+        FavoriteBook: $("#favoriteBook").val()
     }
+
+    console.log(JSON.stringify(obj));
+    
 
     $.post("/User/Details", obj, function(result){
     });

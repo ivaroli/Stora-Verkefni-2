@@ -1,3 +1,12 @@
+function xssPRevention(str){
+    var lt = "<", 
+    gt = ">", 
+    ap = "\'", 
+    ic = "\"";
+
+    return str.replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
+}
+
 function getReviews(callback)
 {
     var ids = window.location.href.split('/');
@@ -41,7 +50,7 @@ function generateHtml(obj)
         html += "</div>\n";
         html += "<div class=\"media-body\">\n";
         html += "<h4 class=\"media-heading\">" + obj[i].user +  " <small><i>Posted  " + obj[i].time + "</i></small></h4>\n";
-        html += "<p>" + obj[i].commentText + "</p>\n";
+        html += "<p>" + xssPRevention(obj[i].commentText) + "</p>\n";
         html += "</div>\n";
         html += "</div>\n";
     }

@@ -35,15 +35,21 @@ namespace BookApp.Services
             {
                 var ret = (from c in InitialList
                         where (c.Name.ToLower().Contains(input.Search.ToLower()) &&
-                        ((c.Type == "" || c.Type == input.Genre) || input.Genre == "" || input.Genre == "All Genres")) 
+                        ((c.Genre == "" || c.Genre == input.Genre) || input.Genre == "" || input.Genre == "All Genres")) 
                         select c).ToList();
                 return ret;
             }
             else{
-                var ret = (from c in InitialList
-                           where ((c.Type == "" || c.Type == input.Genre) || input.Genre == "" || input.Genre == "All Genres")
+                if(input.Tag != "Authors"){
+                    Console.WriteLine("ASDF");
+                    var ret = (from c in InitialList
+                           where ((c.Genre == "" || c.Genre.ToLower().Contains(input.Genre.ToLower())) || input.Genre == "" || input.Genre == "All Genres")
                            select c).ToList();
-                return ret;
+                    return ret;
+                }
+                else{
+                    return InitialList;
+                }
             }
         }
 

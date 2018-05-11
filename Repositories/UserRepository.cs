@@ -31,6 +31,7 @@ namespace BookApp.Repositories
                 currentDetails.Country = userDetails.Country;
                 currentDetails.City = userDetails.City;
                 currentDetails.Address = userDetails.Address;
+                currentDetails.FavoriteBook = userDetails.FavoriteBook;
             }
 
             db.SaveChanges();

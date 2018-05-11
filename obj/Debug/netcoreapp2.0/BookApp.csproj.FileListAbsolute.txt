@@ -18,3 +18,4 @@ C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\Boo
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.AssemblyInfo.cs
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.dll
 C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.pdb
+C:\Users\ivart\Documents\Vefforitun_verkefni\BookApp\obj\Debug\netcoreapp2.0\BookApp.csprojResolveAssemblyReference.cache

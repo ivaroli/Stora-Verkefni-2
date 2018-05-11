@@ -23,6 +23,7 @@ namespace BookApp.Repositories
                                Id = a.Id,
                                Name = a.Name,
                                Type = "Authors",
+                               Genre = "",
                                Image = a.Image
                            }).ToList();
             return authors;
