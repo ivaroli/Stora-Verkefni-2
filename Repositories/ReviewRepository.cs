@@ -8,8 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 
 namespace BookApp.Repositories
-{
-     
+{    
     public class ReviewRepository
     {
         private Data.DataContext db;

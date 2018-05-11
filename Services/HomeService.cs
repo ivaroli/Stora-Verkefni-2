@@ -27,7 +27,8 @@ namespace BookApp.Services
 
         public List<BookAuthorViewModel> search(SearchInputModel input)
         {
-            if(currentTag != input.Tag){
+            if(currentTag != input.Tag)
+            {
                 changeList(input.Tag);
             }
 
@@ -39,15 +40,18 @@ namespace BookApp.Services
                         select c).ToList();
                 return ret;
             }
-            else{
-                if(input.Tag != "Authors"){
+            else
+            {
+                if(input.Tag != "Authors")
+                {
                     Console.WriteLine("ASDF");
                     var ret = (from c in InitialList
                            where ((c.Genre == "" || c.Genre.ToLower().Contains(input.Genre.ToLower())) || input.Genre == "" || input.Genre == "All Genres")
                            select c).ToList();
                     return ret;
                 }
-                else{
+                else
+                {
                     return InitialList;
                 }
             }
@@ -57,7 +61,8 @@ namespace BookApp.Services
         {
             currentTag = tag;
 
-            switch(tag){
+            switch(tag)
+            {
                 case "Books":
                     InitialList = bookrepository.GetAllBooksView();
                 break;

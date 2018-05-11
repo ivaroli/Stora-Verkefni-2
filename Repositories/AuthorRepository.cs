@@ -20,7 +20,8 @@ namespace BookApp.Repositories
         public List<BookAuthorViewModel> GetAllAuthors()
         {
             var authors = (from a in db.Authors
-                           select new BookAuthorViewModel(){
+                           select new BookAuthorViewModel()
+                           {
                                Id = a.Id,
                                Name = a.Name,
                                Type = "Authors",
@@ -35,7 +36,8 @@ namespace BookApp.Repositories
         {
             var authors = (from a in db.Authors
                            where a.Name.ToLower().Contains(name.ToLower())
-                           select new AuthorViewModel(){
+                           select new AuthorViewModel()
+                           {
                                Id = a.Id,
                                Name = a.Name
                            }).ToList();
@@ -46,7 +48,8 @@ namespace BookApp.Repositories
         public List<AuthorViewModel> getAllAuthors()
         {
             var authors = (from a in db.Authors
-                           select new AuthorViewModel(){
+                           select new AuthorViewModel()
+                           {
                                Id = a.Id,
                                Name = a.Name
                            }).ToList();

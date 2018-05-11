@@ -41,6 +41,7 @@ namespace BookApp.Controllers
             }
             return View(book);
         }
+
         [HttpGet]
         public IActionResult Books()
         {
@@ -51,12 +52,14 @@ namespace BookApp.Controllers
         [HttpPost]
         public IActionResult Search(string searchInput)
         {
-            if(searchInput == "" || searchInput == null){
+            if(searchInput == "" || searchInput == null)
+            {
                 Console.WriteLine("\n**ASDFASDFASDF");
                 var books = bookService.GetAllBooks();
                 return Json(books);
             }
-            else{
+            else
+            {
                 var books = bookService.GetBooksByName(searchInput);
                 return Json(books);
             }
@@ -85,7 +88,8 @@ namespace BookApp.Controllers
             var uId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             DateTime date = DateTime.Now;
 
-            var model = new ReviewInputModel(){
+            var model = new ReviewInputModel()
+            {
                 BookId = bookId,
                 Stars = rating,
                 UserId = uId,

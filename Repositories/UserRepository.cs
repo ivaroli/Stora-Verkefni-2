@@ -27,7 +27,8 @@ namespace BookApp.Repositories
             {
                 db.Add(userDetails);
             }
-            else{
+            else
+            {
                 currentDetails.FirstName = userDetails.FirstName;
                 currentDetails.LastName = userDetails.LastName;
                 currentDetails.Country = userDetails.Country;
@@ -44,7 +45,8 @@ namespace BookApp.Repositories
         {
             var details = (from c in db.Details
                                   where c.UserId == userID 
-                                  select new UserDetailsViewModel(){
+                                  select new UserDetailsViewModel()
+                                  {
                                     FirstName = c.FirstName,
                                     LastName = c.LastName,
                                     Country = c.Country,

@@ -42,11 +42,13 @@ namespace BookApp.Services
             var orders = orderRepository.GetCart(uId);
             int total = 0;
 
-            foreach(var order in orders){
+            foreach(var order in orders)
+            {
                 total += order.amount * order.OrderBook.Price;
             }
 
-            var model = new CartViewModel(){
+            var model = new CartViewModel()
+            {
                 Cart = orders,
                 Total = total
             };
@@ -59,11 +61,13 @@ namespace BookApp.Services
             var orders = orderRepository.GetWishlist(uId);
             int total = 0;
 
-            foreach(var order in orders){
+            foreach(var order in orders)
+            {
                 total += order.amount * order.OrderBook.Price;
             }
 
-            var model = new CartViewModel(){
+            var model = new CartViewModel()
+            {
                 Cart = orders,
                 Total = total
             };

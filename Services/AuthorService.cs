@@ -32,7 +32,8 @@ namespace BookApp.Services
         }
         public void AddAuthor(AuthorInputModel model)
         {
-            var author = new Author(){
+            var author = new Author()
+            {
                 Name = model.Name,
                 Description = model.Description,
                 Image = model.Image

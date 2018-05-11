@@ -59,7 +59,8 @@ namespace BookApp.Services
         public void AddBook(BookInputModel model)
         {
             var author = authorRepository.getAuthorFromId(model.AuthorId);
-            var book = new Book(){
+            var book = new Book()
+            {
                 Title = model.Title,
                 Genre = model.Genre,
                 Description = model.Description,
