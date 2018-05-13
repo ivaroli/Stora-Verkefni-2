@@ -618,8 +618,9 @@ font-size: 150%
 }
 
 .ul-authors{
+    margin-top: 10px;
     list-style-type: none;
-    font-size: 150%
+    font-size: 20px;
 }
 
 .li-authors{
