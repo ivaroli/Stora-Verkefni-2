@@ -29,7 +29,6 @@ namespace BookApp.Controllers
             userService = new UserService();
             booksService = new BookService();
             orderService = new OrderService();
-
         }
 
         [HttpGet]
@@ -111,7 +110,7 @@ namespace BookApp.Controllers
         [HttpGet]
         public IActionResult StaffPage()
         {
-            return View(booksService.GetAllBooksStaffView());//asdf
+            return View(booksService.GetAllBooksStaffView());
         }
 
         [Authorize]

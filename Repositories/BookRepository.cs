@@ -16,12 +16,15 @@ namespace BookApp.Repositories
             db = new DataContext();
         }
 
+        //Nær í þær bækur sem eru vinsælastar útfrá Orders
+        //S.s skilar þeim bókum sem seljast mest
         public List<BookAuthorViewModel> GetTopSellers(int top)
         {
             var books = (from b in db.Books
                         join c in db.Orders on b.Id equals c.BookId into g
                         orderby g.Count() descending
-                        select new BookAuthorViewModel(){
+                        select new BookAuthorViewModel()
+                        {
                             Id = b.Id,
                             Name = b.Title,
                             Type = "Books",
@@ -34,6 +37,7 @@ namespace BookApp.Repositories
             return books;
         }
 
+        //Nær í allar bækur og setur í lista
         public List<BookViewModel> GetAllBooks()
         {
             var books = (from a in db.Books
@@ -51,6 +55,8 @@ namespace BookApp.Repositories
             return books;
         }
 
+        //Nær í þær bækur sem eru með séstakt tag
+        //Eins og Coming Soon
         public List<BookAuthorViewModel> GetAllBooksWTag(string Tag)
         {
             var books = (from a in db.Books
@@ -68,6 +74,7 @@ namespace BookApp.Repositories
             return books;
         }
 
+        //Annað fall sem nær í allar bækur en setur í annað view model
         public List<BookAuthorViewModel> GetAllBooksView()
         {
             var books = (from a in db.Books
@@ -75,7 +82,7 @@ namespace BookApp.Repositories
                         {
                             Id = a.Id,
                             Name = a.Title,
-                            Type = "Book",
+                            Type = "Books",
                             Genre = a.Genre,
                             Image = a.Image,
                             Rating = a.Rating,
@@ -84,6 +91,7 @@ namespace BookApp.Repositories
             return books;
         }
 
+        //Annað fall sem nær í allar bækur en setur í annað view model
         public List<StaffBookViewModel> GetAllBooksStaffView()
         {
             var books = (from a in db.Books
@@ -99,6 +107,8 @@ namespace BookApp.Repositories
                         }).ToList();
             return books;
         }
+
+        //Nær í bók með samkvæmt auðkenni
         public BookViewModel GetBookById(int id)
         {
             var book = (from a in db.Books
@@ -117,6 +127,7 @@ namespace BookApp.Repositories
             return book;
         }
 
+        //Nær í allar bækur eftir höfund með id sem auðkenni
         public AuthorBookViewModel GetBooksByAuthorId(int? id)
         {
             var books = (from a in db.Books
@@ -132,9 +143,11 @@ namespace BookApp.Repositories
                             Rating = a.Rating,
                             Price = a.Price
                         }).ToList();
+            
             var author = (from a in db.Authors
                           where a.Id == id
-                          select new AuthorBookViewModel(){
+                          select new AuthorBookViewModel()
+                          {
                               Books = books,
                               Name = a.Name,
                               Image = a.Image,
@@ -142,6 +155,8 @@ namespace BookApp.Repositories
                           }).FirstOrDefault();
             return author;
         }
+
+        //Nær í allar bækur með strenginn search inní sér
         public List<BookViewModel> GetBooksByName(string search)
         {
             var books = (from a in db.Books
@@ -160,6 +175,7 @@ namespace BookApp.Repositories
             return books;
         }
 
+        //Eyðir öllum bókum eftir höfund með AuthorId sem auðkenni
         public void RemoveBooksByAuthor(int AuthorId)
         {
             var books = (from a in db.Books
@@ -169,12 +185,14 @@ namespace BookApp.Repositories
             db.SaveChanges();
         }
 
+        //Bætir við bók í gagnasafnið
         public void addBook(Book b)
         {
             db.Add(b);
             db.SaveChanges();
         }
 
+        //Eyðir bók út gagnasafni
         public void removeBook(int id)
         {
             var bookToRemove = (from c in db.Books
